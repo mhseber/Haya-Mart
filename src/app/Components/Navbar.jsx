@@ -16,6 +16,10 @@ const Navbar = () => {
             <Link href="Posts">
               <li>Posts</li>
             </Link>
+
+            <Link href="meals">
+              <li>MEALS</li>
+            </Link>
           </ul>
         </nav>
       </div>
