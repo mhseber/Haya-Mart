@@ -1,11 +1,11 @@
-import MealSearchInput from "./components/MealSearchinput";
+import MealSearchInput from "./components/MealSearchInput";
 
-const MealsPage = () => {
-  const meals = [];
+export default async function MealsPage({ searchParams }) {
+  const query = await searchParams;
   const fetchMeals = async () => {
     try {
       const res = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=${query.search}`
       );
       const data = await res.json();
       // setMeals(data?.meals || []);
@@ -16,6 +16,8 @@ const MealsPage = () => {
     }
   };
 
+  const meals = await fetchMeals();
+
   return (
     <div>
       <div className="flex justify-center pt-7">
@@ -25,7 +27,7 @@ const MealsPage = () => {
         {meals?.map((singleMeal) => {
           return (
             <div className="border-2 m-5 p-5" key={singleMeal.idMeal}>
-              <p className="text-6xl text-sky-500 font-extrabold p-4">
+              <p className="text-4xl text-sky-500 font-extrabold p-4">
                 {singleMeal?.strMeal}
               </p>
               <p className="text-xl text-sky-600 font-bold p-2">
@@ -44,6 +46,6 @@ const MealsPage = () => {
       </div>
     </div>
   );
-};
+}
 
-export default MealsPage;
+// export default MealsPage;

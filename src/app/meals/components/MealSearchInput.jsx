@@ -1,7 +1,6 @@
 "use client";
-import { usePathname } from "next/navigation";
-import { useRouter } from "next/router";
-import React from "react";
+import { usePathname, useRouter } from "next/navigation";
+
 import React, { useEffect, useState } from "react";
 
 const MealSearchInput = () => {
@@ -10,6 +9,7 @@ const MealSearchInput = () => {
   const router = useRouter();
   const pathname = usePathname();
   useEffect(() => {
+    const searchQuery = { search };
     const urlQueryParam = new URLSearchParams(searchQuery);
     const url = `${pathname}?${urlQueryParam}`;
     router.push(url);
