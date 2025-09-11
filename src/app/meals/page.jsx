@@ -1,49 +1,47 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import MealSearchInput from "./components/MealSearchinput";
 
 const MealsPage = () => {
-  const [meals, setMeals] = useState([]);
-  const [search, setSearch] = useState("");
-
+  const meals = [];
   const fetchMeals = async () => {
     try {
       const res = await fetch(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`
       );
       const data = await res.json();
-      setMeals(data?.meals || []);
+      // setMeals(data?.meals || []);
       return data.meals;
     } catch (error) {
       console.log(error);
       return [];
     }
   };
-  useEffect(() => {
-    fetchMeals();
-  }, [search]);
 
   return (
     <div>
-      {/* <p>{JSON.stringify(meals)}</p> */}
-      {meals?.map((singleMeal) => {
-        return (
-          <div className="border-2 m-5 p-5" key={singleMeal.idMeal}>
-            <p className="text-6xl text-sky-500 font-extrabold p-4">
-              {singleMeal?.strMeal}
-            </p>
-            <p className="text-xl text-sky-600 font-bold p-2">
-              {singleMeal?.strInstructions}
-            </p>
-            <p className=" text-sky-700 font-light  p-4">
-              {singleMeal?.strArea}
-            </p>
-            <p className="text-amber-200">{singleMeal?.strCategory}</p>
-            <p className="text-3xl text-amber-600">
-              {singleMeal?.strMealAlternate}
-            </p>
-          </div>
-        );
-      })}
+      <div className="flex justify-center pt-7">
+        <MealSearchInput />
+      </div>
+      <div className="grid grid-cols-4 gap-4">
+        {meals?.map((singleMeal) => {
+          return (
+            <div className="border-2 m-5 p-5" key={singleMeal.idMeal}>
+              <p className="text-6xl text-sky-500 font-extrabold p-4">
+                {singleMeal?.strMeal}
+              </p>
+              <p className="text-xl text-sky-600 font-bold p-2">
+                {singleMeal?.strInstructions}
+              </p>
+              <p className=" text-sky-700 font-light  p-4">
+                {singleMeal?.strArea}
+              </p>
+              <p className="text-amber-200">{singleMeal?.strCategory}</p>
+              <p className="text-3xl text-amber-600">
+                {singleMeal?.strMealAlternate}
+              </p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
