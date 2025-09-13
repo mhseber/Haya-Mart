@@ -8,7 +8,7 @@ export const getPosts = async () => {
 };
 
 export const metadata = {
-  title: "All Posts | Learn Next.js",
+  title: "All Posts",
   description: "Loading all posts using Next.js",
 };
 
