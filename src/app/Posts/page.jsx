@@ -18,10 +18,18 @@ export default async function Posts() {
     <div className="pt-20 gap-8 grid grid-cols-4">
       {posts.map((singlePost) => {
         return (
-          <div key={singlePost.id}>
+          <div
+            className="border-4 rounded-2xl bg-red-700 p-2"
+            key={singlePost.id}
+          >
             <p>{singlePost.title}</p>
-            <p>{singlePost.body}</p>
-            <Link href={`/Posts/${singlePost.id}`}>Details</Link>
+            <p className="mb-10">{singlePost.body}</p>
+            <Link
+              className="btn bg-blue-500  text-black  w-10 h-5 p-2 rounded-b-3xl "
+              href={`/Posts/${singlePost.id}`}
+            >
+              Details
+            </Link>
           </div>
         );
       })}
