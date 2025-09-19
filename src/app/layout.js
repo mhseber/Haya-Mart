@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono,Poppins, Bitcount } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
 
@@ -11,6 +11,17 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+
+const poppins = Poppins({
+  weight: ['400','600','700'],
+  subsets: ['latin']
+})
+
+const bitcount = Bitcount({
+  weight: ['400','700'],
+  subsets: ['latin']
+})
 
 export const metadata = {
   title: 
@@ -26,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bitcount.className}antialiased bg-slate-200 min-h-screen`}
       >
         <Navbar/>
         {children}

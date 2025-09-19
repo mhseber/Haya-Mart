@@ -1,6 +1,12 @@
 import Link from "next/link";
 import MealSearchInput from "./components/MealSearchInput";
 import Image from "next/image";
+import { SUSE } from "next/font/google";
+
+const suse = SUSE({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "All Meals",
@@ -33,33 +39,35 @@ export default async function MealsPage({ searchParams }) {
       <div className="grid grid-cols-4 gap-4">
         {meals?.map((singleMeal) => {
           return (
-            <div className="border-2 m-5 p-5" key={singleMeal.idMeal}>
-              <Image
-                src={singleMeal?.strMealThumb}
-                width={641}
-                height={641}
-                alt={meals}
-              ></Image>
-              <p className="text-4xl text-sky-500 font-extrabold p-4">
-                {singleMeal?.strMeal}
-              </p>
-              <p className="text-xl text-sky-600 font-bold p-2">
-                {singleMeal?.strInstructions}
-              </p>
-              <p className=" text-sky-700 font-light  p-4">
-                {singleMeal?.strArea}
-              </p>
-              <p className="text-amber-200">{singleMeal?.strCategory}</p>
-              <p className="text-3xl text-amber-600">
-                {singleMeal?.strMealAlternate}
-              </p>
-              <Link
-                className="text-2xl text-green-400"
-                href={`/meals/${singleMeal.idMeal}`}
-              >
-                Details
-              </Link>
-            </div>
+            <section className={suse}>
+              <div className="border-2 m-5 p-5 " key={singleMeal.idMeal}>
+                <Image
+                  src={singleMeal?.strMealThumb}
+                  width={641}
+                  height={641}
+                  alt={meals}
+                ></Image>
+                <p className="text-4xl text-sky-500 font-extrabold p-4">
+                  {singleMeal?.strMeal}
+                </p>
+                <p className="text-xl text-sky-600 font-bold p-2">
+                  {singleMeal?.strInstructions}
+                </p>
+                <p className=" text-sky-700 font-light  p-4">
+                  {singleMeal?.strArea}
+                </p>
+                <p className="text-amber-200">{singleMeal?.strCategory}</p>
+                <p className="text-3xl text-amber-600">
+                  {singleMeal?.strMealAlternate}
+                </p>
+                <Link
+                  className="text-2xl text-green-400"
+                  href={`/meals/${singleMeal.idMeal}`}
+                >
+                  Details
+                </Link>
+              </div>
+            </section>
           );
         })}
       </div>
