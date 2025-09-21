@@ -1,18 +1,18 @@
+import dbConnect from "@/lib/dbConnect";
+
 // get
  export async function GET() {
  
-    const data = {
-        message: "Hello, this is the items API endpoint!",
-        error: false,
-        status: 200
-    }
+ const data = await dbConnect("my_data").find({}).toArray();
  
-  return Response.json({ data })
+  return Response.json(data)
 }
 
 // post
 
 export async function POST(req){
+
+  console.log(req);
     
     const postedData = await req.json();
 
