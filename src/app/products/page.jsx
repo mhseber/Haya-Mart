@@ -4,8 +4,10 @@ export default async function ProductsPage() {
   const res = await fetch("http://localhost:3000/api/items");
   const data = await res.json();
   return (
-    <div>
-      <p>{JSON.stringify(data)}</p>
-    </div>
+    <ul className="text-center mt-9">
+      {data?.map((singleProduct) => {
+        return <li key={singleProduct._id}>{singleProduct?.productName}</li>;
+      })}
+    </ul>
   );
 }
