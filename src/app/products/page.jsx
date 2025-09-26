@@ -7,7 +7,7 @@ export default async function ProductsPage() {
   });
   const data = await res.json();
 
-  if (data.length > 3) {
+  if (data.length > 100) {
     redirect("/");
   }
 
