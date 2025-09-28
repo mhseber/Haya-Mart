@@ -3,9 +3,9 @@ import React from "react";
 export const dynamic = "force-dynamic";
 
 export default async function ProductsPage() {
-  const { NEXT_PUBLIC_SERVER_ADDRESS } = process.env;
-  console.log(NEXT_PUBLIC_SERVER_ADDRESS);
-  const res = await fetch(`${NEXT_PUBLIC_SERVER_ADDRESS}/api/items`);
+  // const { NEXT_PUBLIC_SERVER_ADDRESS } = process.env;
+  // console.log(NEXT_PUBLIC_SERVER_ADDRESS);
+  const res = await fetch("http://localhost:3000/api/items");
   const data = await res.json();
 
   return (
