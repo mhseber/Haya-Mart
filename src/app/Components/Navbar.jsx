@@ -37,11 +37,59 @@
 // export default Navbar;
 
 "use client";
+import { FaHeart, FaHome } from "react-icons/fa";
+import { MdPostAdd } from "react-icons/md";
+import { FaBoxOpen } from "react-icons/fa";
+import { IoMdAddCircle } from "react-icons/io";
+import { GiHotMeal } from "react-icons/gi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Noto_Serif } from "next/font/google";
+
+const notoSerif = Noto_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 const Navbar = () => {
   const pathname = usePathname();
+
+  const navLinks = (
+    <>
+      <li className={`text-lg ${notoSerif.className}`}>
+        <Link href="/">
+          {" "}
+          <FaHome className="inline " />
+          Home
+        </Link>
+      </li>
+      <li className={`text-lg ${notoSerif.className}`}>
+        <Link href="/Posts">
+          <MdPostAdd className="inline " />
+          Posts
+        </Link>
+      </li>
+      <li className={`text-lg ${notoSerif.className}`}>
+        <Link href="/products">
+          <FaBoxOpen className="inline " />
+          Products
+        </Link>
+      </li>
+      <li className={`text-lg ${notoSerif.className}`}>
+        <Link href="/products/add">
+          <IoMdAddCircle className="inline " />
+          Add Products
+        </Link>
+      </li>
+      <li className={`text-lg ${notoSerif.className}`}>
+        <Link href="/meals">
+          {" "}
+          <GiHotMeal className="inline " />
+          Meals
+        </Link>
+      </li>
+    </>
+  );
 
   // dashboard route এ Navbar hide করো
   if (pathname.includes("dashboard")) return null;
@@ -71,52 +119,29 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/Posts">Posts</Link>
-            </li>
-            <li>
-              <Link href="/products">Products</Link>
-            </li>
-            <li>
-              <Link href="/products/add">Add Products</Link>
-            </li>
-            <li>
-              <Link href="/meals">Meals</Link>
-            </li>
+            {navLinks}
           </ul>
         </div>
-        <Link href="/" className="btn btn-ghost text-xl">
+        <Link
+          href="/"
+          className={` pl-8 text-3xl text-blue-400 font-extrabold ${notoSerif.className}`}
+        >
           StreetAura
         </Link>
       </div>
 
       {/* Center (desktop menu) */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/Posts">Posts</Link>
-          </li>
-          <li>
-            <Link href="/products">Products</Link>
-          </li>
-          <li>
-            <Link href="/products/add">Add Products</Link>
-          </li>
-          <li>
-            <Link href="/meals">Meals</Link>
-          </li>
+        <ul className="menu menu-horizontal px-1 pl-32 [&_li>*]:hover:bg-transparent [&_li>*]:hover:text-blue-600 [&_li>*]:hover:underline shadow-none">
+          {navLinks}
         </ul>
       </div>
 
       {/* Right side (extra button or profile) */}
       <div className="navbar-end">
-        <a className="btn">Sign In</a>
+        <a className="btn">
+          <FaHeart />
+        </a>
       </div>
     </div>
   );

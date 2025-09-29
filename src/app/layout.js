@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono,Poppins, Bitcount } from "next/font/google";
+import { Geist,  Bitcount, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
 
@@ -7,16 +7,10 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const notoSerif = Noto_Serif({
   subsets: ["latin"],
+  weight: ["400", "600", "700"], 
 });
-
-
-const poppins = Poppins({
-  weight: ['400','600','700'],
-  subsets: ['latin']
-})
 
 const bitcount = Bitcount({
   weight: ['400','700'],
@@ -26,7 +20,7 @@ const bitcount = Bitcount({
 export const metadata = {
   title: 
   {
-    default:"Learn Next.js",
+    default:"StreetAura",
    template: "%s || Learn Next.js"
     },
     keywords: ['Next.js', 'React', 'JavaScript', 'playground','Learning'],
