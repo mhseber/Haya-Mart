@@ -95,7 +95,7 @@ const Navbar = () => {
   if (pathname.includes("dashboard")) return null;
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar fixed z-10 bg-black bg-opacity-30 backdrop-blur-md  shadow-lg">
       {/* Left side (mobile menu + brand name) */}
       <div className="navbar-start">
         <div className="dropdown">
