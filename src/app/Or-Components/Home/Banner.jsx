@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Banner = () => {
   return (
-    <div className="w-full">
+    <div className="w-full pt-20">
       <Carousel
         autoPlay
         infiniteLoop
@@ -24,7 +24,7 @@ const Banner = () => {
         </div>
         <div>
           <img
-            src="/banner/p2.jpg"
+            src="/banner/tp1.PNG"
             alt="Banner 2"
             className="w-full h-[500px] object-cover"
           />
@@ -52,7 +52,7 @@ const Banner = () => {
         </div>
         <div>
           <img
-            src="/banner/p6.jpg"
+            src="/banner/p2.jpg"
             alt="Banner 6"
             className="w-full h-[500px] object-cover"
           />
