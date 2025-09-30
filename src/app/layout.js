@@ -20,11 +20,11 @@ const bitcount = Bitcount({
 export const metadata = {
   title: 
   {
-    default:"StreetAura",
-   template: "%s || Learn Next.js"
+    default:"Haya",
+   template: "%s | Haya"
     },
     keywords: ['Next.js', 'React', 'JavaScript', 'playground','Learning'],
-  description: "Try to learn Next.js",
+  description: "Islamic Clothing Brand",
 };
 
 export default function RootLayout({ children }) {

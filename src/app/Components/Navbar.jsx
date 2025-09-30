@@ -126,7 +126,7 @@ const Navbar = () => {
           href="/"
           className={` pl-8 text-3xl text-blue-400 font-extrabold ${notoSerif.className}`}
         >
-          StreetAura
+          Haya
         </Link>
       </div>
 
@@ -138,10 +138,11 @@ const Navbar = () => {
       </div>
 
       {/* Right side (extra button or profile) */}
-      <div className="navbar-end">
-        <a className="btn">
+      <div className="indicator pr-10 navbar-end">
+        <span className="indicator-item mr-10 badge badge-secondary">12</span>
+        <button className="btn">
           <FaHeart />
-        </a>
+        </button>
       </div>
     </div>
   );
