@@ -10,6 +10,9 @@ const ShopByCategory = () => {
     { id: 4, image: "/Category/kifay.jpeg", name: "Kifaya" },
     { id: 5, image: "/Category/pangabi.jpeg", name: "Panjabi" },
     { id: 6, image: "/Category/t-shart.jpg", name: "T-Shirt" },
+    { id: 7, image: "/banner/tp1.PNG", name: "Thobe" },
+    { id: 8, image: "/Category/perfume.jpg", name: "Perfume" },
+    { id: 9, image: "/Category/pants.jpg", name: "Pants" },
   ];
 
   return (
@@ -26,7 +29,7 @@ const ShopByCategory = () => {
         {categories.map((cat) => (
           <div
             key={cat.id}
-            className="relative group rounded-lg overflow-hidden shadow-md cursor-pointer"
+            className="relative group  overflow-hidden shadow-md cursor-pointer"
           >
             {/* motion image */}
             <motion.img
