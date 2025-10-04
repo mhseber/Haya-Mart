@@ -39,7 +39,7 @@ const NewArrival = () => {
           {items.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="card bg-base-100 w-full shadow-sm h-[400px] flex flex-col">
-                <figure className="h-70">
+                <figure className="h-[280px]">
                   <img
                     src={item.img}
                     alt={item.title}
@@ -51,10 +51,12 @@ const NewArrival = () => {
                     <h2 className="card-title uppercase text-base">
                       {item.title}
                     </h2>
-                    <p className="text-sm text-blue-500">Price: {item.price}</p>
+                    <p className="text-sm text-blue-300 pt-3">
+                      <span className="text-sky-500">Price:</span> {item.price}
+                    </p>
                   </div>
                   <div className="card-actions justify-center mt-4">
-                    <button className="btn btn-primary btn-sm">
+                    <button className="btn  btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-blue-800 transition duration-300">
                       <FaShoppingBag className="text-lg" />
                       Order Now
                     </button>
