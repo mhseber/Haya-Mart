@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
-import { FaCartPlus, FaShoppingBag } from "react-icons/fa";
+import { FaCartPlus, FaShoppingBag, FaStar } from "react-icons/fa";
 
 const NewArrival = () => {
   const [items, setItems] = useState([]);
@@ -17,11 +18,11 @@ const NewArrival = () => {
 
   return (
     <div className="px-6">
-      <section>
-        <h2 className="text-3xl font-bold pl-2 my-8">New Arrival</h2>
-        <div className="divider divide-gray-300"></div>
+      <section className="flex justify-start gap-3 my-8">
+        <FaStar className="text-4xl text-blue-400" />
+        <h2 className="text-3xl text-blue-200 font-bold">New Arrival</h2>
       </section>
-
+      <div className="divider divide-gray-300"></div>
       <section>
         <Swiper
           className="mySwiper"
@@ -39,13 +40,22 @@ const NewArrival = () => {
           {items.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="card bg-base-100 w-full shadow-sm h-[400px] flex flex-col">
-                <figure className="h-[280px]">
-                  <img
+                <motion.figure
+                  className="h-[280px] overflow-hidden rounded-xl"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                  <motion.img
                     src={item.img}
                     alt={item.title}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover rounded-xl"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.4 }}
                   />
-                </figure>
+                </motion.figure>
                 <div className="card-body flex flex-col justify-between">
                   <div>
                     <h2 className="card-title uppercase text-base">

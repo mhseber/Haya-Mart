@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { MdCategory } from "react-icons/md";
 
 const ShopByCategory = () => {
   const categories = [
@@ -18,10 +19,9 @@ const ShopByCategory = () => {
   return (
     <div>
       {/* text */}
-      <section>
-        <h2 className="text-3xl font-bold text-center my-8">
-          Shop by Category
-        </h2>
+      <section className="flex items-center justify-center gap-3 my-8">
+        <MdCategory className="text-4xl text-blue-400" />
+        <h2 className="text-3xl text-blue-200 font-bold">Shop by Category</h2>
       </section>
 
       {/* category cards */}
