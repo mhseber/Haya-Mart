@@ -1,31 +1,36 @@
 "use client";
 
-import React from "react";
-import { FaFire } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import { GiFeather } from "react-icons/gi"; // সুন্দর Signature আইকন
 import { FaShoppingBag, FaCartPlus } from "react-icons/fa";
-import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const BestSelling = () => {
+const SignatureEdition = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("/BestSelling.json")
+    fetch("/SignatureEdition.json")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
+
   return (
     <div className="px-6">
+      {/* Title Section */}
       <section className="flex justify-start gap-3 my-8 pl-5">
-        <FaFire className="text-4xl text-blue-400" />
-        <h2 className="text-3xl text-blue-200 font-bold">Best Selling</h2>
+        <GiFeather className="text-4xl text-purple-500" />
+        <h2 className="text-3xl font-bold text-purple-300">
+          Signature Edition
+        </h2>
       </section>
+
       <div className="divider divide-gray-300"></div>
 
+      {/* Product Swiper Section */}
       <section>
         <Swiper
           className="mySwiper"
@@ -59,17 +64,20 @@ const BestSelling = () => {
                     transition={{ duration: 0.4 }}
                   />
                 </motion.figure>
+
                 <div className="card-body flex flex-col justify-between">
                   <div>
                     <h2 className="card-title uppercase text-base">
                       {item.title}
                     </h2>
-                    <p className="text-sm text-blue-300 pt-3">
-                      <span className="text-sky-500">Price:</span> {item.price}
+                    <p className="text-sm text-purple-300 pt-3">
+                      <span className="text-purple-500">Price:</span>{" "}
+                      {item.price}
                     </p>
                   </div>
+
                   <div className="card-actions justify-center mt-4">
-                    <button className="btn  btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-blue-800 transition duration-300">
+                    <button className="btn btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-purple-400 transition duration-300">
                       <FaShoppingBag className="text-lg" />
                       Order Now
                     </button>
@@ -85,6 +93,7 @@ const BestSelling = () => {
         </Swiper>
       </section>
 
+      {/* Swiper Custom Styling */}
       <style jsx global>{`
         .mySwiper {
           position: relative;
@@ -106,7 +115,7 @@ const BestSelling = () => {
           margin: 0 6px !important;
         }
         .mySwiper .swiper-pagination-bullet-active {
-          background: #2563eb !important;
+          background: #9333ea !important; /* purple-600 */
           transform: scale(1.25);
           transition: all 0.25s ease;
         }
@@ -121,4 +130,4 @@ const BestSelling = () => {
   );
 };
 
-export default BestSelling;
+export default SignatureEdition;

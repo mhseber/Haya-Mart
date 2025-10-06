@@ -88,7 +88,7 @@ const Navbar = () => {
           href="/"
           className={` pl-8 text-3xl text-blue-400 font-extrabold ${notoSerif.className}`}
         >
-          Haya
+          Haya Mart
         </Link>
       </div>
 
