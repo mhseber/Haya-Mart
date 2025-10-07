@@ -1,0 +1,10 @@
+.aboutUs-item {
+  background-image: url("../../../../../public/extray/about.jpg");
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .aboutUs-item {
+    background-attachment: scroll;
+  }
+}

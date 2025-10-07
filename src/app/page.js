@@ -1,3 +1,4 @@
+import AboutUs from "./Or-Components/Home/AboutUs";
 import Banner from "./Or-Components/Home/Banner";
 import BestSelling from "./Or-Components/Home/BestSelling";
 import NewArrival from "./Or-Components/Home/NewArrival";
@@ -15,6 +16,7 @@ export default function Home() {
       <NewArrival />
       <BestSelling />
       <SignatureEdition />
+      <AboutUs />
     </div>
   );
 }
