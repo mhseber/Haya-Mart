@@ -18,7 +18,7 @@ const NewArrival = () => {
 
   return (
     <div className="px-6">
-      <section className="flex justify-start gap-3 my-8">
+      <section className="flex justify-start gap-3 my-8 pl-5">
         <FaStar className="text-4xl text-blue-400" />
         <h2 className="text-3xl text-blue-200 font-bold">New Arrival</h2>
       </section>

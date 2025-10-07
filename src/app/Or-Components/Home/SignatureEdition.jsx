@@ -22,10 +22,8 @@ const SignatureEdition = () => {
     <div className="px-6">
       {/* Title Section */}
       <section className="flex justify-start gap-3 my-8 pl-5">
-        <GiFeather className="text-4xl text-purple-500" />
-        <h2 className="text-3xl font-bold text-purple-300">
-          Signature Edition
-        </h2>
+        <GiFeather className="text-4xl  text-blue-400" />
+        <h2 className="text-3xl font-bold  text-blue-200">Signature Edition</h2>
       </section>
 
       <div className="divider divide-gray-300"></div>
@@ -70,14 +68,14 @@ const SignatureEdition = () => {
                     <h2 className="card-title uppercase text-base">
                       {item.title}
                     </h2>
-                    <p className="text-sm text-purple-300 pt-3">
-                      <span className="text-purple-500">Price:</span>{" "}
+                    <p className="text-sm  text-blue-300 pt-3">
+                      <span className="text-sky-500">Price:</span>
                       {item.price}
                     </p>
                   </div>
 
                   <div className="card-actions justify-center mt-4">
-                    <button className="btn btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-purple-400 transition duration-300">
+                    <button className="btn btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-blue-800 transition duration-300">
                       <FaShoppingBag className="text-lg" />
                       Order Now
                     </button>
