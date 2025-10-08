@@ -18,7 +18,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="my-20  py-16">
+    <section className="my-20  py-4">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-200">
           🌙 What Our Customers Say
