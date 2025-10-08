@@ -4,6 +4,7 @@ import BestSelling from "./Or-Components/Home/BestSelling";
 import NewArrival from "./Or-Components/Home/NewArrival";
 import ShopByCategory from "./Or-Components/Home/ShopByCategory";
 import SignatureEdition from "./Or-Components/Home/SignatureEdition";
+import Testimonials from "./Or-Components/Home/Testimonials";
 import TrustedCards from "./Or-Components/Home/TrustedCards";
 
 
@@ -17,6 +18,7 @@ export default function Home() {
       <BestSelling />
       <SignatureEdition />
       <AboutUs />
+      <Testimonials />
     </div>
   );
 }
