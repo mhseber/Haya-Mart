@@ -11,9 +11,19 @@ const Footer = () => {
         {/* ----- Brand Section ----- */}
         <aside>
           <div className="text-center sm:text-left space-y-2">
-            <h1 className="text-3xl font-extrabold text-blue-400 tracking-wide">
-              Haya Mart
-            </h1>
+            <h3 className="font-extrabold pl-4 text-4xl text-sky-500">
+              <motion.span
+                animate={{ color: ["#7dd3fc", "#38bdf8", "#0ea5e9"] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              >
+                Haya
+              </motion.span>{" "}
+              Mart
+            </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering the Muslim lifestyle since 2025. <br /> Dedicated to
               providing quality products that align <br /> with faith, culture,

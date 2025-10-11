@@ -7,6 +7,7 @@ import { GiHotMeal } from "react-icons/gi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Noto_Serif } from "next/font/google";
+import { motion } from "framer-motion";
 
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
@@ -84,12 +85,19 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <Link
-          href="/"
-          className={` pl-8 text-3xl text-blue-400 font-extrabold ${notoSerif.className}`}
-        >
-          Haya Mart
-        </Link>
+        <h3 className="font-extrabold pl-4 text-4xl text-sky-500">
+          <motion.span
+            animate={{ color: ["#7dd3fc", "#38bdf8", "#0ea5e9"] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          >
+            Haya
+          </motion.span>{" "}
+          Mart
+        </h3>
       </div>
 
       {/* Center (desktop menu) */}
