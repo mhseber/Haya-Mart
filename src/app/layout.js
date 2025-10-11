@@ -1,28 +1,21 @@
-import { Geist,  Bitcount, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { Noto_Serif } from "next/font/google";
 
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
-  weight: ["400", "600", "700"], 
+  weight: ["400", "700"],
+  display: "swap",
 });
 
-const bitcount = Bitcount({
-  weight: ['400','700'],
-  subsets: ['latin']
-})
+
 
 export const metadata = {
   title: 
   {
-    default:"Haya",
-   template: "%s | Haya"
+    default:"Haya Mart",
+   template: "%s | Haya Mart"
     },
     keywords: ['Next.js', 'React', 'JavaScript', 'playground','Learning'],
   description: "Islamic Clothing Brand",
@@ -32,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${bitcount.className}antialiased bg-slate-200 min-h-screen`}
+        className={`${notoSerif.className} antialiased  min-h-screen`}
       >
         <Navbar/>
         {children}
