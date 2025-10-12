@@ -5,7 +5,7 @@ import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
-import { FaCartPlus, FaShoppingBag, FaStar } from "react-icons/fa";
+import { FaCartPlus, FaRegHeart, FaShoppingBag, FaStar } from "react-icons/fa";
 
 const NewArrival = () => {
   const [items, setItems] = useState([]);
@@ -61,9 +61,15 @@ const NewArrival = () => {
                     <h2 className="card-title uppercase text-base">
                       {item.title}
                     </h2>
-                    <p className="text-sm text-blue-300 pt-3">
-                      <span className="text-sky-500">Price:</span> {item.price}
-                    </p>
+                    <div className="flex justify-between items-center pt-2">
+                      <p className="text-sm text-blue-300 pt-3">
+                        <span className="text-sky-500">Price:</span>{" "}
+                        {item.price}
+                      </p>
+                      <button className="btn rounded-full border-sky-700 mt-2">
+                        <FaRegHeart className="text-lg text-sky-500" />
+                      </button>
+                    </div>
                   </div>
                   <div className="card-actions justify-center mt-4">
                     <button className="btn  btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-blue-800 transition duration-300">

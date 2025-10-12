@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaFire } from "react-icons/fa";
+import { FaFire, FaRegHeart } from "react-icons/fa";
 import { FaShoppingBag, FaCartPlus } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -64,9 +64,15 @@ const BestSelling = () => {
                     <h2 className="card-title uppercase text-base">
                       {item.title}
                     </h2>
-                    <p className="text-sm text-blue-300 pt-3">
-                      <span className="text-sky-500">Price:</span> {item.price}
-                    </p>
+                    <div className="flex justify-between items-center pt-2">
+                      <p className="text-sm text-blue-300 pt-3">
+                        <span className="text-sky-500">Price:</span>{" "}
+                        {item.price}
+                      </p>
+                      <button className="btn rounded-full border-sky-700 mt-2">
+                        <FaRegHeart className="text-lg text-sky-500" />
+                      </button>
+                    </div>
                   </div>
                   <div className="card-actions justify-center mt-4">
                     <button className="btn  btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-blue-800 transition duration-300">

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { GiFeather } from "react-icons/gi"; // সুন্দর Signature আইকন
-import { FaShoppingBag, FaCartPlus } from "react-icons/fa";
+import { FaShoppingBag, FaCartPlus, FaRegHeart } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -68,10 +68,15 @@ const SignatureEdition = () => {
                     <h2 className="card-title uppercase text-base">
                       {item.title}
                     </h2>
-                    <p className="text-sm  text-blue-300 pt-3">
-                      <span className="text-sky-500">Price:</span>
-                      {item.price}
-                    </p>
+                    <div className="flex justify-between items-center pt-2">
+                      <p className="text-sm  text-blue-300 pt-3">
+                        <span className="text-sky-500">Price:</span>
+                        {item.price}
+                      </p>
+                      <button className="btn rounded-full border-sky-700 mt-2">
+                        <FaRegHeart className="text-lg text-sky-500" />
+                      </button>
+                    </div>
                   </div>
 
                   <div className="card-actions justify-center mt-4">
