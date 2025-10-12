@@ -1,5 +1,5 @@
 "use client";
-import { FaHeart, FaHome } from "react-icons/fa";
+import { FaHeart, FaHome, FaRegHeart, FaUsers } from "react-icons/fa";
 import { MdPostAdd } from "react-icons/md";
 import { FaBoxOpen } from "react-icons/fa";
 import { IoMdAddCircle } from "react-icons/io";
@@ -8,6 +8,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Noto_Serif } from "next/font/google";
 import { motion } from "framer-motion";
+import { IoCartOutline } from "react-icons/io5";
 
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
@@ -27,9 +28,9 @@ const Navbar = () => {
         </Link>
       </li>
       <li className={`text-lg ${notoSerif.className}`}>
-        <Link href="/Posts">
+        <Link href="/Outfits">
           <MdPostAdd className="inline " />
-          Posts
+          Outfits
         </Link>
       </li>
       <li className={`text-lg ${notoSerif.className}`}>
@@ -85,7 +86,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <h3 className="font-extrabold pl-4 text-4xl text-sky-500">
+        <h3 className="font-extrabold pl-4 lg:text-4xl text-2xl text-sky-500">
           <motion.span
             animate={{ color: ["#7dd3fc", "#38bdf8", "#0ea5e9"] }}
             transition={{
@@ -108,11 +109,22 @@ const Navbar = () => {
       </div>
 
       {/* Right side (extra button or profile) */}
-      <div className="indicator pr-10 navbar-end">
-        <span className="indicator-item mr-10 badge badge-secondary">12</span>
-        <button className="btn">
-          <FaHeart />
-        </button>
+      <div className="indicator pr-10 gap-2 navbar-end">
+        <div>
+          <button className="btn rounded-full border-sky-700">
+            <IoCartOutline className="text-lg text-sky-500" />
+          </button>
+        </div>
+        <div>
+          <button className="btn rounded-full border-sky-700">
+            <FaRegHeart className="text-lg text-sky-500" />
+          </button>
+        </div>
+        <div>
+          <button className="btn rounded-full border-sky-700">
+            <FaUsers className="text-lg text-sky-500" />
+          </button>
+        </div>
       </div>
     </div>
   );
