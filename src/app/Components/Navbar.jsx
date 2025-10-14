@@ -30,7 +30,7 @@ const Navbar = () => {
       <li className={`text-lg ${notoSerif.className}`}>
         <Link href="/Outfits">
           <MdPostAdd className="inline " />
-          Outfits
+          OutFits
         </Link>
       </li>
       <li className={`text-lg ${notoSerif.className}`}>
