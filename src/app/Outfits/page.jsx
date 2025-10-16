@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Filter from "../Or-Components/OutfitSe/Filter";
+import TShirt from "../Or-Components/OutfitSe/Tshirt";
 
 const OutfitsPage = () => {
   return (
@@ -44,6 +45,7 @@ const OutfitsPage = () => {
       </section>
       {/* Filter */}
       <Filter />
+      <TShirt />
     </div>
   );
 };

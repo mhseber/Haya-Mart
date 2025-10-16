@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import { Noto_Serif } from "next/font/google";
 import { motion } from "framer-motion";
 import { IoCartOutline } from "react-icons/io5";
+import { GiClothes } from "react-icons/gi";
 
 const notoSerif = Noto_Serif({
   subsets: ["latin"],
@@ -29,7 +30,7 @@ const Navbar = () => {
       </li>
       <li className={`text-lg ${notoSerif.className}`}>
         <Link href="/Outfits">
-          <MdPostAdd className="inline " />
+          <GiClothes className="inline " />
           OutFits
         </Link>
       </li>

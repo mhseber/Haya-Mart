@@ -21,3 +21,6 @@ revalidatePath("/products")
     return Response.json({ result})
 }
 
+
+
+

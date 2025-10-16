@@ -21,7 +21,7 @@ const Filter = () => {
   return (
     <section className="flex flex-col items-center justify-center p-5 px-4">
       <motion.div
-        className=" bg-sky-400 w-full max-w-5xl p-6 rounded-3xl shadow-2xl shadow-blue-700 "
+        className=" bg-sky-300 w-full max-w-5xl p-6 rounded-3xl shadow-2xl shadow-blue-700 "
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
