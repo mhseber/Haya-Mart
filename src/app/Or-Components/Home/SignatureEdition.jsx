@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { GiFeather } from "react-icons/gi"; // সুন্দর Signature আইকন
+import { GiFeather } from "react-icons/gi";
 import { FaShoppingBag, FaCartPlus, FaRegHeart } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";

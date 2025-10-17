@@ -1,0 +1,139 @@
+[
+  {
+    "name": "1 Ummah T-shirt - White",
+    "code": "TSH001",
+    "color": "White",
+    "description": "Soft cotton white T-shirt with a clean, minimal design.",
+    "inStock": true,
+    "category": "T-Shirt",
+    "img": "https://www.getdawah.com/cdn/shop/products/White_f7972063-d10e-410d-bfb2-1f9a85420ca7.jpg?v=1607805643&width=1500"
+  },
+  {
+    "name": "Best dawah of a muslim - Black",
+    "code": "TSH002",
+    "color": "Black",
+    "description": "Everyday wear T-shirt made from 100% organic cotton.",
+    "inStock": true,
+    "category": "T-Shirt",
+    "img": "https://rokbucket.rokomari.io/ProductNew20190903/260X372/One_Ummah_BD_Best_dawah_of_a_muslim_is_h-One_Ummah_BD-d088c-283250.png"
+  },
+  {
+    "name": "Round neck half sleeve - Gray",
+    "code": "TSH003",
+    "color": "Gray",
+    "description": "Urban-style graphic T-shirt with high-quality print.",
+    "inStock": true,
+    "category": "T-Shirt",
+    "img": "https://images.othoba.com/images/thumbs/1170399_round-neck-half-sleeve-t-shirt-100-cotton-fabric_bio-washed-gsm-180.jpeg"
+  },
+  {
+    "name": "Round neck half sleeve - Olive",
+    "code": "TSH004",
+    "color": "Olive",
+    "description": "Trendy olive T-shirt that matches all your favorite jeans.",
+    "inStock": true,
+    "category": "T-Shirt",
+    "img": "https://www.aazbd.com/wp-content/uploads/2024/06/SOLID-OLIVE-GREEN-scaled.jpg"
+  },
+  {
+    "name": "Round neck half sleeve - Mint Green",
+    "code": "TSH005",
+    "color": "Mint Green",
+    "description": "Cool and comfy mint T-shirt perfect for hot summer days.",
+    "inStock": true,
+    "category": "T-Shirt",
+    "img": "https://5.imimg.com/data5/SELLER/Default/2020/11/EG/MN/RZ/113713486/men-dark-green-plain-t-shirt-500x500.jpg"
+  },
+
+  {
+    "name": "Black Drop Shoulder Tee",
+    "code": "DRS001",
+    "color": "Black",
+    "description": "Oversized drop shoulder tee with a relaxed fit and premium cotton.",
+    "inStock": true,
+    "category": "Drop Shoulder",
+    "img": ""
+  },
+  {
+    "name": "Beige Drop Shoulder Tee",
+    "code": "DRS002",
+    "color": "Beige",
+    "description": "Soft beige drop shoulder T-shirt with casual streetwear vibe.",
+    "inStock": true,
+    "category": "Drop Shoulder",
+    "img": ""
+  },
+  {
+    "name": "Charcoal Gray Drop Shoulder",
+    "code": "DRS003",
+    "color": "Charcoal",
+    "description": "Relaxed charcoal drop shoulder tee made with premium fabric.",
+    "inStock": false,
+    "category": "Drop Shoulder",
+    "img": ""
+  },
+  {
+    "name": "Lavender Oversized Drop Tee",
+    "code": "DRS004",
+    "color": "Lavender",
+    "description": "Trendy lavender oversized tee with drop shoulders.",
+    "inStock": true,
+    "category": "Drop Shoulder",
+    "img": ""
+  },
+  {
+    "name": "Navy Blue Drop Shoulder Tee",
+    "code": "DRS005",
+    "color": "Navy Blue",
+    "description": "Stylish navy tee with a roomy drop shoulder design.",
+    "inStock": true,
+    "category": "Drop Shoulder",
+    "img": ""
+  },
+
+  {
+    "name": "Classic White Polo Shirt",
+    "code": "POL001",
+    "color": "White",
+    "description": "Premium cotton polo shirt with two-button placket.",
+    "inStock": true,
+    "category": "Polo",
+    "img": ""
+  },
+  {
+    "name": "Black Premium Polo",
+    "code": "POL002",
+    "color": "Black",
+    "description": "Slim-fit black polo with breathable cotton fabric.",
+    "inStock": true,
+    "category": "Polo",
+    "img": ""
+  },
+  {
+    "name": "Royal Blue Polo Shirt",
+    "code": "POL003",
+    "color": "Royal Blue",
+    "description": "Vibrant blue polo with a soft collar and durable stitching.",
+    "inStock": true,
+    "category": "Polo",
+    "img": ""
+  },
+  {
+    "name": "Gray Sports Polo",
+    "code": "POL004",
+    "color": "Gray",
+    "description": "Moisture-wicking gray polo ideal for active days.",
+    "inStock": false,
+    "category": "Polo",
+    "img": ""
+  },
+  {
+    "name": "Maroon Classic Polo",
+    "code": "POL005",
+    "color": "Maroon",
+    "description": "Rich maroon polo perfect for both casual and formal looks.",
+    "inStock": true,
+    "category": "Polo",
+    "img": ""
+  }
+]

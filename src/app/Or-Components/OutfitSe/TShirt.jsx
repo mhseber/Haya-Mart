@@ -10,6 +10,7 @@ const TShirt = () => {
         </section>
         <div className="divider divide-gray-300"></div>
       </div>
+      {/* card */}
     </div>
   );
 };
