@@ -46,94 +46,94 @@
   },
 
   {
-    "name": "Black Drop Shoulder Tee",
+    "name": "Sabr Oversized Drop Shoulder - Black",
     "code": "DRS001",
     "color": "Black",
-    "description": "Oversized drop shoulder tee with a relaxed fit and premium cotton.",
+    "description": "Oversized drop shoulder  with a relaxed fit and premium cotton.",
     "inStock": true,
     "category": "Drop Shoulder",
-    "img": ""
+    "img": "https://www.shopummah.pk/wp-content/uploads/2024/06/4476.jpg"
   },
   {
-    "name": "Beige Drop Shoulder Tee",
+    "name": "Beige Drop Shoulder - Soft",
     "code": "DRS002",
     "color": "Beige",
     "description": "Soft beige drop shoulder T-shirt with casual streetwear vibe.",
     "inStock": true,
     "category": "Drop Shoulder",
-    "img": ""
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3EFVr6mOuWE9wn0uqOdx8AQS2yXNuwqV12w&s"
   },
   {
-    "name": "Charcoal Gray Drop Shoulder",
+    "name": "Explore Drop Shoulder - Charcoal",
     "code": "DRS003",
     "color": "Charcoal",
-    "description": "Relaxed charcoal drop shoulder tee made with premium fabric.",
+    "description": "Relaxed charcoal drop shoulder  made with premium fabric.",
     "inStock": false,
     "category": "Drop Shoulder",
-    "img": ""
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/87O5zXeU4mTS02p1dCCmLBISwWVlQJp138fzWljJ.webp"
   },
   {
-    "name": "Lavender Oversized Drop Tee",
+    "name": "Oversized Drop Shoulder - Lavender",
     "code": "DRS004",
     "color": "Lavender",
-    "description": "Trendy lavender oversized tee with drop shoulders.",
+    "description": "Trendy lavender oversized  with drop shoulders.",
     "inStock": true,
     "category": "Drop Shoulder",
-    "img": ""
+    "img": "https://www.shopummah.pk/wp-content/uploads/2024/08/4481.jpg"
   },
   {
-    "name": "Navy Blue Drop Shoulder Tee",
+    "name": "Navy Blue Drop Shoulder - Stylish ",
     "code": "DRS005",
     "color": "Navy Blue",
     "description": "Stylish navy tee with a roomy drop shoulder design.",
     "inStock": true,
     "category": "Drop Shoulder",
-    "img": ""
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaCDXltodRwwbzdI8-178XEnhL4g1kx6tpBw&s"
   },
 
   {
-    "name": "Classic White Polo Shirt",
+    "name": "MENS PREMIUM SINGLE JERSEY POLO T-SHIRT - White",
     "code": "POL001",
     "color": "White",
     "description": "Premium cotton polo shirt with two-button placket.",
     "inStock": true,
     "category": "Polo",
-    "img": ""
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpE26TnX4OAHXSGeT5cCx0Et0Fcn6uXvM13mxIBiOjhL2kKZZGckyzHJJiSIl3mucYDFk&usqp=CAU"
   },
   {
-    "name": "Black Premium Polo",
+    "name": "MENS PREMIUM SINGLE JERSEY POLO T-SHIRT - Black",
     "code": "POL002",
     "color": "Black",
     "description": "Slim-fit black polo with breathable cotton fabric.",
     "inStock": true,
     "category": "Polo",
-    "img": ""
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/v2m35lRWbth3VDNaSwYQ40pZK7eMYdcDJvwhZN04.webp"
   },
   {
-    "name": "Royal Blue Polo Shirt",
+    "name": "MENS PREMIUM SINGLE JERSEY POLO T-SHIRT - Royal Blue",
     "code": "POL003",
     "color": "Royal Blue",
-    "description": "Vibrant blue polo with a soft collar and durable stitching.",
+    "description": "Royal Blue polo with a soft collar and durable stitching.",
     "inStock": true,
     "category": "Polo",
-    "img": ""
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/NsWC7KgHNSLgFPnkJ3toJtceJBcRxOd6dhnuQySJ.webp"
   },
   {
-    "name": "Gray Sports Polo",
+    "name": "MENS PREMIUM SINGLE JERSEY POLO T-SHIRT - Brown",
     "code": "POL004",
-    "color": "Gray",
-    "description": "Moisture-wicking gray polo ideal for active days.",
+    "color": "Brown",
+    "description": "Moisture-wicking Brown polo ideal for active days.",
     "inStock": false,
     "category": "Polo",
-    "img": ""
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/acGBst2jO9Y5oY30mOweBUwTXy3h7ERpPhW3bdDr.webp"
   },
   {
-    "name": "Maroon Classic Polo",
+    "name": "MENS PREMIUM SINGLE JERSEY POLO T-SHIRT - Coffee",
     "code": "POL005",
-    "color": "Maroon",
-    "description": "Rich maroon polo perfect for both casual and formal looks.",
+    "color": "Coffee",
+    "description": "Rich Coffee polo perfect for both casual and formal looks.",
     "inStock": true,
     "category": "Polo",
-    "img": ""
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/OzTdLvx7NIrB3qOal2Dm8fpJZ7Amszuz7VRsIKuI.webp"
   }
 ]
