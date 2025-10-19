@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Classic White Panjabi",
+    "code": "PNJ-001",
+    "color": "White",
+    "description": "A timeless white panjabi made from soft cotton fabric that ensures all-day comfort. Perfect for Jummah prayers, festivals, or casual gatherings. The classic design brings elegance to any traditional outfit.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 1850,
+    "img": "https://i.ibb.co/3C6kFJr/white-panjabi.jpg"
+  },
+  {
+    "name": "Royal Blue Panjabi",
+    "code": "PNJ-002",
+    "color": "Royal Blue",
+    "description": "Crafted with premium cotton blend, this royal blue panjabi gives a rich, bold look. Ideal for cultural programs or special events, it adds sophistication and style with minimal effort.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 1950,
+    "img": "https://i.ibb.co/N9PpWVr/royal-blue-panjabi.jpg"
+  },
+  {
+    "name": "Jet Black Panjabi",
+    "code": "PNJ-003",
+    "color": "Black",
+    "description": "An elegant black panjabi designed for the modern gentleman. Its sleek finish and tailored fit make it perfect for evening wear, Eid occasions, or family gatherings.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 2100,
+    "img": "https://i.ibb.co/VBFG2Lg/black-panjabi.jpg"
+  },
+  {
+    "name": "Olive Green Panjabi",
+    "code": "PNJ-004",
+    "color": "Olive Green",
+    "description": "Made from soft cotton-linen mix, this olive green panjabi offers both comfort and durability. The subtle shade and fine stitching give it a classy and sophisticated appeal.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 1750,
+    "img": "https://i.ibb.co/JK0RLwM/olive-panjabi.jpg"
+  },
+  {
+    "name": "Maroon Luxury Panjabi",
+    "code": "PNJ-005",
+    "color": "Maroon",
+    "description": "A luxurious maroon panjabi designed with intricate embroidery on the collar and cuffs. Made from rich fabric that feels smooth on the skin, making it ideal for weddings or special ceremonies.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 2250,
+    "img": "https://i.ibb.co/3ztd7Cy/maroon-panjabi.jpg"
+  },
+  {
+    "name": "Navy Blue Panjabi",
+    "code": "PNJ-006",
+    "color": "Navy Blue",
+    "description": "This navy blue panjabi offers a perfect blend of tradition and modernity. Lightweight, breathable fabric ensures comfort during long festive days and special events.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 2050,
+    "img": "https://i.ibb.co/Bn5J6sD/navy-panjabi.jpg"
+  },
+  {
+    "name": "Cream Cotton Panjabi",
+    "code": "PNJ-007",
+    "color": "Cream",
+    "description": "Soft cream cotton panjabi with minimalistic design. Perfect for hot weather and casual occasions. The fine cotton texture gives a graceful and elegant appearance.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 1750,
+    "img": "https://i.ibb.co/SKprTn4/cream-panjabi.jpg"
+  },
+  {
+    "name": "Sky Blue Panjabi",
+    "code": "PNJ-008",
+    "color": "Sky Blue",
+    "description": "A refreshing sky blue panjabi crafted from breathable cotton. Its soothing color and simple design make it perfect for both everyday wear and religious occasions.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 1800,
+    "img": "https://i.ibb.co/Gn3F4Gm/sky-panjabi.jpg"
+  },
+  {
+    "name": "Ash Grey Panjabi",
+    "code": "PNJ-009",
+    "color": "Ash Grey",
+    "description": "A smart ash grey panjabi for a contemporary look. Tailored with attention to detail, this piece ensures a sharp and confident appearance for any social gathering.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 1900,
+    "img": "https://i.ibb.co/LJc1cLG/ash-panjabi.jpg"
+  },
+  {
+    "name": "Golden Beige Panjabi",
+    "code": "PNJ-010",
+    "color": "Golden Beige",
+    "description": "This golden beige panjabi reflects luxury and class. Designed with subtle detailing on the collar, it is ideal for formal programs and traditional events.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 2300,
+    "img": "https://i.ibb.co/ZfXBrVG/golden-panjabi.jpg"
+  },
+  {
+    "name": "Forest Green Panjabi",
+    "code": "PNJ-011",
+    "color": "Forest Green",
+    "description": "A deep forest green panjabi with a rich texture and strong stitching. Designed for those who prefer bold yet traditional tones for special occasions.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 2000,
+    "img": "https://i.ibb.co/gdnBYR2/forest-panjabi.jpg"
+  },
+  {
+    "name": "Silver Grey Panjabi",
+    "code": "PNJ-012",
+    "color": "Silver Grey",
+    "description": "A soft and elegant silver-grey panjabi made from breathable cotton. Its light tone gives a premium, calm look ideal for Jummah or Eid wear.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 1950,
+    "img": "https://i.ibb.co/1LwK3zW/silver-panjabi.jpg"
+  },
+  {
+    "name": "Mustard Yellow Panjabi",
+    "code": "PNJ-013",
+    "color": "Mustard Yellow",
+    "description": "A bright mustard yellow panjabi perfect for festive days. The soft cotton fabric and stylish collar detailing make it stand out in any crowd.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 2100,
+    "img": "https://i.ibb.co/ZxchJds/mustard-panjabi.jpg"
+  },
+  {
+    "name": "Chocolate Brown Panjabi",
+    "code": "PNJ-014",
+    "color": "Chocolate Brown",
+    "description": "Made from rich fabric with a deep brown hue, this panjabi gives a royal look suitable for evening wear or traditional events.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 2200,
+    "img": "https://i.ibb.co/Rch5Qk6/brown-panjabi.jpg"
+  },
+  {
+    "name": "Teal Blue Panjabi",
+    "code": "PNJ-015",
+    "color": "Teal Blue",
+    "description": "A unique teal blue panjabi combining elegance and comfort. Crafted from high-quality fabric that stays cool and soft even after long wear.",
+    "inStock": "In Stock",
+    "category": "Panjabi",
+    "price": 2150,
+    "img": "https://i.ibb.co/hsGdXTv/teal-panjabi.jpg"
+  }
+]

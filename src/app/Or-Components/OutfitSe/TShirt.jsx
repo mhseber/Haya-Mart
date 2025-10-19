@@ -1,27 +1,6 @@
-// import React from "react";
-
-// const TShirt = () => {
-//   return (
-//     <div className="px-4">
-//       {/* text */}
-//       <div className="px-6">
-//         <section className="flex justify-start gap-3 my-4 pl-5">
-//           <h2 className="text-3xl text-blue-200 font-bold">T-Shirt</h2>
-//         </section>
-//         <div className="divider divide-gray-300"></div>
-//       </div>
-//       {/* card */}
-//     </div>
-//   );
-// };
-
-// export default TShirt;
-
 "use client";
-
 import React, { useEffect, useState } from "react";
 import { FaShoppingBag, FaCartPlus, FaRegHeart } from "react-icons/fa";
-// import { TfiTshirt } from "react-icons/tfi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -41,11 +20,10 @@ const TShirt = () => {
   }, []);
 
   return (
-    <div className="px-6 py-10">
+    <div className="px-6 py-8">
       {/* Title Section */}
-      <section className="flex justify-start gap-3 my-8 pl-5">
-        {/* <TfiTshirt className="text-4xl text-blue-400" /> */}
-        <h2 className="text-3xl font-bold text-blue-200">T-Shirt Collection</h2>
+      <section className=" gap-3 my-8 pl-5">
+        <h2 className="text-3xl font-bold text-blue-200">T-Shirt</h2>
       </section>
 
       <div className="divider divide-gray-300"></div>
@@ -90,16 +68,20 @@ const TShirt = () => {
                     <h2 className="card-title uppercase text-base">
                       {item.name}
                     </h2>
-                    <p className="text-sm text-gray-500">{item.description}</p>
 
                     <div className="flex justify-between items-center pt-2">
                       <p className="text-sm text-blue-300 pt-3">
-                        <span className="text-sky-500">Color:</span>{" "}
-                        {item.color}
+                        <span className="text-sky-500">Price: </span>
+                        {item.price}
                       </p>
-                      <button className="btn rounded-full border-sky-700 mt-2">
-                        <FaRegHeart className="text-lg text-sky-500" />
-                      </button>
+                      <div>
+                        <button className="btn rounded-full border-sky-700 mt-2">
+                          <FaRegHeart className="text-lg text-sky-500" />
+                        </button>
+                        <button className="btn rounded-full border-sky-700 mt-2">
+                          <FaRegHeart className="text-lg text-sky-500" />
+                        </button>
+                      </div>
                     </div>
                     <p
                       className={`text-sm font-semibold mt-2 ${
