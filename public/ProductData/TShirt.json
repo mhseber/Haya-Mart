@@ -6,6 +6,7 @@
     "description": "Soft cotton white T-shirt with a clean, minimal design.",
     "inStock": true,
     "category": "T-Shirt",
+    "price": 399,
     "img": "https://www.getdawah.com/cdn/shop/products/White_f7972063-d10e-410d-bfb2-1f9a85420ca7.jpg?v=1607805643&width=1500"
   },
   {
@@ -15,6 +16,7 @@
     "description": "Everyday wear T-shirt made from 100% organic cotton.",
     "inStock": true,
     "category": "T-Shirt",
+    "price": 399,
     "img": "https://rokbucket.rokomari.io/ProductNew20190903/260X372/One_Ummah_BD_Best_dawah_of_a_muslim_is_h-One_Ummah_BD-d088c-283250.png"
   },
   {
@@ -24,6 +26,7 @@
     "description": "Urban-style graphic T-shirt with high-quality print.",
     "inStock": true,
     "category": "T-Shirt",
+    "price": 399,
     "img": "https://images.othoba.com/images/thumbs/1170399_round-neck-half-sleeve-t-shirt-100-cotton-fabric_bio-washed-gsm-180.jpeg"
   },
   {
@@ -33,6 +36,7 @@
     "description": "Trendy olive T-shirt that matches all your favorite jeans.",
     "inStock": true,
     "category": "T-Shirt",
+    "price": 499,
     "img": "https://www.aazbd.com/wp-content/uploads/2024/06/SOLID-OLIVE-GREEN-scaled.jpg"
   },
   {
@@ -42,26 +46,29 @@
     "description": "Cool and comfy mint T-shirt perfect for hot summer days.",
     "inStock": true,
     "category": "T-Shirt",
+    "price": 599,
     "img": "https://5.imimg.com/data5/SELLER/Default/2020/11/EG/MN/RZ/113713486/men-dark-green-plain-t-shirt-500x500.jpg"
   },
 
   {
-    "name": "Sabr Oversized Drop Shoulder - Black",
+    "name": "Dignity Oversized Drop Shoulder - Orange",
     "code": "DRS001",
-    "color": "Black",
+    "color": "Orange",
     "description": "Oversized drop shoulder  with a relaxed fit and premium cotton.",
     "inStock": true,
     "category": "Drop Shoulder",
-    "img": "https://www.shopummah.pk/wp-content/uploads/2024/06/4476.jpg"
+    "price": 650,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDeK9uARNwg3qZKhVmMrJAot29vd3e_1w8NzQo0CsLetVHZEah8Bw0RBo8S9BVcaUuY8w&usqp=CAU"
   },
   {
-    "name": "Beige Drop Shoulder - Soft",
+    "name": "Palestine Oversized Drop Shoulder - White",
     "code": "DRS002",
-    "color": "Beige",
-    "description": "Soft beige drop shoulder T-shirt with casual streetwear vibe.",
+    "color": "White",
+    "description": "Soft Palestine Oversized drop shoulder with casual vibe.",
     "inStock": true,
     "category": "Drop Shoulder",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3EFVr6mOuWE9wn0uqOdx8AQS2yXNuwqV12w&s"
+      "price": 650,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/mtYXhnmtXEIOgvdyaES8OHCCZ70GUctOV853qyhr.webp"
   },
   {
     "name": "Explore Drop Shoulder - Charcoal",
@@ -70,25 +77,28 @@
     "description": "Relaxed charcoal drop shoulder  made with premium fabric.",
     "inStock": false,
     "category": "Drop Shoulder",
+      "price": 750,
     "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/87O5zXeU4mTS02p1dCCmLBISwWVlQJp138fzWljJ.webp"
   },
   {
-    "name": "Oversized Drop Shoulder - Lavender",
+    "name": " ILM SEEKER Drop Shoulder - Off White",
     "code": "DRS004",
-    "color": "Lavender",
-    "description": "Trendy lavender oversized  with drop shoulders.",
+    "color": "Off White",
+    "description": " ILM SEEKER oversized  with drop shoulders.",
     "inStock": true,
     "category": "Drop Shoulder",
-    "img": "https://www.shopummah.pk/wp-content/uploads/2024/08/4481.jpg"
+      "price": 750,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/K7jl3f3O8Y1IwsSeJS8cnLI5qn0VDQOOxgRyMLVG.webp"
   },
   {
-    "name": "Navy Blue Drop Shoulder - Stylish ",
+    "name": "Sailor Drop Shoulder - Sky Blue",
     "code": "DRS005",
-    "color": "Navy Blue",
-    "description": "Stylish navy tee with a roomy drop shoulder design.",
+    "color": "Sky Blue",
+    "description": "Stylish Sky Blue with a Sailor drop shoulder design.",
     "inStock": true,
     "category": "Drop Shoulder",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaCDXltodRwwbzdI8-178XEnhL4g1kx6tpBw&s"
+      "price": 800,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/g6h32OxWVUctvHpZRoGOPHysO6JHT3TC2sPKZ4l2.webp"
   },
 
   {
@@ -98,6 +108,7 @@
     "description": "Premium cotton polo shirt with two-button placket.",
     "inStock": true,
     "category": "Polo",
+      "price": 700,
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpE26TnX4OAHXSGeT5cCx0Et0Fcn6uXvM13mxIBiOjhL2kKZZGckyzHJJiSIl3mucYDFk&usqp=CAU"
   },
   {
@@ -107,6 +118,7 @@
     "description": "Slim-fit black polo with breathable cotton fabric.",
     "inStock": true,
     "category": "Polo",
+      "price": 700,
     "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/v2m35lRWbth3VDNaSwYQ40pZK7eMYdcDJvwhZN04.webp"
   },
   {
@@ -116,6 +128,7 @@
     "description": "Royal Blue polo with a soft collar and durable stitching.",
     "inStock": true,
     "category": "Polo",
+      "price": 850,
     "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/NsWC7KgHNSLgFPnkJ3toJtceJBcRxOd6dhnuQySJ.webp"
   },
   {
@@ -125,6 +138,7 @@
     "description": "Moisture-wicking Brown polo ideal for active days.",
     "inStock": false,
     "category": "Polo",
+      "price": 850,
     "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/acGBst2jO9Y5oY30mOweBUwTXy3h7ERpPhW3bdDr.webp"
   },
   {
@@ -134,6 +148,7 @@
     "description": "Rich Coffee polo perfect for both casual and formal looks.",
     "inStock": true,
     "category": "Polo",
+      "price": 850,
     "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/OzTdLvx7NIrB3qOal2Dm8fpJZ7Amszuz7VRsIKuI.webp"
   }
 ]
