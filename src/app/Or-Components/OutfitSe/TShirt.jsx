@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { FaShoppingBag, FaCartPlus, FaRegHeart } from "react-icons/fa";
+import { AiFillEye } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -10,7 +11,8 @@ import "swiper/css/pagination";
 const TShirt = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/api/items/tshirt")
+    // fetch("http://localhost:3000/api/items/tshirt")
+    fetch("ProductData/tshirt.json")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch data");
         return res.json();
@@ -74,12 +76,12 @@ const TShirt = () => {
                         <span className="text-sky-500">Price: </span>
                         {item.price}
                       </p>
-                      <div>
-                        <button className="btn rounded-full border-sky-700 mt-2">
+                      <div className="flex gap-2">
+                        <button className="btn rounded-2xl border-sky-700 mt-2">
                           <FaRegHeart className="text-lg text-sky-500" />
                         </button>
-                        <button className="btn rounded-full border-sky-700 mt-2">
-                          <FaRegHeart className="text-lg text-sky-500" />
+                        <button className="btn rounded-2xl border-sky-700 mt-2">
+                          <AiFillEye className="text-lg text-sky-500" />
                         </button>
                       </div>
                     </div>
