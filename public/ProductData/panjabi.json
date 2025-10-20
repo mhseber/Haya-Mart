@@ -1,13 +1,13 @@
 [
   {
-    "name": "Classic White Panjabi",
+    "name": "MPJ02A25 MENS PANJABI - Coffee",
     "code": "PNJ-001",
-    "color": "White",
-    "description": "A timeless white panjabi made from soft cotton fabric that ensures all-day comfort. Perfect for Jummah prayers, festivals, or casual gatherings. The classic design brings elegance to any traditional outfit.",
+    "color": "Coffee",
+    "description": "Men’s Panjabi by Haya Mart – a perfect blend of style and comfort. Made from 100% premium cotton, it’s lightweight, breathable, and soft, ensuring all-day ease, especially in summer. Plus, its color stays vibrant even after multiple washes.",
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 1850,
-    "img": "https://i.ibb.co/3C6kFJr/white-panjabi.jpg"
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/6Rmj3IhFZ69ZhVB54q5DpkdMSkShHRmauxHIihWj.webp"
   },
   {
     "name": "Royal Blue Panjabi",
@@ -17,7 +17,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 1950,
-    "img": "https://i.ibb.co/N9PpWVr/royal-blue-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Jet Black Panjabi",
@@ -27,7 +27,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 2100,
-    "img": "https://i.ibb.co/VBFG2Lg/black-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Olive Green Panjabi",
@@ -37,7 +37,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 1750,
-    "img": "https://i.ibb.co/JK0RLwM/olive-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Maroon Luxury Panjabi",
@@ -47,7 +47,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 2250,
-    "img": "https://i.ibb.co/3ztd7Cy/maroon-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Navy Blue Panjabi",
@@ -57,7 +57,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 2050,
-    "img": "https://i.ibb.co/Bn5J6sD/navy-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Cream Cotton Panjabi",
@@ -67,7 +67,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 1750,
-    "img": "https://i.ibb.co/SKprTn4/cream-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Sky Blue Panjabi",
@@ -77,7 +77,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 1800,
-    "img": "https://i.ibb.co/Gn3F4Gm/sky-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Ash Grey Panjabi",
@@ -87,7 +87,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 1900,
-    "img": "https://i.ibb.co/LJc1cLG/ash-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Golden Beige Panjabi",
@@ -97,7 +97,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 2300,
-    "img": "https://i.ibb.co/ZfXBrVG/golden-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Forest Green Panjabi",
@@ -107,7 +107,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 2000,
-    "img": "https://i.ibb.co/gdnBYR2/forest-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Silver Grey Panjabi",
@@ -117,7 +117,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 1950,
-    "img": "https://i.ibb.co/1LwK3zW/silver-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Mustard Yellow Panjabi",
@@ -127,7 +127,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 2100,
-    "img": "https://i.ibb.co/ZxchJds/mustard-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Chocolate Brown Panjabi",
@@ -137,7 +137,7 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 2200,
-    "img": "https://i.ibb.co/Rch5Qk6/brown-panjabi.jpg"
+    "img": ""
   },
   {
     "name": "Teal Blue Panjabi",
@@ -147,6 +147,6 @@
     "inStock": "In Stock",
     "category": "Panjabi",
     "price": 2150,
-    "img": "https://i.ibb.co/hsGdXTv/teal-panjabi.jpg"
+    "img": ""
   }
 ]
