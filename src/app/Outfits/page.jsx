@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Filter from "../Or-Components/OutfitSe/Filter";
 import TShirt from "../Or-Components/OutfitSe/Tshirt";
 import Panjabi from "../Or-Components/OutfitSe/Panjabi";
+import Caps from "../Or-Components/OutfitSe/Caps";
 
 const OutfitsPage = () => {
   return (
@@ -49,6 +50,7 @@ const OutfitsPage = () => {
       {/* product Section */}
       <Panjabi />
       <TShirt />
+      <Caps />
     </div>
   );
 };
