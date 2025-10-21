@@ -46,8 +46,9 @@ const OutfitsPage = () => {
       </section>
       {/* Filter */}
       <Filter />
-      <TShirt />
+      {/* product Section */}
       <Panjabi />
+      <TShirt />
     </div>
   );
 };
