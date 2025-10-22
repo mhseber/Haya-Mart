@@ -1,0 +1,152 @@
+[
+  {
+    "name": "",
+    "code": "CAP001",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1200,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP002",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1300,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP003",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1250,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP004",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1350,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP005",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1400,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP006",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1200,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP007",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1250,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP008",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1350,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP009",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1400,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP010",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1300,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP011",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1450,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP012",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1500,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP013",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1350,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP014",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1600,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "CAP015",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Cap",
+    "price": 1450,
+    "img": ""
+  }
+]
