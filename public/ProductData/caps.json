@@ -1,152 +1,102 @@
 [
   {
-    "name": "",
+    "name": "DOCKER CAP - BLESSING",
     "code": "CAP001",
-    "color": "",
-    "description": "",
+    "color": "Maroon",
+    "description": "The Docker Cap by Haya Mart – a must-have accessory that blends style, comfort, and premium quality. Made from high-quality suede leather, this cap delivers a luxurious texture and long-lasting durability. With a soft inner lining, it ensures breathable comfort, making it perfect for everyday wear, travel, and outdoor adventures.",
     "inStock": true,
     "category": "Cap",
-    "price": 1200,
-    "img": ""
+    "price": 650,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/3D6VMIjQGWe3FmZAELKnJc9i9hUGyGvYaTUzp5IG.webp"
   },
   {
-    "name": "",
+    "name": "DOCKER CAP - ONE UMMAH",
     "code": "CAP002",
-    "color": "",
-    "description": "",
+    "color": " Bottle Green",
+    "description": "The Docker Cap by Haya Mart – a must-have accessory that blends style, comfort, and premium quality. Made from high-quality suede leather, this cap delivers a luxurious texture and long-lasting durability. With a soft inner lining, it ensures breathable comfort, making it perfect for everyday wear, travel, and outdoor adventures.",
     "inStock": true,
     "category": "Cap",
-    "price": 1300,
-    "img": ""
+    "price": 650,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/qcvcLbCsgvjUrFl2r7g072wRkfTx0jDZ49wnSawa.webp"
   },
   {
-    "name": "",
+    "name": "DOCKER CAP - SALAM",
     "code": "CAP003",
-    "color": "",
-    "description": "",
+    "color": "Olive",
+    "description": "The Docker Cap by Haya Mart – a must-have accessory that blends style, comfort, and premium quality. Made from high-quality suede leather, this cap delivers a luxurious texture and long-lasting durability. With a soft inner lining, it ensures breathable comfort, making it perfect for everyday wear, travel, and outdoor adventures.",
     "inStock": true,
     "category": "Cap",
-    "price": 1250,
-    "img": ""
+    "price": 650,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/pCGtLPqYYhlkzzUrqkNbezK8tWRGeyrZS6fa3rvs.webp"
   },
   {
-    "name": "",
+    "name": "DOCKER CAP - ISLAM IS THE ANCHOR OF PEACE",
     "code": "CAP004",
-    "color": "",
-    "description": "",
+    "color": "NAvy",
+    "description": "The Docker Cap by Haya Mart – a must-have accessory that blends style, comfort, and premium quality. Made from high-quality suede leather, this cap delivers a luxurious texture and long-lasting durability. With a soft inner lining, it ensures breathable comfort, making it perfect for everyday wear, travel, and outdoor adventures.",
     "inStock": true,
     "category": "Cap",
-    "price": 1350,
-    "img": ""
+    "price": 650,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/H9SHWz6JeEIT1zHOdwYbGQf3BvdojyiAGknS8t8a.webp"
   },
   {
-    "name": "",
+    "name": "DOCKER CAP - GRATITUDE",
     "code": "CAP005",
-    "color": "",
-    "description": "",
+    "color": "Navy Blue",
+    "description": "The Docker Cap by Haya Mart – a must-have accessory that blends style, comfort, and premium quality. Made from high-quality suede leather, this cap delivers a luxurious texture and long-lasting durability. With a soft inner lining, it ensures breathable comfort, making it perfect for everyday wear, travel, and outdoor adventures.",
     "inStock": true,
     "category": "Cap",
-    "price": 1400,
-    "img": ""
+    "price": 650,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/fMsdAUw8XcBbxHtS77TuWnY8vaWLE2HeCwgxmtOw.webp"
   },
   {
-    "name": "",
+    "name": "DOCKER CAP - HONOR",
     "code": "CAP006",
-    "color": "",
-    "description": "",
+    "color": "Olive",
+    "description": "The Docker Cap by Haya Mart – a must-have accessory that blends style, comfort, and premium quality. Made from high-quality suede leather, this cap delivers a luxurious texture and long-lasting durability. With a soft inner lining, it ensures breathable comfort, making it perfect for everyday wear, travel, and outdoor adventures.",
     "inStock": true,
     "category": "Cap",
-    "price": 1200,
-    "img": ""
+    "price": 650,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/6MX9NqrMAEkKXCALEgFd57ksihMEl8LIdMtUEj3h.webp"
   },
   {
-    "name": "",
+    "name": "DOCKER CAP - HONOR",
     "code": "CAP007",
-    "color": "",
-    "description": "",
+    "color": "Brown",
+    "description": "The Docker Cap by Haya Mart – a must-have accessory that blends style, comfort, and premium quality. Made from high-quality suede leather, this cap delivers a luxurious texture and long-lasting durability. With a soft inner lining, it ensures breathable comfort, making it perfect for everyday wear, travel, and outdoor adventures.",
     "inStock": true,
     "category": "Cap",
-    "price": 1250,
-    "img": ""
+    "price": 550,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/Nkh13bR8aDVwCVHhPhEEuzjNNucE33APyqxvpSGe.webp"
   },
   {
-    "name": "",
+    "name": "DOCKER CAP - 313",
     "code": "CAP008",
-    "color": "",
-    "description": "",
+    "color": "Brown",
+    "description": "The Docker Cap by Haya Mart – a must-have accessory that blends style, comfort, and premium quality. Made from high-quality suede leather, this cap delivers a luxurious texture and long-lasting durability. With a soft inner lining, it ensures breathable comfort, making it perfect for everyday wear, travel, and outdoor adventures.",
     "inStock": true,
     "category": "Cap",
-    "price": 1350,
-    "img": ""
+    "price": 550,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/Yo8vSKAsz3CzabhAdJSLNIAMksXXvOMgeacSoG2y.webp"
   },
   {
-    "name": "",
+    "name": "DOCKER CAP - JANNAH",
     "code": "CAP009",
-    "color": "",
-    "description": "",
+    "color": "Navy Blue",
+    "description": "The Docker Cap by Haya Mart – a must-have accessory that blends style, comfort, and premium quality. Made from high-quality suede leather, this cap delivers a luxurious texture and long-lasting durability. With a soft inner lining, it ensures breathable comfort, making it perfect for everyday wear, travel, and outdoor adventures.",
     "inStock": true,
     "category": "Cap",
-    "price": 1400,
-    "img": ""
+    "price": 450,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/Dz08gx7bcDXcopJ3MOP93dtI8TNewYUUFmriTlnV.webp"
   },
   {
-    "name": "",
+    "name": "DOCKER CAP - EXPLORE",
     "code": "CAP010",
-    "color": "",
-    "description": "",
+    "color": "Navy Blue",
+    "description": "The Docker Cap by Haya Mart – a must-have accessory that blends style, comfort, and premium quality. Made from high-quality suede leather, this cap delivers a luxurious texture and long-lasting durability. With a soft inner lining, it ensures breathable comfort, making it perfect for everyday wear, travel, and outdoor adventures.",
     "inStock": true,
     "category": "Cap",
-    "price": 1300,
-    "img": ""
-  },
-  {
-    "name": "",
-    "code": "CAP011",
-    "color": "",
-    "description": "",
-    "inStock": true,
-    "category": "Cap",
-    "price": 1450,
-    "img": ""
-  },
-  {
-    "name": "",
-    "code": "CAP012",
-    "color": "",
-    "description": "",
-    "inStock": true,
-    "category": "Cap",
-    "price": 1500,
-    "img": ""
-  },
-  {
-    "name": "",
-    "code": "CAP013",
-    "color": "",
-    "description": "",
-    "inStock": true,
-    "category": "Cap",
-    "price": 1350,
-    "img": ""
-  },
-  {
-    "name": "",
-    "code": "CAP014",
-    "color": "",
-    "description": "",
-    "inStock": true,
-    "category": "Cap",
-    "price": 1600,
-    "img": ""
-  },
-  {
-    "name": "",
-    "code": "CAP015",
-    "color": "",
-    "description": "",
-    "inStock": true,
-    "category": "Cap",
-    "price": 1450,
-    "img": ""
+    "price": 350,
+    "img": "https://img-cdn-oubd.s3.ap-southeast-1.amazonaws.com/uploads/all/Xc1Tdr9NV3jEl3mdAxnQLAJtJNlNCP1NJboG6eKf.webp"
   }
 ]
