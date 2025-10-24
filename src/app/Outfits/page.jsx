@@ -4,6 +4,7 @@ import Filter from "../Or-Components/OutfitSe/Filter";
 import TShirt from "../Or-Components/OutfitSe/Tshirt";
 import Panjabi from "../Or-Components/OutfitSe/Panjabi";
 import Caps from "../Or-Components/OutfitSe/Caps";
+import Perfume from "../Or-Components/OutfitSe/Perfume";
 
 const OutfitsPage = () => {
   return (
@@ -51,6 +52,7 @@ const OutfitsPage = () => {
       <Panjabi />
       <TShirt />
       <Caps />
+      <Perfume />
     </div>
   );
 };
