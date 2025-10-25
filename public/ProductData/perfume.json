@@ -1,95 +1,52 @@
 [
   {
-    "name": "",
+    "name": "Non Alcoholic Perfume Oil By - Haya Perfumes",
     "code": "PER001",
-    "fragrances": "",
-    "description": "",
+    "fragrances": "Soft floral notes blended with musk and amber for a long-lasting aroma.",
+    "description": "A premium non-alcoholic perfume oil with a soft, elegant fragrance that blends floral and woody notes. Perfect for daily wear and special occasions.",
     "inStock": true,
     "category": "Perfume",
-    "price": 111,
-    "img": ""
+    "price": 1110,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV0Jt1AcE47ldFcSkZ-jp3iCjd16grw6PaFg&s"
   },
   {
-    "name": "",
-    "code": "PER001",
-    "fragrances": "",
-    "description": "",
+    "name": "Amber Musk Perfume Oil - Haya Perfumes",
+    "code": "PER002",
+    "fragrances": "Rich amber and soft musk tones for a deep, long-lasting scent.",
+    "description": "A premium non-alcoholic perfume oil with a soft, elegant fragrance that blends floral and woody notes. Perfect for daily wear and special occasions.",
     "inStock": true,
     "category": "Perfume",
-    "price": 111,
-    "img": ""
+    "price": 1200,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHgZ-03Gd0wNkJEOijvEbvZcsUR7VaCXhSfg&s"
   },
   {
-    "name": "",
-    "code": "PER001",
-    "fragrances": "",
-    "description": "",
+    "name": "Oudh Essence Perfume Oil - Haya Perfumes",
+    "code": "PER003",
+    "fragrances": "Classic Arabian Oudh with deep woody notes and a hint of spice.",
+    "description": "A premium non-alcoholic perfume oil with a soft, elegant fragrance that blends floral and woody notes. Perfect for daily wear and special occasions.",
     "inStock": true,
     "category": "Perfume",
-    "price": 111,
-    "img": ""
+    "price": 1300,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDrhWKUP9TobOEJszjGUz7ms7e1s6cDqQmMg&s"
   },
   {
-    "name": "",
-    "code": "PER001",
-    "fragrances": "",
-    "description": "",
+    "name": "Rose Bloom Perfume Oil - Haya Perfumes",
+    "code": "PER004",
+    "fragrances": "Delicate rose petals blended with a touch of vanilla and musk.",
+    "description": "A premium non-alcoholic perfume oil with a soft, elegant fragrance that blends floral and woody notes. Perfect for daily wear and special occasions.",
     "inStock": true,
     "category": "Perfume",
-    "price": 111,
-    "img": ""
+    "price": 1150,
+    "img": "https://ummahcorner.com/wp-content/uploads/2025/04/20250418_164257-1-247x247.jpg"
   },
   {
-    "name": "",
-    "code": "PER001",
-    "fragrances": "",
-    "description": "",
-    "inStock": true,
+    "name": "Royal Oud Perfume Oil - Haya Perfumes",
+    "code": "PER005",
+    "fragrances": "Deep smoky Oudh balanced with spicy and woody undertones.",
+    "description": "A premium non-alcoholic perfume oil with a soft, elegant fragrance that blends floral and woody notes. Perfect for daily wear and special occasions.",
+    "inStock": false,
     "category": "Perfume",
-    "price": 111,
-    "img": ""
-  },
-  {
-    "name": "",
-    "code": "PER001",
-    "fragrances": "",
-    "description": "",
-    "inStock": true,
-    "category": "Perfume",
-    "price": 111,
-    "img": ""
-  },
-  {
-    "name": "",
-    "code": "PER001",
-    "fragrances": "",
-    "description": "",
-    "inStock": true,
-    "category": "Perfume",
-    "price": 111,
-    "img": ""
-  },
-  {
-    "name": "",
-    "code": "PER001",
-    "fragrances": "",
-    "description": "",
-    "inStock": true,
-    "category": "Perfume",
-    "price": 111,
-    "img": ""
-  },
-  {
-    "name": "",
-    "code": "PER001",
-    "fragrances": "",
-    "description": "",
-    "inStock": true,
-    "category": "Perfume",
-    "price": 111,
-    "img": ""
+    "price": 1450,
+    "img": "https://ummahcorner.com/wp-content/uploads/2025/04/20250417_202822-scaled-247x247.jpg"
   }
-
 ]
-
-
