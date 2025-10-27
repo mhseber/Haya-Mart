@@ -1,0 +1,52 @@
+[
+  {
+    "name": "",
+    "code": "ACC001",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 600,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "ACC002",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 600,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "ACC003",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 600,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "ACC004",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 600,
+    "img": ""
+  },
+  {
+    "name": "",
+    "code": "ACC005",
+    "color": "",
+    "description": "",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 600,
+    "img": ""
+  }
+]
