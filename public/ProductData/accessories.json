@@ -1,52 +1,137 @@
 [
   {
-    "name": "",
+    "name": "DEODORANT COTTON SOCKS-CASUAL GRAY MELANGE",
     "code": "ACC001",
-    "color": "",
-    "description": "",
+    "color": "Ash Gray",
+    "description": "Experience unmatched comfort and freshness with our Deodorant Cotton Socks, made from premium Egyptian cotton — the softest and most breathable cotton in the world. Designed for all-day wear, these socks combine luxury, durability, and odor-control technology to keep your feet fresh and dry.",
     "inStock": true,
     "category": "Accessories",
-    "price": 600,
-    "img": ""
+    "price": 120,
+    "img": "https://backend.oubd.shop/uploads/all/EzXFaoFDZmbmbPrCY6YQTbKFb5Rqp3AvbnmxfsDx.webp"
   },
   {
-    "name": "",
+    "name": "DEODORANT COTTON SOCKS-SOLID OLIVE",
     "code": "ACC002",
-    "color": "",
-    "description": "",
+    "color": "Olive",
+    "description": "Experience unmatched comfort and freshness with our Deodorant Cotton Socks, made from premium Egyptian cotton — the softest and most breathable cotton in the world. Designed for all-day wear, these socks combine luxury, durability, and odor-control technology to keep your feet fresh and dry.",
     "inStock": true,
     "category": "Accessories",
-    "price": 600,
-    "img": ""
+    "price": 120,
+    "img": "https://backend.oubd.shop/uploads/all/kEtMVb52g6JnutrQyNFuVsKETUY7g4TfZkOCqHSE.webp"
   },
   {
-    "name": "",
+    "name": "DEODORANT COTTON SOCKS-STRIPE NAVY",
     "code": "ACC003",
-    "color": "",
-    "description": "",
+    "color": "Navy Blue",
+    "description": "Experience unmatched comfort and freshness with our Deodorant Cotton Socks, made from premium Egyptian cotton — the softest and most breathable cotton in the world. Designed for all-day wear, these socks combine luxury, durability, and odor-control technology to keep your feet fresh and dry.",
     "inStock": true,
     "category": "Accessories",
-    "price": 600,
-    "img": ""
+    "price": 120,
+    "img": "https://backend.oubd.shop/uploads/all/Xn1w54ElgtdUAz9jIo5SdLQCM11I0rP8fuSWFPGO.webp"
   },
   {
-    "name": "",
+    "name": "PREMIUM LEATHER CARD HOLDER",
     "code": "ACC004",
-    "color": "",
-    "description": "",
+    "color": "Black",
+    "description": "Experience sophistication and durability with our Premium Leather Bi-Fold Wallet. Made from high-quality leather with fine stitching, it offers a classic look that complements any outfit. Perfect for carrying your essentials in style.",
     "inStock": true,
     "category": "Accessories",
-    "price": 600,
-    "img": ""
+    "price": 1200,
+    "img": "https://backend.oubd.shop/uploads/all/36M49BcCveq5DjNWKvcBkbotEJOiTg5C8RWX31Sy.png"
   },
   {
-    "name": "",
+    "name": "PREMIUM LEATHER BI-FOLD WALLET",
     "code": "ACC005",
-    "color": "",
-    "description": "",
+    "color": "Camal",
+    "description": "Experience sophistication and durability with our Premium Leather Bi-Fold Wallet. Made from high-quality leather with fine stitching, it offers a classic look that complements any outfit. Perfect for carrying your essentials in style.",
     "inStock": true,
     "category": "Accessories",
-    "price": 600,
-    "img": ""
+    "price": 1200,
+    "img": "https://backend.oubd.shop/uploads/all/jr0p4KOD7bC1j8PJTaYbjrclZY4CMvjGse9G6jFO.png"
+  },
+  {
+    "name": "PREMIUM LEATHER TRI-FOLD WALLET",
+    "code": "ACC006",
+    "color": "Chakolate Brown",
+    "description": "Experience sophistication and durability with our Premium Leather Bi-Fold Wallet. Made from high-quality leather with fine stitching, it offers a classic look that complements any outfit. Perfect for carrying your essentials in style.",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 1500,
+    "img": "https://backend.oubd.shop/uploads/all/v7IJPRJF3zDlJoCdjvQjabWJSbwKi07iiZpEzy3q.png"
+  },
+  {
+    "name": "প্রোটোকলস অব জায়োনিজম",
+    "code": "ACC007",
+    "description": "একটি ইসলামিক গবেষণাধর্মী গ্রন্থ যা মুসলিম উম্মাহর জন্য জ্ঞান ও সচেতনতা বৃদ্ধি করে। ইসলামী দৃষ্টিকোণ থেকে গুরুত্বপূর্ণ বিষয়গুলো বিশ্লেষণ করা হয়েছে।",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 310,
+    "img": "https://backend.oubd.shop/uploads/all/skaeT6bHLSomaIljqMvw20JbbdbvWjlwYm8sIsMA.jpg"
+  },
+  {
+    "name": "ইসলামি ব্যাংকব্যবস্থার শুভংকরের ফাঁকি",
+    "code": "ACC008",
+    "description": "একটি ইসলামিক গবেষণাধর্মী গ্রন্থ যা মুসলিম উম্মাহর জন্য জ্ঞান ও সচেতনতা বৃদ্ধি করে। ইসলামী দৃষ্টিকোণ থেকে গুরুত্বপূর্ণ বিষয়গুলো বিশ্লেষণ করা হয়েছে।",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 190,
+    "img": "https://backend.oubd.shop/uploads/all/V4Q3K09Xke2cUnrMUPMiB2VNf0xXMWLrQhviyKgv.jpg"
+  },
+  {
+    "name": "ব্যাংকব্যবস্থা ও টাকার গোপন রহস্য",
+    "code": "ACC009",
+    "description": "একটি ইসলামিক গবেষণাধর্মী গ্রন্থ যা মুসলিম উম্মাহর জন্য জ্ঞান ও সচেতনতা বৃদ্ধি করে। ইসলামী দৃষ্টিকোণ থেকে গুরুত্বপূর্ণ বিষয়গুলো বিশ্লেষণ করা হয়েছে।",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 200,
+    "img": "https://backend.oubd.shop/uploads/all/C1xjPxIwFMjCM2XKJsF9OxtlHfYVgZE9p0fTp2Kj.jpg"
+  },
+  {
+    "name": "ডলারের খেলা ও রাষ্ট্রের দেউলিয়াত্বের রহস্য",
+    "code": "ACC0010",
+    "description": "একটি ইসলামিক গবেষণাধর্মী গ্রন্থ যা মুসলিম উম্মাহর জন্য জ্ঞান ও সচেতনতা বৃদ্ধি করে। ইসলামী দৃষ্টিকোণ থেকে গুরুত্বপূর্ণ বিষয়গুলো বিশ্লেষণ করা হয়েছে।",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 210,
+    "img": "https://backend.oubd.shop/uploads/all/2BkVObGpVecDtxDFKqseu1SunFT2XAH505DXwyS7.jpg"
+  },
+  {
+    "name": "গল্পে গল্পে অর্থনীতি",
+    "code": "ACC0011",
+    "description": "একটি ইসলামিক গবেষণাধর্মী গ্রন্থ যা মুসলিম উম্মাহর জন্য জ্ঞান ও সচেতনতা বৃদ্ধি করে। ইসলামী দৃষ্টিকোণ থেকে গুরুত্বপূর্ণ বিষয়গুলো বিশ্লেষণ করা হয়েছে।",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 357,
+    "img": "https://backend.oubd.shop/uploads/all/73OIYw8zxL9QLCCFxR9zCRGmXi9rr8PiSGkJ1Gys.jpg"
+  },
+  {
+    "name": "Solid Prayer Mat - Haya Mart",
+    "code": "ACC0012",
+    "color" : "Black",
+    "description": "Comfortable and durable Islamic prayer mat, perfect for performing Salah with focus and ease. Made from soft, non-slip material, ideal for daily use and long-lasting comfort.",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 800,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjMkF36nWVOrYx2yQQqGf0ADZKvJSGaHdcJg&s"
+  },
+  {
+    "name": "Solid Prayer Mat - Haya Mart",
+    "code": "ACC0013",
+    "color" : "Blue",
+    "description": "Comfortable and durable Islamic prayer mat, perfect for performing Salah with focus and ease. Made from soft, non-slip material, ideal for daily use and long-lasting comfort.",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 800,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgG2bk4WvXwysjizALJee1597pQxFyFzI-HjaxBk2JWCjIuLxphSnaYUIm5t2qmvYGIJs&usqp=CAU"
+  },
+  {
+    "name": "Solid Prayer Mat - Haya Mart",
+    "code": "ACC0014",
+    "color" : "Green",
+    "description": "Comfortable and durable Islamic prayer mat, perfect for performing Salah with focus and ease. Made from soft, non-slip material, ideal for daily use and long-lasting comfort.",
+    "inStock": true,
+    "category": "Accessories",
+    "price": 800,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTskjVnRSvgMsYFHC2NnSPpse06uo6vyQtAH8uwTkuXS4s4cjcOTMtPOGx2quMyRjnjAbY&usqp=CAU"
   }
 ]
