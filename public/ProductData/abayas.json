@@ -1,0 +1,102 @@
+[
+ {
+    "name": "Pakistani Abayas for Women",
+    "code": "ABA001",
+    "color": "jolpin",
+    "description": "Elegant and modest Abayas crafted from premium quality fabric, designed for comfort and grace. Perfect for everyday wear or special occasions, these Abayas combine traditional style with a modern touch to reflect true Islamic elegance.",
+    "inStock": true,
+    "category": "Abayas",
+    "price": 3500,
+    "img": "https://tgmstore.pk/cdn/shop/products/2_17590401-4404-4a5a-8d84-a6b20a04a50c_1080x.jpg?v=1753952819"
+  },
+ {
+    "name": "Pakistani Abayas for Women",
+    "code": "ABA002",
+    "color": "Orange Red",
+    "description": "Elegant and modest Abayas crafted from premium quality fabric, designed for comfort and grace. Perfect for everyday wear or special occasions, these Abayas combine traditional style with a modern touch to reflect true Islamic elegance.",
+    "inStock": true,
+    "category": "Abayas",
+    "price": 3500,
+    "img": "https://rivaaj.pk/wp-content/uploads/2023/02/Front-Open-Style-Abaya-2.jpg"
+  },
+ {
+    "name": "Pakistani Abayas for Women",
+    "code": "ABA003",
+    "color": "Black",
+    "description": "Elegant and modest Abayas crafted from premium quality fabric, designed for comfort and grace. Perfect for everyday wear or special occasions, these Abayas combine traditional style with a modern touch to reflect true Islamic elegance.",
+    "inStock": true,
+    "category": "Abayas",
+    "price": 3500,
+    "img": "https://tgmstore.pk/cdn/shop/products/darktealblue4_1080x.jpg?v=1753952677"
+  },
+ {
+    "name": "Pakistani Abayas for Women",
+    "code": "ABA004",
+    "color": "Meroon",
+    "description": "Elegant and modest Abayas crafted from premium quality fabric, designed for comfort and grace. Perfect for everyday wear or special occasions, these Abayas combine traditional style with a modern touch to reflect true Islamic elegance.",
+    "inStock": true,
+    "category": "Abayas",
+    "price": 3500,
+    "img": "https://tgmstore.pk/cdn/shop/files/Sumaira_1.jpg?v=1753952691"
+  },
+ {
+    "name": "Pakistani Abayas for Women",
+    "code": "ABA005",
+    "color": "Nevy Blue",
+    "description": "Elegant and modest Abayas crafted from premium quality fabric, designed for comfort and grace. Perfect for everyday wear or special occasions, these Abayas combine traditional style with a modern touch to reflect true Islamic elegance.",
+    "inStock": true,
+    "category": "Abayas",
+    "price": 3000,
+    "img": "https://i.pinimg.com/236x/0f/38/db/0f38db0adaf18219c65f0ac7372a4557.jpg"
+  },
+ {
+    "name": "Pakistani Abayas for Women",
+    "code": "ABA006",
+    "color": "Ash Grey",
+    "description": "Elegant and modest Abayas crafted from premium quality fabric, designed for comfort and grace. Perfect for everyday wear or special occasions, these Abayas combine traditional style with a modern touch to reflect true Islamic elegance.",
+    "inStock": true,
+    "category": "Abayas",
+    "price": 3000,
+    "img": "https://blackcamels.com.pk/cdn/shop/products/SOHAI-MAXI-STYLE-ABAYA-13-7.jpg"
+  },
+ {
+    "name": "Pakistani Abayas for Women",
+    "code": "ABA007",
+    "color": "Blue",
+    "description": "Elegant and modest Abayas crafted from premium quality fabric, designed for comfort and grace. Perfect for everyday wear or special occasions, these Abayas combine traditional style with a modern touch to reflect true Islamic elegance.",
+    "inStock": false,
+    "category": "Abayas",
+    "price": 3000,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKbp33-Kw1PQuT4wJs5gLv_S5JN5NecarsVQ&s"
+  },
+ {
+    "name": "Turkish Style Maxi Abaya for Women",
+    "code": "ABA008",
+    "color": "Khaki",
+    "description": "Elegant and modest Abayas crafted from premium quality fabric, designed for comfort and grace. Perfect for everyday wear or special occasions, these Abayas combine traditional style with a modern touch to reflect true Islamic elegance.",
+    "inStock": true,
+    "category": "Abayas",
+    "price": 2500,
+    "img": "https://www.jalbaab.com/cdn/shop/files/11_74725222-16e2-40d9-b460-a8e2654aa550.webp?v=1708929416"
+  },
+ {
+    "name": "Turkish Style Maxi Abaya for Women",
+    "code": "ABA009",
+    "color": "Olive Green",
+    "description": "Elegant and modest Abayas crafted from premium quality fabric, designed for comfort and grace. Perfect for everyday wear or special occasions, these Abayas combine traditional style with a modern touch to reflect true Islamic elegance.",
+    "inStock": true,
+    "category": "Abayas",
+    "price": 1500,
+    "img": "https://cdn.shopify.com/s/files/1/2337/7003/files/0002_claire_2_43aed09a-e085-4280-96bd-4e491f9498c3.jpg?v=1727867619"
+  },
+ {
+    "name": "Turkish Style Maxi Abaya for Women",
+    "code": "ABA0010",
+    "color": "Black",
+    "description": "Elegant and modest Abayas crafted from premium quality fabric, designed for comfort and grace. Perfect for everyday wear or special occasions, these Abayas combine traditional style with a modern touch to reflect true Islamic elegance.",
+    "inStock": false,
+    "category": "Abayas",
+    "price": 1500,
+    "img": "https://static-01.daraz.pk/p/d2bb5e6a47625723f50a43c33ea6a4e6.jpg"
+  }
+]

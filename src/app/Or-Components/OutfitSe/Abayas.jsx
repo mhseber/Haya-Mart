@@ -9,11 +9,11 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const Accessories = () => {
+const Abayas = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    // fetch("http://localhost:3000/api/items/accessories")
-    fetch("ProductData/accessories.json")
+    // fetch("http://localhost:3000/api/items/abayas")
+    fetch("ProductData/abayas.json")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch data");
         return res.json();
@@ -26,7 +26,7 @@ const Accessories = () => {
     <div className="px-6 py-6">
       {/* Title Section */}
       <section className=" gap-3 my-8 pl-5">
-        <h2 className="text-3xl font-bold text-blue-200">Accessories</h2>
+        <h2 className="text-3xl font-bold text-blue-200">Abayas</h2>
       </section>
       <div className="divider divide-gray-300"></div>
 
@@ -148,4 +148,4 @@ const Accessories = () => {
   );
 };
 
-export default Accessories;
+export default Abayas;
