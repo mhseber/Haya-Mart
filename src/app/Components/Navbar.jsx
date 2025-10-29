@@ -1,52 +1,46 @@
 "use client";
-import { FaHeart, FaHome, FaRegHeart, FaUsers } from "react-icons/fa";
-import { MdPostAdd } from "react-icons/md";
+
+import { FaHome, FaRegHeart, FaUsers } from "react-icons/fa";
 import { FaBoxOpen } from "react-icons/fa";
 import { IoMdAddCircle } from "react-icons/io";
 import { GiHotMeal } from "react-icons/gi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Noto_Serif } from "next/font/google";
 import { motion } from "framer-motion";
 import { IoCartOutline } from "react-icons/io5";
 import { GiClothes } from "react-icons/gi";
-
-const notoSerif = Noto_Serif({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 const Navbar = () => {
   const pathname = usePathname();
 
   const navLinks = (
     <>
-      <li className={`text-lg ${notoSerif.className}`}>
+      <li className={`text-lg `}>
         <Link href="/">
           {" "}
           <FaHome className="inline " />
           Home
         </Link>
       </li>
-      <li className={`text-lg ${notoSerif.className}`}>
+      <li className={`text-lg `}>
         <Link href="/Outfits">
           <GiClothes className="inline " />
           OutFits
         </Link>
       </li>
-      <li className={`text-lg ${notoSerif.className}`}>
-        <Link href="/products">
+      <li className={`text-lg `}>
+        <Link href="/offerZone">
           <FaBoxOpen className="inline " />
-          Products
+          OfferZone
         </Link>
       </li>
-      <li className={`text-lg ${notoSerif.className}`}>
+      <li className={`text-lg `}>
         <Link href="/products/add">
           <IoMdAddCircle className="inline " />
           Add Products
         </Link>
       </li>
-      <li className={`text-lg ${notoSerif.className}`}>
+      <li className={`text-lg `}>
         <Link href="/meals">
           {" "}
           <GiHotMeal className="inline " />
