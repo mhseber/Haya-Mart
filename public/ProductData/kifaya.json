@@ -1,82 +1,52 @@
 [
  {
-    "name": "",
+    "name": "MENS PALESTINE STYLE KIFAYA - MAROON",
     "code": "KIF001",
-    "color": "",
-    "description": "",
+    "color": "Maroon",
+    "description": "Celebrate tradition with the Palestine Kifaya by Haya Mart. Lightweight, durable, and wrinkle-resistant, this 100% polyester scarf is perfect for everyday wear.",
     "inStock": true,
     "category": "Kifaya",
-    "price": 3500,
-    "img": ""
+    "price": 850,
+    "img": "https://backend.oubd.shop/uploads/all/fnsyfm1jt0Kfnk9tEEexIAKyotzbWHIVmKZ4Ry9n.webp"
   },
  {
-    "name": "",
-    "code": "KIF001",
-    "color": "",
-    "description": "",
+    "name": "MENS PALESTINE STYLE KIFAYA - BROWN",
+    "code": "KIF002",
+    "color": "Brown",
+    "description": "Celebrate tradition with the Palestine Kifaya by Haya Mart. Lightweight, durable, and wrinkle-resistant, this 100% polyester scarf is perfect for everyday wear.",
     "inStock": true,
     "category": "Kifaya",
-    "price": 3500,
-    "img": ""
+    "price": 850,
+    "img": "https://backend.oubd.shop/uploads/all/kMrrF2sJwWOz0r7eZWH56zcy3xT81Ewuv4RCxpZq.webp"
   },
  {
-    "name": "",
-    "code": "KIF001",
-    "color": "",
-    "description": "",
+    "name": "MENS PALESTINE STYLE KIFAYA - DARK GRAY",
+    "code": "KIF003",
+    "color": "Dark Gray",
+    "description": "Celebrate tradition with the Palestine Kifaya by Haya Mart. Lightweight, durable, and wrinkle-resistant, this 100% polyester scarf is perfect for everyday wear.",
     "inStock": true,
     "category": "Kifaya",
-    "price": 3500,
-    "img": ""
+    "price": 850,
+    "img": "https://backend.oubd.shop/uploads/all/GJW2niXZQ8RjaRMr32p7ttBVbGWbWcryvQKxVVn8.webp"
   },
  {
-    "name": "",
-    "code": "KIF001",
-    "color": "",
-    "description": "",
+    "name": "MENS PALESTINE STYLE KIFAYA - WHITE ",
+    "code": "KIF004",
+    "color": "White",
+    "description": "Celebrate tradition with the Palestine Kifaya by Haya Mart. Lightweight, durable, and wrinkle-resistant, this 100% polyester scarf is perfect for everyday wear.",
     "inStock": true,
     "category": "Kifaya",
-    "price": 3500,
-    "img": ""
+    "price": 850,
+    "img": "https://backend.oubd.shop/uploads/all/s6Tz7AvGVhlkhOYTOUEE8utJkoYXG1gmi6iEZPjq.webp"
   },
  {
-    "name": "",
-    "code": "KIF001",
-    "color": "",
-    "description": "",
+    "name": "MENS PALESTINE STYLE KIFAYA - BLACK",
+    "code": "KIF005",
+    "color": "Black",
+    "description": "Celebrate tradition with the Palestine Kifaya by Haya Mart. Lightweight, durable, and wrinkle-resistant, this 100% polyester scarf is perfect for everyday wear.",
     "inStock": true,
     "category": "Kifaya",
-    "price": 3500,
-    "img": ""
-  },
- {
-    "name": "",
-    "code": "KIF001",
-    "color": "",
-    "description": "",
-    "inStock": true,
-    "category": "Kifaya",
-    "price": 3500,
-    "img": ""
-  },
- {
-    "name": "",
-    "code": "KIF001",
-    "color": "",
-    "description": "",
-    "inStock": true,
-    "category": "Kifaya",
-    "price": 3500,
-    "img": ""
-  },
- {
-    "name": "",
-    "code": "KIF001",
-    "color": "",
-    "description": "",
-    "inStock": true,
-    "category": "Kifaya",
-    "price": 3500,
-    "img": ""
-  }
+    "price": 850,
+    "img": "https://backend.oubd.shop/uploads/all/RetQcXdnt95XgXBeOK6btO16SLsM2Arb2dQKkIQj.webp"
+  } 
 ]
