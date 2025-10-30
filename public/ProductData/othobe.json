@@ -1,0 +1,102 @@
+[
+ {
+    "name": "MOSPT08-OMANI SPECIAL THOBE",
+    "code": "OTH001",
+    "color": "Ash Gray",
+    "description": "A classic Islamic thobe made from high-quality, breathable fabric for ultimate comfort and elegance. Designed with modesty and simplicity in mind, it’s perfect for daily wear, prayers, and special occasions. A timeless piece that reflects traditional Islamic culture and style.",
+    "inStock": true,
+    "category": "Thobe",
+    "price": 3400,
+    "img": "https://backend.oubd.shop/uploads/all/aE7mrZS5ucsMDSJY1hEf6PQsmRDa3kOSlOP5L1s7.webp"
+  } ,
+ {
+    "name": "MOSPT03-OMANI SPECIAL THOBE",
+    "code": "OTH002",
+    "color": "Dark Gray",
+    "description": "A classic Islamic thobe made from high-quality, breathable fabric for ultimate comfort and elegance. Designed with modesty and simplicity in mind, it’s perfect for daily wear, prayers, and special occasions. A timeless piece that reflects traditional Islamic culture and style.",
+    "inStock": true,
+    "category": "Thobe",
+    "price": 3400,
+    "img": "https://backend.oubd.shop/uploads/all/dVUWCOKewPD41E7PupIFBhU2nvW5BJhsi2ArfIUb.webp"
+  }, 
+ {
+    "name": "MOSPT05-OMANI SPECIAL THOBE",
+    "code": "OTH003",
+    "color": "Light Gray",
+    "description": "A classic Islamic thobe made from high-quality, breathable fabric for ultimate comfort and elegance. Designed with modesty and simplicity in mind, it’s perfect for daily wear, prayers, and special occasions. A timeless piece that reflects traditional Islamic culture and style.",
+    "inStock": true,
+    "category": "Thobe",
+    "price": 3400,
+    "img": "https://backend.oubd.shop/uploads/all/nuCjSfMswQESjnjW0JrK3PuQKeNHJM4LsxBpkO9T.webp"
+  } ,
+ {
+    "name": "MOSPT06-OMANI SPECIAL THOBE",
+    "code": "OTH004",
+    "color": "Ash",
+    "description": "A classic Islamic thobe made from high-quality, breathable fabric for ultimate comfort and elegance. Designed with modesty and simplicity in mind, it’s perfect for daily wear, prayers, and special occasions. A timeless piece that reflects traditional Islamic culture and style.",
+    "inStock": true,
+    "category": "Thobe",
+    "price": 3400,
+    "img": "https://backend.oubd.shop/uploads/all/6yQp092xfLNcB4LEh1Dkak8XYDbzCokyXz18Ut0K.webp"
+  } ,
+ {
+    "name": "MOSPT07-OMANI SPECIAL THOBE",
+    "code": "OTH005",
+    "color": "Light Gray",
+    "description": "A classic Islamic thobe made from high-quality, breathable fabric for ultimate comfort and elegance. Designed with modesty and simplicity in mind, it’s perfect for daily wear, prayers, and special occasions. A timeless piece that reflects traditional Islamic culture and style.",
+    "inStock": true,
+    "category": "Thobe",
+    "price": 3400,
+    "img": "https://backend.oubd.shop/uploads/all/mjvZGAZ7dR3zEKyO4sdD6EEWjCpRzeHWVGATTvhh.webp"
+  } ,
+ {
+    "name": "MOSPT01-OMANI SPECIAL THOBE",
+    "code": "OTH006",
+    "color": "Light Blue",
+    "description": "A classic Islamic thobe made from high-quality, breathable fabric for ultimate comfort and elegance. Designed with modesty and simplicity in mind, it’s perfect for daily wear, prayers, and special occasions. A timeless piece that reflects traditional Islamic culture and style.",
+    "inStock": true,
+    "category": "Thobe",
+    "price": 3400,
+    "img": "https://backend.oubd.shop/uploads/all/4F1DwdRElh4Af6k1EY5elRvIxJRSCFTrTVVGr6vw.webp"
+  } ,
+ {
+    "name": "MAEMBT01-ST01-ARABIAN EMBROIDERY THOBE",
+    "code": "OTH007",
+    "color": "Dark Blue",
+    "description": "A classic Islamic thobe made from high-quality, breathable fabric for ultimate comfort and elegance. Designed with modesty and simplicity in mind, it’s perfect for daily wear, prayers, and special occasions. A timeless piece that reflects traditional Islamic culture and style.",
+    "inStock": true,
+    "category": "Thobe",
+    "price": 3850,
+    "img": "https://backend.oubd.shop/uploads/all/UE6S5bHVYwNHLi3IDWI35UiZwTus3jJSjxNKdgli.webp"
+  } ,
+ {
+    "name": "MAEMBT02-ST02-ARABIAN EMBROIDERY THOBE",
+    "code": "OTH008",
+    "color": "Dark Gray",
+    "description": "A classic Islamic thobe made from high-quality, breathable fabric for ultimate comfort and elegance. Designed with modesty and simplicity in mind, it’s perfect for daily wear, prayers, and special occasions. A timeless piece that reflects traditional Islamic culture and style.",
+    "inStock": true,
+    "category": "Thobe",
+    "price": 3850,
+    "img": "https://backend.oubd.shop/uploads/all/WDesjP49r83MQkyS36KXvFOOseah0xAhLZWUrT87.webp"
+  } ,
+ {
+    "name": "MAEMBT07-ST07-ARABIAN EMBROIDERY THOBE",
+    "code": "OTH009",
+    "color": "Light Gray",
+    "description": "A classic Islamic thobe made from high-quality, breathable fabric for ultimate comfort and elegance. Designed with modesty and simplicity in mind, it’s perfect for daily wear, prayers, and special occasions. A timeless piece that reflects traditional Islamic culture and style.",
+    "inStock": true,
+    "category": "Thobe",
+    "price": 3850,
+    "img": "https://backend.oubd.shop/uploads/all/voeCkWgMV0zY47jMj7UaxOZLoYtOf9eL1Dy4F3dq.webp"
+  } ,
+ {
+    "name": "MAEMBT08-ST08-ARABIAN EMBROIDERY THOBE",
+    "code": "OTH0010",
+    "color": "Coffee",
+    "description": "A classic Islamic thobe made from high-quality, breathable fabric for ultimate comfort and elegance. Designed with modesty and simplicity in mind, it’s perfect for daily wear, prayers, and special occasions. A timeless piece that reflects traditional Islamic culture and style.",
+    "inStock": true,
+    "category": "Thobe",
+    "price": 3850,
+    "img": "https://backend.oubd.shop/uploads/all/wP9dFM0iCs0fWnzGl0jiOzDylpYXV4ni3G5F2yrS.webp"
+  } 
+]
