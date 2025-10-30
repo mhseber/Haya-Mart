@@ -8,6 +8,7 @@ import Perfume from "../Or-Components/OutfitSe/Perfume";
 import Pants from "../Or-Components/OutfitSe/Pants";
 import Accessories from "../Or-Components/OutfitSe/Accessories";
 import Abayas from "../Or-Components/OutfitSe/Abayas";
+import Kifaya from "../Or-Components/OutfitSe/Kifaya";
 
 const OutfitsPage = () => {
   return (
@@ -59,6 +60,7 @@ const OutfitsPage = () => {
       <Pants />
       <Accessories />
       <Abayas />
+      <Kifaya />
     </div>
   );
 };
