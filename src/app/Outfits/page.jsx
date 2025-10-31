@@ -55,14 +55,14 @@ const OutfitsPage = () => {
       <Filter />
       {/* product Section */}
       <Panjabi />
-      <TShirt />
-      <Caps />
-      <Perfume />
-      <Pants />
-      <Accessories />
-      <Abayas />
-      <Kifaya />
       <Othobe />
+      <Kifaya />
+      <Caps />
+      <TShirt />
+      <Pants />
+      <Perfume />
+      <Abayas />
+      <Accessories />
     </div>
   );
 };
