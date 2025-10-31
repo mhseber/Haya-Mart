@@ -7,9 +7,11 @@ import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
+import PanjabiMo from "../ProductModalPage/PanjabiMo";
 
 const Panjabi = () => {
   const [items, setItems] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null);
   useEffect(() => {
     // fetch("http://localhost:3000/api/items/panjabi")
     fetch("ProductData/panjabi.json")
@@ -20,6 +22,16 @@ const Panjabi = () => {
       .then((data) => setItems(data))
       .catch((err) => console.error("Error fetching T-shirt data:", err));
   }, []);
+
+  // এই ফাংশন দিয়ে modal open করো
+  const handleViewDetails = (item) => {
+    setSelectedItem(item);
+  };
+
+  // modal close করার জন্য
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+  };
 
   return (
     <div className="px-6 py-6">
@@ -76,10 +88,13 @@ const Panjabi = () => {
                         {item.price}
                       </p>
                       <div className="flex gap-2">
-                        <button className="btn rounded-2xl border-sky-700 mt-2">
+                        <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
                           <FaRegHeart className="text-lg text-sky-500" />
                         </button>
-                        <button className="btn rounded-2xl border-sky-700 mt-2">
+                        <button
+                          onClick={() => handleViewDetails(item)}
+                          className="btn btn-sm  rounded-2xl border-sky-700 mt-2"
+                        >
                           <AiFillEye className="text-lg text-sky-500" />
                         </button>
                       </div>
@@ -109,6 +124,11 @@ const Panjabi = () => {
           ))}
         </Swiper>
       </section>
+
+      {/* ✅ Islamic Modal placed here */}
+      {selectedItem && (
+        <PanjabiMo item={selectedItem} onClose={handleCloseModal} />
+      )}
 
       {/* Swiper Custom Styling */}
       <style jsx global>{`
