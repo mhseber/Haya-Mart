@@ -66,7 +66,7 @@ const NewArrival = () => {
                         <span className="text-sky-500">Price:</span>{" "}
                         {item.price}
                       </p>
-                      <button className="btn rounded-2xl border-sky-700 mt-2">
+                      <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
                         <FaRegHeart className="text-lg text-sky-500" />
                       </button>
                     </div>

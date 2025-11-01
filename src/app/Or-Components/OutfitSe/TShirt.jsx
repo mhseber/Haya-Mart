@@ -77,10 +77,10 @@ const TShirt = () => {
                         {item.price}
                       </p>
                       <div className="flex gap-2">
-                        <button className="btn rounded-2xl border-sky-700 mt-2">
+                        <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
                           <FaRegHeart className="text-lg text-sky-500" />
                         </button>
-                        <button className="btn rounded-2xl border-sky-700 mt-2">
+                        <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
                           <AiFillEye className="text-lg text-sky-500" />
                         </button>
                       </div>
