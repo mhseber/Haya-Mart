@@ -8,9 +8,11 @@ import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
+import OthobeMo from "../ProductModalPage/OthobeMo";
 
 const Othobe = () => {
   const [items, setItems] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null);
   useEffect(() => {
     // fetch("http://localhost:3000/api/items/othobe")
     fetch("ProductData/othobe.json")
@@ -21,6 +23,16 @@ const Othobe = () => {
       .then((data) => setItems(data))
       .catch((err) => console.error("Error fetching T-shirt data:", err));
   }, []);
+
+  // এই ফাংশন দিয়ে modal open করো
+  const handleViewDetails = (item) => {
+    setSelectedItem(item);
+  };
+
+  // modal close করার জন্য
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+  };
 
   return (
     <div className="px-6 py-6">
@@ -80,7 +92,10 @@ const Othobe = () => {
                         <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
                           <FaRegHeart className="text-lg text-sky-500" />
                         </button>
-                        <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
+                        <button
+                          onClick={() => handleViewDetails(item)}
+                          className="btn btn-sm  rounded-2xl border-sky-700 mt-2"
+                        >
                           <AiFillEye className="text-lg text-sky-500" />
                         </button>
                       </div>
@@ -110,6 +125,11 @@ const Othobe = () => {
           ))}
         </Swiper>
       </section>
+
+      {/* ✅ Islamic Modal placed here */}
+      {selectedItem && (
+        <OthobeMo item={selectedItem} onClose={handleCloseModal} />
+      )}
 
       {/* Swiper Custom Styling */}
       <style jsx global>{`
