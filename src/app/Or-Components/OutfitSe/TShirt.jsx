@@ -7,9 +7,11 @@ import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
+import TShirtMo from "../ProductModalPage/TShirtMo";
 
 const TShirt = () => {
   const [items, setItems] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null);
   useEffect(() => {
     // fetch("http://localhost:3000/api/items/tshirt")
     fetch("ProductData/tshirt.json")
@@ -20,6 +22,16 @@ const TShirt = () => {
       .then((data) => setItems(data))
       .catch((err) => console.error("Error fetching T-shirt data:", err));
   }, []);
+
+  // এই ফাংশন দিয়ে modal open করো
+  const handleViewDetails = (item) => {
+    setSelectedItem(item);
+  };
+
+  // modal close করার জন্য
+  const handleCloseModal = () => {
+    setSelectedItem(null);
+  };
 
   return (
     <div className="px-6 py-6">
@@ -80,7 +92,10 @@ const TShirt = () => {
                         <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
                           <FaRegHeart className="text-lg text-sky-500" />
                         </button>
-                        <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
+                        <button
+                          onClick={() => handleViewDetails(item)}
+                          className="btn btn-sm  rounded-2xl border-sky-700 mt-2"
+                        >
                           <AiFillEye className="text-lg text-sky-500" />
                         </button>
                       </div>
@@ -110,6 +125,11 @@ const TShirt = () => {
           ))}
         </Swiper>
       </section>
+
+      {/* ✅ Islamic Modal placed here */}
+      {selectedItem && (
+        <TShirtMo item={selectedItem} onClose={handleCloseModal} />
+      )}
 
       {/* Swiper Custom Styling */}
       <style jsx global>{`
