@@ -45,16 +45,16 @@ const OthobeMo = ({ item, onClose }) => {
 
               <div className="mt-4 sm:mt-6">
                 <p className="text-xs sm:text-sm text-gray-400 mb-1">
-                  <b>Code:</b> {item.code}
+                  <b>Code :</b> {item.code}
                 </p>
                 <p className="text-xs sm:text-sm text-gray-400 mb-1">
-                  <b>Color:</b> {item.color}
+                  <b>Color :</b> {item.color}
                 </p>
                 <p className="text-xs sm:text-sm text-gray-400 mb-1">
-                  <b>Category:</b> {item.category}
+                  <b>Category :</b> {item.category}
                 </p>
                 <p className="text-lg sm:text-xl md:text-2xl font-semibold mt-2">
-                  <b className="text-sky-500">Price:</b> ৳ {item.price}.00
+                  <b className="text-sky-500">Price :</b> ৳ {item.price}.00
                 </p>
               </div>
 
