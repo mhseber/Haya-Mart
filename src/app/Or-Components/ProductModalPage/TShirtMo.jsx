@@ -61,7 +61,7 @@ const TShirtMo = ({ item, onClose }) => {
               {/* Sizes */}
               <div className="mt-4 sm:mt-6">
                 <h3 className="text-xs sm:text-sm text-sky-500 font-semibold mb-2">
-                  Select Size:{" "}
+                  Select Size :{" "}
                   <span className="text-[#38bdf8]">{selectedSize || ""}</span>
                 </h3>
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -103,7 +103,7 @@ const TShirtMo = ({ item, onClose }) => {
           {/* Close */}
           <button
             onClick={onClose}
-            className="absolute top-2 right-4 text-[#38bdf8] text-xl sm:text-2xl hover:text-white transition"
+            className="absolute top-2  right-4 text-[#38bdf8] text-xl sm:text-2xl hover:text-white transition"
           >
             ✕
           </button>

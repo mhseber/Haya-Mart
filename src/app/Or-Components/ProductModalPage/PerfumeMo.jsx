@@ -61,9 +61,26 @@ const PerfumeMo = ({ item, onClose }) => {
               {/* Sizes */}
               <div className="mt-4 sm:mt-6">
                 <h3 className="text-xs sm:text-sm text-sky-500 font-semibold mb-2">
-                  Select Size: Free Size
+                  Select Size :{" "}
                   <span className="text-[#38bdf8]">{selectedSize || ""}</span>
                 </h3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {["3.ml", "6.ml"].map((size) => (
+                    <button
+                      key={size}
+                      onClick={() =>
+                        setSelectedSize(selectedSize === size ? "" : size)
+                      }
+                      className={`border px-3 sm:px-4 py-[3px] sm:py-1 rounded-lg text-xs sm:text-sm transition-all ${
+                        selectedSize === size
+                          ? "bg-[#38bdf8] text-black border-[#38bdf8]"
+                          : "text-[#38bdf8] border-[#38bdf8] hover:bg-[#38bdf8] hover:text-black"
+                      }`}
+                    >
+                      {size}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {/* Buttons */}
