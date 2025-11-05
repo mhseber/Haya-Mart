@@ -53,16 +53,34 @@ const OutfitsPage = () => {
       </section>
       {/* Filter */}
       <Filter />
-      {/* product Section */}
-      <Panjabi />
-      <Othobe />
-      <Kifaya />
-      <Caps />
-      <TShirt />
-      <Pants />
-      <Perfume />
-      <Abayas />
-      <Accessories />
+      {/* product Section with IDs */}
+      <div id="panjabi">
+        <Panjabi />
+      </div>
+      <div id="othobe">
+        <Othobe />
+      </div>
+      <div id="kifaya">
+        <Kifaya />
+      </div>
+      <div id="caps">
+        <Caps />
+      </div>
+      <div id="tshirt">
+        <TShirt />
+      </div>
+      <div id="pants">
+        <Pants />
+      </div>
+      <div id="perfume">
+        <Perfume />
+      </div>
+      <div id="abayas">
+        <Abayas />
+      </div>
+      <div id="accessories">
+        <Accessories />
+      </div>
     </div>
   );
 };
