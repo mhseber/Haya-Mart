@@ -28,17 +28,17 @@ const OfferZonePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-950 to-blue-950 text-white py-12">
+    <div className="min-h-screen bg-gradient-to-b from-sky-950 to-blue-950 text-white py-12 ">
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center text-4xl md:text-5xl font-extrabold text-sky-400 mb-12"
+        className="text-center text-4xl md:text-5xl font-extrabold text-sky-400 mb-12 mt-16"
       >
         ✨ Special Offer Zone ✨
       </motion.h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-16">
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-8 px-6 md:px-16">
         {offers.map((offer) => (
           <motion.div
             key={offer.id}
@@ -47,17 +47,30 @@ const OfferZonePage = () => {
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-br from-blue-900 to-sky-900 p-4 rounded-2xl shadow-lg hover:shadow-sky-500/40 transition-all"
           >
-            <img
-              src={offer.img}
-              alt={offer.title}
-              className="rounded-xl mb-4 w-full h-48 object-cover"
-            />
-            <h3 className="text-2xl font-bold text-sky-400">{offer.title}</h3>
-            <p className="text-sm text-sky-200 mb-2">{offer.discount}</p>
-            <p className="text-gray-300 text-sm">{offer.desc}</p>
-            <button className="mt-4 btn btn-sm bg-sky-600 hover:bg-sky-500 text-white rounded-lg border-none">
-              Grab Offer
-            </button>
+            <section className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-around gap-6 bg-[#0a192f] p-6 rounded-2xl">
+              {/* Image */}
+              <div className="flex-shrink-0 w-full md:w-1/3">
+                <img
+                  src={offer.img}
+                  alt={offer.title}
+                  className="rounded-xl w-full h-48 object-cover border border-sky-500 shadow-lg"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="text-center md:text-left md:w-2/3">
+                <h3 className="text-2xl font-bold text-sky-400 mb-2">
+                  {offer.title}
+                </h3>
+                <p className="text-sm text-sky-200 mb-2">{offer.discount}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {offer.desc}
+                </p>
+                <button className="mt-4 btn btn-sm bg-sky-600 hover:bg-sky-500 text-white rounded-lg border-none">
+                  Grab Offer
+                </button>
+              </div>
+            </section>
           </motion.div>
         ))}
       </div>
