@@ -1,29 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const OfferZonePage = () => {
+  const [selectedSize, setSelectedSize] = useState("");
   const offers = [
     {
       id: 1,
       title: "Winter Collection Sale",
       discount: "Up to 50% Off",
-      desc: "Stay cozy this winter with our premium jackets and hoodies.",
-      img: "https://i.ibb.co/9T4pPHm/winter-sale.jpg",
+      desc: "Jual Jaket Hoodie Dakwah Islami Prophet Muhammad Bonus Topi + Sticker | Haya Mart Stay cozy this winter with our premium jackets and hoodies.",
+      img: "https://down-id.img.susercontent.com/file/dc9ff75d510a1f2e3853f81db1f2951c",
     },
     {
       id: 2,
-      title: "Buy 1 Get 1 Free",
+      title: "Buy One Get One Attar Combo With Free T-Shirt",
       discount: "Limited Time Offer",
       desc: "Grab your favorite perfumes with our BOGO deal!",
-      img: "https://i.ibb.co/Jpsf5D8/perfume-offer.jpg",
+      img: "https://ummahmartbd.com/wp-content/uploads/2024/03/Copy-of-Musterd-Oil-24.jpg",
     },
     {
       id: 3,
       title: "Exclusive New Arrivals",
       discount: "20% Off",
       desc: "New styles just dropped — get yours before they're gone!",
-      img: "https://i.ibb.co/3rDwQXJ/new-arrival.jpg",
+      img: "https://taibahstyle.com/wp-content/uploads/2024/01/Maroon-Raglan-768x768-1.webp",
     },
   ];
 
@@ -53,20 +55,46 @@ const OfferZonePage = () => {
                 <img
                   src={offer.img}
                   alt={offer.title}
-                  className="rounded-xl w-full h-48 object-cover border border-sky-500 shadow-lg"
+                  className="rounded-xl w-full h-[400px] object-cover  shadow-lg"
                 />
               </div>
 
               {/* Content */}
               <div className="text-center md:text-left md:w-2/3">
-                <h3 className="text-2xl font-bold text-sky-400 mb-2">
+                <h3 className="text-6xl font-bold text-sky-400 mb-2">
                   {offer.title}
                 </h3>
-                <p className="text-sm text-sky-200 mb-2">{offer.discount}</p>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-2xl text-yellow-200 font-extrabold mb-2 pt-6">
+                  {offer.discount}
+                </p>
+                <p className="text-gray-300 text-xl leading-relaxed pt-6">
                   {offer.desc}
                 </p>
-                <button className="mt-4 btn btn-sm bg-sky-600 hover:bg-sky-500 text-white rounded-lg border-none">
+                {/* Sizes */}
+                <div className="mt-4 sm:mt-6">
+                  <h3 className="text-xs sm:text-sm text-sky-500 font-semibold mb-2">
+                    Select Size :{" "}
+                    <span className="text-[#38bdf8]">{selectedSize || ""}</span>
+                  </h3>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {["S", "M", "L", "XL", "XXL"].map((size) => (
+                      <button
+                        key={size}
+                        onClick={() =>
+                          setSelectedSize(selectedSize === size ? "" : size)
+                        }
+                        className={`border px-3 sm:px-4 py-[3px] sm:py-1 rounded-lg text-xs sm:text-sm transition-all ${
+                          selectedSize === size
+                            ? "bg-[#38bdf8] text-black border-[#38bdf8]"
+                            : "text-[#38bdf8] border-[#38bdf8] hover:bg-[#38bdf8] hover:text-black"
+                        }`}
+                      >
+                        {size}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <button className="mt-4 btn btn-xl bg-sky-600 hover:bg-sky-500 text-white rounded-lg border-none">
                   Grab Offer
                 </button>
               </div>
