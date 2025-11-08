@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FaRegHeart } from "react-icons/fa";
+import { IoCartOutline } from "react-icons/io5";
 
 const OfferZonePage = () => {
   const [selectedSize, setSelectedSize] = useState("");
@@ -26,6 +28,27 @@ const OfferZonePage = () => {
       discount: "20% Off",
       desc: "New styles just dropped — get yours before they're gone!",
       img: "https://taibahstyle.com/wp-content/uploads/2024/01/Maroon-Raglan-768x768-1.webp",
+    },
+    {
+      id: 4,
+      title: "Classic Flex Black Loafer (Code: M42)",
+      discount: "Flat 30% Off",
+      desc: "Celebrate this Eid with elegance! Shop premium Loafer at discounted prices.",
+      img: "https://ummahbd.com/wp-content/uploads/2025/04/1-M-42.jpg",
+    },
+    {
+      id: 5,
+      title: "Accessories Bonanza",
+      discount: "Buy 2 Get 1 Free",
+      desc: "Upgrade your look with our stylish caps, watches, and sunglasses. Perfect for everyday wear.",
+      img: "https://img.freepik.com/premium-photo/men-s-accessories-black-leather-shoes-belt-watch-black-background_9083-2891.jpg",
+    },
+    {
+      id: 6,
+      title: "Hot Summer Deals",
+      discount: "Up to 40% Off",
+      desc: "Elegant abayas and modest fashion pieces designed for comfort and grace — at unbeatable prices!",
+      img: "https://cdn.shopify.com/s/files/1/0603/9288/9263/files/abaya-collection.webp?v=1675422904",
     },
   ];
 
@@ -61,7 +84,7 @@ const OfferZonePage = () => {
 
               {/* Content */}
               <div className="text-center md:text-left md:w-2/3">
-                <h3 className="text-6xl font-bold text-sky-400 mb-2">
+                <h3 className="text-5xl font-bold text-sky-400 mb-2">
                   {offer.title}
                 </h3>
                 <p className="text-2xl text-yellow-200 font-extrabold mb-2 pt-6">
@@ -94,9 +117,24 @@ const OfferZonePage = () => {
                     ))}
                   </div>
                 </div>
-                <button className="mt-4 btn btn-xl bg-sky-600 hover:bg-sky-500 text-white rounded-lg border-none">
-                  Grab Offer
-                </button>
+                <section className="flex gap-2 mt-2 ">
+                  <button
+                    className="px-6 py-2  border-2 border-black text-white font-semibold 
+                   hover:bg-black hover:text-blue-800 transition duration-300"
+                  >
+                    Grab Offer
+                  </button>
+                  <div>
+                    <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
+                      <IoCartOutline className="text-lg text-sky-500" />
+                    </button>
+                  </div>
+                  <div>
+                    <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
+                      <FaRegHeart className="text-lg text-sky-500" />
+                    </button>
+                  </div>
+                </section>
               </div>
             </section>
           </motion.div>
