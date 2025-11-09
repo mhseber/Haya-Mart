@@ -88,7 +88,7 @@ const OfferZonePage = () => {
                 <img
                   src={offer.img}
                   alt={offer.title}
-                  className="rounded-xl w-full h-[400px] object-cover shadow-lg"
+                  className="rounded-xl w-full h-[400px] object-cover shadow-md"
                 />
               </div>
 
@@ -97,7 +97,7 @@ const OfferZonePage = () => {
                 <h3 className="text-3xl md:text-4xl font-bold text-sky-400 mb-2">
                   {offer.title}
                 </h3>
-                <p className="text-xl text-yellow-200 font-bold mb-2">
+                <p className="text-xl text-yellow-400 font-bold mb-2">
                   {offer.discount}
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed pt-3">
