@@ -3,7 +3,7 @@
 import { FaHome, FaRegHeart, FaUsers } from "react-icons/fa";
 import { FaBoxOpen } from "react-icons/fa";
 import { FiBarChart2 } from "react-icons/fi";
-import { GiHotMeal } from "react-icons/gi";
+import { FiGrid } from "react-icons/fi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
@@ -41,10 +41,10 @@ const Navbar = () => {
         </Link>
       </li>
       <li className={`text-lg `}>
-        <Link href="/meals">
+        <Link href="/Dashboard">
           {" "}
-          <GiHotMeal className="inline " />
-          Meals
+          <FiGrid className="inline " />
+          Dashboard
         </Link>
       </li>
     </>
