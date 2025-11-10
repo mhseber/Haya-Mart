@@ -2,7 +2,7 @@
 
 import { FaHome, FaRegHeart, FaUsers } from "react-icons/fa";
 import { FaBoxOpen } from "react-icons/fa";
-import { IoMdAddCircle } from "react-icons/io";
+import { FiBarChart2 } from "react-icons/fi";
 import { GiHotMeal } from "react-icons/gi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -35,9 +35,9 @@ const Navbar = () => {
         </Link>
       </li>
       <li className={`text-lg `}>
-        <Link href="/products/add">
-          <IoMdAddCircle className="inline " />
-          Add Products
+        <Link href="/Statistics">
+          <FiBarChart2 className="inline " />
+          Statistics
         </Link>
       </li>
       <li className={`text-lg `}>
