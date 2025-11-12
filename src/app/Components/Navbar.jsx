@@ -106,9 +106,11 @@ const Navbar = () => {
       {/* Right side (extra button or profile) */}
       <div className="indicator pr-10 gap-2 navbar-end">
         <div>
-          <button className="btn btn-sm rounded-2xl border-sky-700">
-            <IoCartOutline className="text-lg text-sky-500" />
-          </button>
+          <Link href="/Or-Components/Cart">
+            <button className="btn btn-sm rounded-2xl border-sky-700">
+              <IoCartOutline className="text-lg text-sky-500" />
+            </button>
+          </Link>
         </div>
         <div>
           <button className="btn btn-sm rounded-2xl border-sky-700">
