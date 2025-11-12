@@ -113,9 +113,11 @@ const Navbar = () => {
           </Link>
         </div>
         <div>
-          <button className="btn btn-sm rounded-2xl border-sky-700">
-            <FaRegHeart className="text-lg text-sky-500" />
-          </button>
+          <Link href="/Or-Components/Wishlist">
+            <button className="btn btn-sm rounded-2xl border-sky-700">
+              <FaRegHeart className="text-lg text-sky-500" />
+            </button>
+          </Link>
         </div>
         <div>
           <button className="btn btn-sm rounded-2xl border-sky-700">
