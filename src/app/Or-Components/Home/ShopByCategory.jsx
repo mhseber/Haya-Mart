@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { MdCategory } from "react-icons/md";
@@ -14,6 +15,9 @@ const ShopByCategory = () => {
     { id: 7, image: "/banner/tp1.PNG", name: "Thobe" },
     { id: 8, image: "/Category/perfume.jpg", name: "Perfume" },
     { id: 9, image: "/Category/pants.jpg", name: "Pants" },
+    { id: 9, image: "/Category/offer.avif", name: "OfferZone" },
+    { id: 9, image: "/Category/gadget2.jpeg", name: "Gadgets" },
+    { id: 9, image: "/Category/ofood.webp", name: "Organic Foods" },
   ];
 
   return (
@@ -35,7 +39,7 @@ const ShopByCategory = () => {
             <motion.img
               src={cat.image}
               alt={cat.name}
-              className="w-full h-75 object-cover"
+              className="w-full h-[420px] object-cover"
               whileHover={{ scale: 2.1 }} // zoom effect
               transition={{ duration: 1.7, ease: "easeInOut" }}
             />
