@@ -39,7 +39,7 @@ const NewArrival = () => {
         >
           {items.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="card bg-base-100 w-full shadow-sm h-[400px] flex flex-col">
+              <div className="card bg-base-100 w-full shadow-sm h-[500px] flex flex-col">
                 <motion.figure
                   className="h-[280px] overflow-hidden rounded-xl"
                   whileHover={{ scale: 1.05 }}
@@ -63,7 +63,7 @@ const NewArrival = () => {
                     </h2>
                     <div className="flex justify-between items-center pt-2">
                       <p className="text-sm text-blue-300 pt-3">
-                        <span className="text-sky-500">Price :</span>{" "}
+                        <span className="text-sky-500">Price : </span> ৳{" "}
                         {item.price}
                       </p>
                       <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">

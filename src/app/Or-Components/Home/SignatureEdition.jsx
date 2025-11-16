@@ -70,7 +70,7 @@ const SignatureEdition = () => {
                     </h2>
                     <div className="flex justify-between items-center pt-2">
                       <p className="text-sm  text-blue-300 pt-3">
-                        <span className="text-sky-500">Price :</span>
+                        <span className="text-sky-500">Price : ৳ </span>
                         {item.price}
                       </p>
                       <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
