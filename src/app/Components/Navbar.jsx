@@ -9,12 +9,8 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { IoCartOutline } from "react-icons/io5";
 import { GiClothes } from "react-icons/gi";
-import { useState } from "react";
-import AuthModal from "./AuthModal";
-
 const Navbar = () => {
   const pathname = usePathname();
-  const [isModalOpen, setModalOpen] = useState(false);
 
   const navLinks = (
     <>
@@ -124,16 +120,11 @@ const Navbar = () => {
         </div>
         <div>
           {/* User Modal Button */}
-          <button
-            onClick={() => setModalOpen(true)}
-            className="btn btn-sm rounded-2xl border-sky-700"
-          >
+          <button className="btn btn-sm rounded-2xl border-sky-700">
             <FaUsers className="text-lg text-sky-500" />
           </button>
         </div>
       </div>
-      {/* Auth Modal */}
-      <AuthModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 };
