@@ -119,10 +119,11 @@ const Navbar = () => {
           </Link>
         </div>
         <div>
-          {/* User Modal Button */}
-          <button className="btn btn-sm rounded-2xl border-sky-700">
-            <FaUsers className="text-lg text-sky-500" />
-          </button>
+          <Link href="/AuthUsers">
+            <button className="btn btn-sm rounded-2xl border-sky-700">
+              <FaUsers className="text-lg text-sky-500" />
+            </button>
+          </Link>
         </div>
       </div>
     </div>
