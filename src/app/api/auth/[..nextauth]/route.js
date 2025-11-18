@@ -1,4 +1,5 @@
 import NextAuth from "next-auth"
+import CredentialsProvider from "next-auth/providers/credentials"
 
 const handler = NextAuth({
  providers: [
@@ -11,9 +12,11 @@ const handler = NextAuth({
     // You can pass any HTML attribute to the <input> tag through the object.
     credentials: {
       username: { label: "Username", type: "text", placeholder: "jsmith" },
-      password: { label: "Password", type: "password" }
+      password: { label: "Password", type: "password" },
+      email: { label: "Email", type: "email" }
     },
     async authorize(credentials, req) {
+        console.log("CREDENTIALS FROM AUTH",credentials)
       // You need to provide your own logic here that takes the credentials
       // submitted and returns either a object representing a user or value
       // that is false/null if the credentials are invalid.
@@ -34,7 +37,7 @@ const handler = NextAuth({
       // Return null if user data could not be retrieved
       return null
     }
-  })
+  }) 
 ]
 })
 
