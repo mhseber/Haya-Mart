@@ -1,3 +1,4 @@
+
 import AboutUs from "./Or-Components/Home/AboutUs";
 import Banner from "./Or-Components/Home/Banner";
 import BestSelling from "./Or-Components/Home/BestSelling";
@@ -9,7 +10,9 @@ import Testimonials from "./Or-Components/Home/Testimonials";
 import TrustedCards from "./Or-Components/Home/TrustedCards";
 
 
-export default function Home() {
+
+export default  function Home() {
+  
   return (
     <div>
       <Banner />
