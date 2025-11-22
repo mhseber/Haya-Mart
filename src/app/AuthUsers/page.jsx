@@ -3,9 +3,23 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaUserCircle } from "react-icons/fa";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import auth from "@/Firebase/firebase.init";
 
 const AuthUsersPage = () => {
   const [loggedIn, setLoggedIn] = useState(false);
+  const provider = new GoogleAuthProvider();
+
+  const handleGoogleLogin = () => {
+    console.log("Google Login Clicked");
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error("Error during Google login:", error);
+      });
+  };
 
   return (
     <div
@@ -53,6 +67,14 @@ const AuthUsersPage = () => {
               className="btn bg-sky-500 hover:bg-sky-600 text-white w-full rounded-xl"
             >
               Login
+            </motion.button>
+            {/* GoogleLogin */}
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={handleGoogleLogin}
+              className="btn bg-sky-500 hover:bg-sky-600 text-white w-full rounded-xl"
+            >
+              Login with Google
             </motion.button>
           </div>
         ) : (
