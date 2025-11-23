@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { FaUserCircle } from "react-icons/fa";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "@/Firebase/firebase.init";
+import { FcGoogle } from "react-icons/fc";
+import { LuLogIn } from "react-icons/lu";
 
 const AuthUsersPage = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -66,6 +68,7 @@ const AuthUsersPage = () => {
               onClick={() => setLoggedIn(true)}
               className="btn bg-sky-500 hover:bg-sky-600 text-white w-full rounded-xl"
             >
+              <LuLogIn className="text-2xl" />
               Login
             </motion.button>
             {/* GoogleLogin */}
@@ -74,6 +77,7 @@ const AuthUsersPage = () => {
               onClick={handleGoogleLogin}
               className="btn bg-sky-500 hover:bg-sky-600 text-white w-full rounded-xl"
             >
+              <FcGoogle className="text-2xl" />
               Login with Google
             </motion.button>
           </div>
