@@ -7,6 +7,7 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "@/Firebase/firebase.init";
 import { FcGoogle } from "react-icons/fc";
 import { LuLogIn } from "react-icons/lu";
+import Swal from "sweetalert2";
 
 const AuthUsersPage = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -17,9 +18,27 @@ const AuthUsersPage = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log(result);
+
+        // show success alert
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Login Successful!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+
+        setLoggedIn(true); // update UI
       })
       .catch((error) => {
         console.error("Error during Google login:", error);
+
+        // error alert
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Google login failed!",
+        });
       });
   };
 
