@@ -139,17 +139,59 @@
 
 // export default AuthUsersPage;
 
+// "use client";
+
+// import React from "react";
+// import { useRouter } from "next/navigation";
+
+// const AuthUsersPage = () => {
+//   const router = useRouter();
+
+//   return (
+//     <div
+//       className="min-h-screen flex flex-col gap-4 justify-center items-center bg-cover bg-center relative"
+//       style={{
+//         backgroundImage:
+//           "url('https://wallpaper.forfun.com/fetch/84/84738f85d5f04b91e003c35a0b5c40e2.jpeg')",
+//       }}
+//     >
+//       {/* Dark Overlay */}
+//       <div className="absolute inset-0 bg-black/60"></div>
+
+//       {/* Buttons */}
+//       <div className="relative z-10 flex gap-4">
+//         <button
+//           onClick={() => router.push("/AuthUsers/Login")}
+//           className="btn bg-sky-500 hover:bg-sky-600 text-white px-6 py-2 rounded-xl"
+//         >
+//           Login
+//         </button>
+
+//         <button
+//           onClick={() => router.push("/AuthUsers/Register")}
+//           className="btn bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-xl"
+//         >
+//           Register
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default AuthUsersPage;
+
 "use client";
 
-import React from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
+import LoginPage from "./LoginForm";
+import RegisterPage from "./RegisterForm";
 
-const AuthUsersPage = () => {
-  const router = useRouter();
+export default function AuthUsersPage() {
+  const [activeTab, setActiveTab] = useState("login"); // toggle login / register
 
   return (
     <div
-      className="min-h-screen flex flex-col gap-4 justify-center items-center bg-cover bg-center relative"
+      className="min-h-screen flex flex-col gap-6 justify-center items-center bg-cover bg-center relative"
       style={{
         backgroundImage:
           "url('https://wallpaper.forfun.com/fetch/84/84738f85d5f04b91e003c35a0b5c40e2.jpeg')",
@@ -158,24 +200,32 @@ const AuthUsersPage = () => {
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* Buttons */}
+      {/* Buttons (Fixed) */}
       <div className="relative z-10 flex gap-4">
         <button
-          onClick={() => router.push("/AuthUsers/Login")}
-          className="btn bg-sky-500 hover:bg-sky-600 text-white px-6 py-2 rounded-xl"
+          onClick={() => setActiveTab("login")}
+          className={`px-6 py-2 rounded-xl text-white font-semibold 
+            ${activeTab === "login" ? "bg-sky-600" : "bg-sky-500/60"}`}
         >
           Login
         </button>
 
         <button
-          onClick={() => router.push("/AuthUsers/Register")}
-          className="btn bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-xl"
+          onClick={() => setActiveTab("register")}
+          className={`px-6 py-2 rounded-xl text-white font-semibold 
+            ${activeTab === "register" ? "bg-purple-600" : "bg-purple-500/60"}`}
         >
           Register
         </button>
       </div>
+
+      {/* Toggle Border Below Buttons */}
+      <div className="relative z-10 w-60 border-b-2 border-white/40"></div>
+
+      {/* Forms */}
+      <div className="relative z-10">
+        {activeTab === "login" ? <LoginPage /> : <RegisterPage />}
+      </div>
     </div>
   );
-};
-
-export default AuthUsersPage;
+}
