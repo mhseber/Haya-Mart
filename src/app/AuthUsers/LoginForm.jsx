@@ -21,6 +21,7 @@ export default function LoginForm() {
     signInWithPopup(auth, provider)
       .then(() => {
         Swal.fire({
+          position: "top-end",
           icon: "success",
           title: "Login Successful!",
           timer: 1200,
@@ -68,7 +69,7 @@ export default function LoginForm() {
       />
 
       {/* Normal Login */}
-      <button className="btn bg-sky-500 hover:bg-sky-600 text-white w-full mb-3">
+      <button className="btn border-2  border-black bg-black text-white font-semibold  w-full mb-3">
         <LuLogIn className="text-xl" /> Login
       </button>
 
@@ -76,7 +77,7 @@ export default function LoginForm() {
       <button
         onClick={handleGoogleLogin}
         disabled={loading}
-        className="btn bg-sky-500 hover:bg-sky-600 text-white w-full"
+        className="btn bg-black hover:bg-sky-700 text-white w-full"
       >
         <FcGoogle className="text-xl" />
         {loading ? "Loading..." : "Login with Google"}
