@@ -10,7 +10,7 @@ export default function AuthUsersPage() {
 
   return (
     <div
-      className="min-h-screen flex flex-col gap-6 justify-center items-center bg-cover bg-center relative z-0"
+      className="min-h-screen flex flex-col gap-6 pt-20 justify-center items-center bg-cover bg-center relative z-0"
       style={{
         backgroundImage:
           "url('https://wallpaper.forfun.com/fetch/84/84738f85d5f04b91e003c35a0b5c40e2.jpeg')",
@@ -20,14 +20,14 @@ export default function AuthUsersPage() {
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Buttons */}
-      <div className="relative flex gap-4 pt-20">
+      <div className="relative flex gap-4 pt-20 ">
         <button
           onClick={() => setActiveTab("login")}
           className={`btn btn-xl flex rounded-xl text-white font-semibold
             ${activeTab === "login" ? "bg-sky-600" : "bg-sky-500/60"}`}
         >
           <FaUserCircle className="text-xl text-white/90" />
-          Login
+          LOGIN
         </button>
 
         <button
@@ -36,7 +36,7 @@ export default function AuthUsersPage() {
             ${activeTab === "register" ? "bg-purple-600" : "bg-purple-500/60"}`}
         >
           <FaUserPlus className="text-xl text-white/90" />
-          Register
+          CREATE ACCOUNT
         </button>
       </div>
 

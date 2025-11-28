@@ -44,7 +44,7 @@ export default function LoginForm() {
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8 w-[350px]"
+      className="backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8 w-[350px] mb-10"
     >
       <div className="flex justify-center mb-4">
         <FaUserCircle className="text-6xl text-white/90" />
@@ -80,7 +80,7 @@ export default function LoginForm() {
         className="btn bg-black hover:bg-sky-700 text-white w-full"
       >
         <FcGoogle className="text-xl" />
-        {loading ? "Loading..." : "Login with Google"}
+        {loading ? "Loading..." : "Google Login"}
       </button>
     </motion.div>
   );
