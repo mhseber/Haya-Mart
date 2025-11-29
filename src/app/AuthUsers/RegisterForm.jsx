@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import { FaUserPlus } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useState } from "react";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import auth from "@/Firebase/firebase.init";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
@@ -14,6 +18,23 @@ export default function RegisterForm() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const number = e.target.number.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(name, number, email, password);
+
+    // create user with email and password
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error("ERROR", error);
+      });
+  };
   const handleGoogleLogin = () => {
     setLoading(true);
 
@@ -51,43 +72,49 @@ export default function RegisterForm() {
       <h2 className="text-2xl font-semibold text-center text-white mb-6">
         Create an Account
       </h2>
+      {/* form */}
+      <form onSubmit={handleRegister}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Full Name"
+          className="input input-bordered w-full bg-white/20 text-white mb-3"
+        />
+        <input
+          type="number"
+          name="number"
+          placeholder="01XXXXXXXXX"
+          className="input input-bordered w-full bg-white/20 text-white mb-3"
+        />
 
-      <input
-        type="text"
-        placeholder="Full Name"
-        className="input input-bordered w-full bg-white/20 text-white mb-3"
-      />
-      <input
-        type="number"
-        placeholder="01XXXXXXXXX"
-        className="input input-bordered w-full bg-white/20 text-white mb-3"
-      />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          className="input input-bordered w-full bg-white/20 text-white mb-3"
+        />
 
-      <input
-        type="email"
-        placeholder="Email"
-        className="input input-bordered w-full bg-white/20 text-white mb-3"
-      />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          className="input input-bordered w-full bg-white/20 text-white mb-4"
+        />
 
-      <input
-        type="password"
-        placeholder="Password"
-        className="input input-bordered w-full bg-white/20 text-white mb-4"
-      />
-
-      <button className=" btn border-2  border-black bg-black text-white font-semibold  w-full mb-3">
-        <FaUserPlus className="text-xl text-white/90" />
-        CREATE ACCOUNT
-      </button>
-      {/* Google Login */}
-      <button
-        onClick={handleGoogleLogin}
-        disabled={loading}
-        className="btn bg-black hover:bg-sky-700 text-white w-full"
-      >
-        <FcGoogle className="text-xl" />
-        {loading ? "Loading..." : "Google Login"}
-      </button>
+        <button className=" btn border-2  border-black bg-black text-white font-semibold  w-full mb-3">
+          <FaUserPlus className="text-xl text-white/90" />
+          CREATE ACCOUNT
+        </button>
+        {/* Google Login */}
+        <button
+          onClick={handleGoogleLogin}
+          disabled={loading}
+          className="btn bg-black hover:bg-sky-700 text-white w-full"
+        >
+          <FcGoogle className="text-xl" />
+          {loading ? "Loading..." : "Google Login"}
+        </button>
+      </form>
     </motion.div>
   );
 }
