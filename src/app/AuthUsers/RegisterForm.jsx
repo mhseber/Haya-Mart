@@ -14,9 +14,11 @@ import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
 
 export default function RegisterForm() {
+  const [success, setSuccess] = useState(false);
   const provider = new GoogleAuthProvider();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -26,15 +28,31 @@ export default function RegisterForm() {
     const password = e.target.password.value;
     console.log(name, number, email, password);
 
+    // reset error message
+    setErrorMessage("");
+    setSuccess(false);
+
+    // basic validation
+    if (password.length < 6) {
+      setErrorMessage("Password must be at least 6 characters long.");
+      return;
+    }
+
     // create user with email and password
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         console.log(result.user);
+        setSuccess(true);
       })
       .catch((error) => {
         console.error("ERROR", error);
+        setErrorMessage(error.message);
+        setSuccess(false);
       });
   };
+
+  // Google Login
+
   const handleGoogleLogin = () => {
     setLoading(true);
 
@@ -101,7 +119,7 @@ export default function RegisterForm() {
           className="input input-bordered w-full bg-white/20 text-white mb-4"
         />
 
-        <button className=" btn border-2  border-black bg-black text-white font-semibold  w-full mb-3">
+        <button className=" btn border-2 rounded-2xl  border-black bg-black text-white font-semibold  w-full mb-3">
           <FaUserPlus className="text-xl text-white/90" />
           CREATE ACCOUNT
         </button>
@@ -115,6 +133,10 @@ export default function RegisterForm() {
           {loading ? "Loading..." : "Google Login"}
         </button>
       </form>
+      {errorMessage && <p className="text-red-500 pt-2">{errorMessage}</p>}
+      {success && (
+        <p className="text-green-600 pt-2">Create User Successful!</p>
+      )}
     </motion.div>
   );
 }
