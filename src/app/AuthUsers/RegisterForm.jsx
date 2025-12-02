@@ -287,7 +287,9 @@ export default function RegisterForm() {
           {/* Name */}
           <div>
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text font-bold">
+                <i>Number</i>
+              </span>
             </label>
             <input
               type="text"
@@ -300,7 +302,9 @@ export default function RegisterForm() {
           {/* Number */}
           <div>
             <label className="label">
-              <span className="label-text">Number</span>
+              <span className="label-text font-bold">
+                <i>Number</i>
+              </span>
             </label>
             <input
               type="number"
@@ -314,7 +318,9 @@ export default function RegisterForm() {
         {/* Photo */}
         <div>
           <label className="label">
-            <span className="label-text">Photo</span>
+            <span className="label-text font-bold">
+              <i>Photo</i>
+            </span>
           </label>
           <input
             type="text"
@@ -329,7 +335,9 @@ export default function RegisterForm() {
           {/* Email */}
           <div>
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text font-bold">
+                <i>email</i>
+              </span>
             </label>
             <input
               type="email"
@@ -342,7 +350,9 @@ export default function RegisterForm() {
           {/* Password */}
           <div className="relative">
             <label className="label">
-              <span className="label-text">Password</span>
+              <span className="label-text font-bold">
+                <i>Password</i>
+              </span>
             </label>
             <input
               type={showPass ? "text" : "password"}
@@ -386,9 +396,15 @@ export default function RegisterForm() {
         </button>
       </form>
 
-      {errorMessage && <p className="text-red-500 pt-2">{errorMessage}</p>}
+      {errorMessage && (
+        <p className="text-red-500 pt-2">
+          <i>{errorMessage}</i>
+        </p>
+      )}
       {success && (
-        <p className="text-green-600 pt-2">Create User Successful!</p>
+        <p className="text-green-600 pt-2">
+          <i>Create User Successful!</i>
+        </p>
       )}
     </motion.div>
   );

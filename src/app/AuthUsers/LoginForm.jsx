@@ -84,20 +84,33 @@ export default function LoginForm() {
       </h2>
       <form onSubmit={handleLogin}>
         {/* Email */}
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          className="input input-bordered w-full bg-white/20 text-white mb-3"
-        />
-
+        <div>
+          <label className="label">
+            <span className="label-text font-bold">
+              <i>Email</i>
+            </span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            className="input input-bordered w-full bg-white/20 text-white mb-3"
+          />
+        </div>
         {/* Password */}
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          className="input input-bordered w-full bg-white/20 text-white mb-4"
-        />
+        <div>
+          <label className="label">
+            <span className="label-text font-bold">
+              <i>Password</i>
+            </span>
+          </label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            className="input input-bordered w-full bg-white/20 text-white mb-4"
+          />
+        </div>
 
         {/* Normal Login */}
         <button className="btn border-2  border-black bg-black text-white font-semibold  w-full mb-3">
@@ -116,12 +129,12 @@ export default function LoginForm() {
 
       {/* success message */}
       {success && (
-        <p className="text-green-600">
+        <p className="text-green-600 pt-2">
           <i>Login Successful!</i>
         </p>
       )}
       {loginError && (
-        <p className="text-red-600">
+        <p className="text-red-600 pt-2">
           <i>{loginError}</i>
         </p>
       )}
