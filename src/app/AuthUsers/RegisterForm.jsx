@@ -271,7 +271,7 @@ export default function RegisterForm() {
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="backdrop-blur-xl bg-white/10 border mb-10 border-white/20 shadow-2xl rounded-2xl p-8 w-[550px]"
+      className="backdrop-blur-xl bg-white/10 border mb-10 border-white/20 shadow-2xl shadow-sky-500 rounded-2xl p-8 lg:w-[550px]"
     >
       <div className="flex justify-center mb-4">
         <FaUserPlus className="text-6xl text-white/90" />
@@ -286,22 +286,22 @@ export default function RegisterForm() {
         <div className="grid grid-cols-2 gap-4">
           {/* Name */}
           <div>
-            <label className="label">
+            <label className="label pb-1">
               <span className="label-text font-bold">
-                <i>Number</i>
+                <i>Name</i>
               </span>
             </label>
             <input
               type="text"
               name="name"
               placeholder="Full Name"
-              className="input input-bordered w-full bg-white/20 text-white mb-3"
+              className="input input-bordered input-primary w-full bg-white/20 text-white mb-3"
             />
           </div>
 
           {/* Number */}
           <div>
-            <label className="label">
+            <label className="label pb-1">
               <span className="label-text font-bold">
                 <i>Number</i>
               </span>
@@ -310,14 +310,14 @@ export default function RegisterForm() {
               type="number"
               name="number"
               placeholder="01XXXXXXXXX"
-              className="input input-bordered w-full bg-white/20 text-white mb-3"
+              className="input input-bordered input-primary w-full bg-white/20 text-white mb-3"
             />
           </div>
         </div>
 
         {/* Photo */}
         <div>
-          <label className="label">
+          <label className="label pb-1">
             <span className="label-text font-bold">
               <i>Photo</i>
             </span>
@@ -326,7 +326,7 @@ export default function RegisterForm() {
             type="text"
             name="photo"
             placeholder="url link"
-            className="input input-bordered w-full bg-white/20 text-white mb-3"
+            className="input input-bordered input-primary w-full bg-white/20 text-white mb-3"
           />
         </div>
 
@@ -334,22 +334,22 @@ export default function RegisterForm() {
         <div className="grid grid-cols-2 gap-4">
           {/* Email */}
           <div>
-            <label className="label">
+            <label className="label pb-1">
               <span className="label-text font-bold">
-                <i>email</i>
+                <i>Email</i>
               </span>
             </label>
             <input
               type="email"
               name="email"
               placeholder="Email"
-              className="input input-bordered w-full bg-white/20 text-white mb-3"
+              className="input input-bordered input-primary w-full bg-white/20 text-white mb-3"
             />
           </div>
 
           {/* Password */}
           <div className="relative">
-            <label className="label">
+            <label className="label pb-1">
               <span className="label-text font-bold">
                 <i>Password</i>
               </span>
@@ -358,7 +358,7 @@ export default function RegisterForm() {
               type={showPass ? "text" : "password"}
               name="password"
               placeholder="Password"
-              className="input input-bordered w-full bg-white/20 text-white mb-4"
+              className="input input-bordered input-primary w-full bg-white/20 text-white mb-4"
             />
 
             {/* Eye Button */}
@@ -381,7 +381,7 @@ export default function RegisterForm() {
           <p>I agree to the Terms of Service and Privacy Policy</p>
         </div>
 
-        <button className="btn border-2 rounded-2xl border-black bg-black text-white font-semibold w-full mb-3">
+        <button className="btn border-2 rounded-xl border-black bg-black text-white font-semibold w-full mb-3">
           <FaUserPlus className="text-xl text-white/90" />
           CREATE ACCOUNT
         </button>
@@ -389,10 +389,10 @@ export default function RegisterForm() {
         <button
           onClick={handleGoogleLogin}
           disabled={loading}
-          className="btn bg-black hover:bg-sky-700 text-white w-full"
+          className="btn bg-black hover:bg-sky-700 text-white w-full rounded-xl"
         >
           <FcGoogle className="text-xl" />
-          {loading ? "Loading..." : "Google Login"}
+          {loading ? "Loading..." : "CONTINUE WITH GOOGLE"}
         </button>
       </form>
 
