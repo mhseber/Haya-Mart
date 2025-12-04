@@ -1,186 +1,3 @@
-// "use client";
-
-// import { motion } from "framer-motion";
-// import { FaEye, FaUserPlus } from "react-icons/fa";
-// import { FcGoogle } from "react-icons/fc";
-// import { useState } from "react";
-// import {
-//   createUserWithEmailAndPassword,
-//   GoogleAuthProvider,
-//   signInWithPopup,
-// } from "firebase/auth";
-// import auth from "@/Firebase/firebase.init";
-// import Swal from "sweetalert2";
-// import { useRouter } from "next/navigation";
-
-// export default function RegisterForm() {
-//   const [success, setSuccess] = useState(false);
-//   const provider = new GoogleAuthProvider();
-//   const router = useRouter();
-//   const [loading, setLoading] = useState(false);
-//   const [errorMessage, setErrorMessage] = useState("");
-
-//   const handleRegister = (e) => {
-//     e.preventDefault();
-//     const name = e.target.name.value;
-//     const number = e.target.number.value;
-//     const email = e.target.email.value;
-//     const password = e.target.password.value;
-//     console.log(name, number, email, password);
-
-//     // reset error message
-//     setErrorMessage("");
-//     setSuccess(false);
-
-//     // basic validation
-//     if (password.length < 6) {
-//       setErrorMessage("Password must be at least 6 characters long.");
-//       return;
-//     }
-
-//     // create user with email and password
-//     createUserWithEmailAndPassword(auth, email, password)
-//       .then((result) => {
-//         console.log(result.user);
-//         setSuccess(true);
-//       })
-//       .catch((error) => {
-//         console.error("ERROR", error);
-//         setErrorMessage(error.message);
-//         setSuccess(false);
-//       });
-//   };
-
-//   // Google Login
-
-//   const handleGoogleLogin = () => {
-//     setLoading(true);
-
-//     signInWithPopup(auth, provider)
-//       .then(() => {
-//         Swal.fire({
-//           position: "top-end",
-//           icon: "success",
-//           title: "Login Successful!",
-//           timer: 1200,
-//           showConfirmButton: false,
-//         });
-
-//         setTimeout(() => router.push("/"), 1200);
-//       })
-//       .catch(() => {
-//         Swal.fire({
-//           icon: "error",
-//           title: "Google Login Failed",
-//         });
-//       })
-//       .finally(() => setLoading(false));
-//   };
-//   return (
-//     <motion.div
-//       initial={{ opacity: 0, y: 25 }}
-//       animate={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 0.5 }}
-//       className="backdrop-blur-xl bg-white/10 border mb-10 border-white/20 shadow-2xl rounded-2xl p-8 w-[350px]"
-//     >
-//       <div className="flex justify-center mb-4">
-//         <FaUserPlus className="text-6xl text-white/90" />
-//       </div>
-
-//       <h2 className="text-2xl font-semibold text-center text-white mb-6">
-//         Create an Account
-//       </h2>
-//       {/* form */}
-//       <form onSubmit={handleRegister}>
-//         {/* name */}
-//         <div>
-//           <label className="label">
-//             <span className="label-text">Name</span>
-//           </label>
-//           <input
-//             type="text"
-//             name="name"
-//             placeholder="Full Name"
-//             className="input input-bordered w-full bg-white/20 text-white mb-3"
-//           />
-//         </div>
-//         {/* img */}
-//         <div>
-//           <label className="label">
-//             <span className="label-text">Photo</span>
-//           </label>
-//           <input
-//             type="text"
-//             name="photo"
-//             placeholder="url link"
-//             className="input input-bordered w-full bg-white/20 text-white mb-3"
-//           />
-//         </div>
-//         {/* Number */}
-//         <div>
-//           <label className="label">
-//             <span className="label-text">Number</span>
-//           </label>
-//           <input
-//             type="number"
-//             name="number"
-//             placeholder="01XXXXXXXXX"
-//             className="input input-bordered w-full bg-white/20 text-white mb-3"
-//           />
-//         </div>
-//         {/* email */}
-//         <div>
-//           <label className="label">
-//             <span className="label-text">Email</span>
-//           </label>
-//           <input
-//             type="email"
-//             name="email"
-//             placeholder="Email"
-//             className="input input-bordered w-full bg-white/20 text-white mb-3"
-//           />
-//         </div>
-//         {/* password */}
-//         <div className="relative">
-//           <label className="label">
-//             <span className="label-text">Password</span>
-//           </label>
-//           <input
-//             type="password"
-//             name="password"
-//             placeholder="Password"
-//             className="input input-bordered w-full bg-white/20 text-white mb-4"
-//           />
-//           <button className="btn btn-xs absolute right-2 ">
-//             <FaEye />
-//           </button>
-//         </div>
-//         <div>
-//           <a className="link link-hover">Forgot password?</a>
-//         </div>
-
-//         <button className=" btn border-2 rounded-2xl  border-black bg-black text-white font-semibold  w-full mb-3">
-//           <FaUserPlus className="text-xl text-white/90" />
-//           CREATE ACCOUNT
-//         </button>
-//         {/* Google Login */}
-//         <button
-//           onClick={handleGoogleLogin}
-//           disabled={loading}
-//           className="btn bg-black hover:bg-sky-700 text-white w-full"
-//         >
-//           <FcGoogle className="text-xl" />
-//           {loading ? "Loading..." : "Google Login"}
-//         </button>
-//       </form>
-//       {errorMessage && <p className="text-red-500 pt-2">{errorMessage}</p>}
-//       {success && (
-//         <p className="text-green-600 pt-2">Create User Successful!</p>
-//       )}
-//     </motion.div>
-//   );
-// }
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -190,6 +7,7 @@ import { useState } from "react";
 import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
+  sendEmailVerification,
   signInWithPopup,
 } from "firebase/auth";
 import auth from "@/Firebase/firebase.init";
@@ -234,6 +52,11 @@ export default function RegisterForm() {
       .then((result) => {
         console.log(result.user);
         setSuccess(true);
+
+        // send verification email address
+        sendEmailVerification(auth.currentUser).then(() => {
+          console.log("Email verification sent");
+        });
       })
       .catch((error) => {
         console.error("ERROR", error);

@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { FcGoogle } from "react-icons/fc";
 import { LuLogIn } from "react-icons/lu";
 import { FaEye, FaEyeSlash, FaUserCircle } from "react-icons/fa";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   GoogleAuthProvider,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
@@ -21,6 +22,7 @@ export default function LoginForm() {
   const [success, setSuccess] = useState(false);
   const [loginError, setLoginError] = useState("");
   const [showPass, setShowPass] = useState(false);
+  const emailRef = useRef();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -89,6 +91,19 @@ export default function LoginForm() {
       .finally(() => setLoading(false));
   };
 
+  // Handle Forget Password
+  const handleForgetPassword = () => {
+    console.log("Forget Password Clicked", emailRef.current.value);
+    const email = emailRef.current.value;
+    if (!email) {
+      console.log("Please enter your email address to reset password.");
+    } else {
+      sendPasswordResetEmail(auth, email).then(() => {
+        alert("Password reset email sent. Please check your inbox.");
+      });
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 25 }}
@@ -114,6 +129,7 @@ export default function LoginForm() {
           <input
             type="email"
             name="email"
+            ref={emailRef}
             placeholder="Email"
             className="input input-bordered  input-primary w-full bg-white/20 text-white mb-3"
           />
@@ -154,6 +170,10 @@ export default function LoginForm() {
           >
             {showPass ? <FaEyeSlash /> : <FaEye />}
           </button>
+        </div>
+        {/* forget pass */}
+        <div onClick={handleForgetPassword} className="pb-6">
+          <a class="link link-hover">Forgot password?</a>
         </div>
 
         {/* Normal Login */}
