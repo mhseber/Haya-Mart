@@ -135,20 +135,6 @@ export default function LoginForm() {
           />
         </div>
         {/* Password */}
-        {/* <div>
-          <label className="label pb-1">
-            <span className="label-text font-bold">
-              <i>Password</i>
-            </span>
-          </label>
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            className="input input-bordered w-full bg-white/20 text-white mb-4"
-          />
-        </div> */}
-        {/* Password */}
         <div className="relative">
           <label className="label pb-1">
             <span className="label-text font-bold">
