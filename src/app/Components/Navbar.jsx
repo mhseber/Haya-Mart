@@ -11,17 +11,35 @@ import { GiClothes } from "react-icons/gi";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import auth from "@/Firebase/firebase.init";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [user] = useAuthState(auth);
 
+  const router = useRouter();
+
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
-        alert("Logged out successfully");
+        // user logout hoise, ekhon redirect
+        router.push("/AuthUsers");
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Logged out successfully!",
+          timer: 1200,
+          showConfirmButton: false,
+        });
       })
-      .catch((err) => console.error(err));
+      .catch((error) => {
+        console.error("Logout Error:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Logout Failed",
+          text: error.message,
+        });
+      });
   };
 
   const navLinks = (
@@ -111,12 +129,29 @@ const Navbar = () => {
       </div>
 
       <div className="indicator pt-2 lg:pt-0 pr-4 lg:pr-10 gap-2 navbar-end flex flex-wrap items-center justify-end">
-        <Link href="/Or-Components/Cart">
+        <Link
+          href={user ? "/Or-Components/Cart" : "#"}
+          onClick={(e) => {
+            if (!user) {
+              e.preventDefault(); // Default navigation stop
+              router.push("/AuthUsers"); // Redirect to login
+            }
+          }}
+        >
           <button className="btn btn-sm rounded-2xl border-sky-700 mb-2 lg:mb-0">
             <IoCartOutline className="text-lg text-sky-500" />
           </button>
         </Link>
-        <Link href="/Or-Components/Wishlist">
+
+        <Link
+          href={user ? "/Or-Components/Wishlist" : "#"}
+          onClick={(e) => {
+            if (!user) {
+              e.preventDefault();
+              router.push("/AuthUsers");
+            }
+          }}
+        >
           <button className="btn btn-sm rounded-2xl border-sky-700 mb-2 lg:mb-0">
             <FaRegHeart className="text-lg text-sky-500" />
           </button>
