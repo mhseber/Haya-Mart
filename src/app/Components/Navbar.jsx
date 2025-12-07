@@ -12,6 +12,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import auth from "@/Firebase/firebase.init";
 import { useRouter } from "next/navigation";
+import { CiLogout } from "react-icons/ci";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -42,6 +43,8 @@ const Navbar = () => {
       });
   };
 
+  const ADMIN_EMAIL = "sebermh@gmail.com";
+
   const navLinks = (
     <>
       <li className="text-lg">
@@ -67,11 +70,15 @@ const Navbar = () => {
               <FiBarChart2 className="inline" /> Statistics
             </Link>
           </li>
-          <li className="text-lg">
-            <Link href="/Dashboard">
-              <FiGrid className="inline" /> Dashboard
-            </Link>
-          </li>
+
+          {/* Only show Admin link for admin email */}
+          {user?.email === ADMIN_EMAIL && (
+            <li className="text-lg">
+              <Link href="/Dashboard/Admin">
+                <span className="text-yellow-400">Admin</span>
+              </Link>
+            </li>
+          )}
         </>
       )}
     </>
@@ -167,9 +174,10 @@ const Navbar = () => {
             />
             <button
               onClick={handleLogout}
-              className="btn btn-sm rounded-2xl border-red-500 text-red-500 mb-2 lg:mb-0"
+              className="btn btn-sm rounded-xl border-red-500 text-red-500 mb-2 lg:mb-0"
             >
-              Logout
+              <CiLogout />
+              LogOut
             </button>
           </>
         ) : (
