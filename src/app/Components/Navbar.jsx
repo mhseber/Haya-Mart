@@ -65,17 +65,26 @@ const Navbar = () => {
       {/* Only show if user is logged in */}
       {user && (
         <>
+          {/* Statistics for all logged users */}
           <li className="text-lg">
             <Link href="/Statistics">
               <FiBarChart2 className="inline" /> Statistics
             </Link>
           </li>
+          {/* Normal User Dashboard */}
+          <li className="text-lg">
+            <Link href="/Dashboard/User">
+              <FiGrid className="inline" /> Dashboard
+            </Link>
+          </li>
 
-          {/* Only show Admin link for admin email */}
-          {user?.email === ADMIN_EMAIL && (
+          {/* Admin only */}
+          {user.email === ADMIN_EMAIL && (
             <li className="text-lg">
               <Link href="/Dashboard/Admin">
-                <span className="text-yellow-400">Admin</span>
+                <span className="text-yellow-400 font-semibold">
+                  Admin Panel
+                </span>
               </Link>
             </li>
           )}
@@ -85,7 +94,7 @@ const Navbar = () => {
   );
 
   // dashboard route এ Navbar hide করো
-  if (pathname.includes("dashboard")) return null;
+  if (pathname.toLowerCase().includes("/dashboard")) return null;
 
   return (
     <div className="navbar fixed z-10 bg-black bg-opacity-30 backdrop-blur-md shadow-lg">
