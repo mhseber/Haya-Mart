@@ -76,9 +76,11 @@ import {
   FaHeart,
   FaCog,
   FaBoxOpen,
+  FaRegHeart,
 } from "react-icons/fa";
 import { GiClothes } from "react-icons/gi";
 import { FiBarChart2 } from "react-icons/fi";
+import { IoCartOutline } from "react-icons/io5";
 
 const UserDashboard = () => {
   const [user, loading] = useAuthState(auth);
@@ -137,6 +139,16 @@ const UserDashboard = () => {
             href="/Statistics"
             icon={<FiBarChart2 className="inline" />}
             label="Statistics"
+          />
+          <DashLink
+            href="/Or-Components/Cart"
+            icon={<IoCartOutline className="text-lg text-sky-500" />}
+            label="Cart"
+          />
+          <DashLink
+            href="/Or-Components/Wishlist"
+            icon={<FaRegHeart className="text-lg text-sky-500" />}
+            label="Wishlist"
           />
         </nav>
       </aside>

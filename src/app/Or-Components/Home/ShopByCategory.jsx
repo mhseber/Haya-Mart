@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MdCategory } from "react-icons/md";
+import Link from "next/link";
 
 const ShopByCategory = () => {
   const categories = [
@@ -46,12 +47,14 @@ const ShopByCategory = () => {
 
             {/* fixed button */}
             <div className="absolute bottom-4 right-4">
-              <button
-                className="px-6 py-2  border-2 border-black text-black font-semibold 
+              <Link href="/Outfits">
+                <button
+                  className="px-6 py-2  border-2 border-black text-black font-semibold 
                    hover:bg-black hover:text-blue-800 transition duration-300"
-              >
-                {cat.name}
-              </button>
+                >
+                  {cat.name}
+                </button>
+              </Link>
             </div>
           </div>
         ))}
