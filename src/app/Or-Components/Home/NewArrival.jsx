@@ -6,15 +6,41 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FaCartPlus, FaRegHeart, FaShoppingBag, FaStar } from "react-icons/fa";
+import Swal from "sweetalert2";
+import { useRouter } from "next/navigation";
 
 const NewArrival = () => {
   const [items, setItems] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
     fetch("/NewArrival.json")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
+
+  const handleConfirmOrder = (product) => {
+    setSelectedProduct(null);
+
+    // ✅ Dummy order save (future API ready)
+    const order = {
+      id: Date.now(),
+      productName: product.title,
+      price: product.price,
+      status: "Confirmed",
+    };
+
+    localStorage.setItem("lastOrder", JSON.stringify(order));
+
+    Swal.fire({
+      icon: "success",
+      title: "Order Confirmed 🎉",
+      text: "Your order has been placed successfully!",
+    }).then(() => {
+      router.push("/Dashboard/User"); // User dashboard
+    });
+  };
 
   return (
     <div className="px-6">
@@ -72,7 +98,10 @@ const NewArrival = () => {
                     </div>
                   </div>
                   <div className="card-actions justify-center mt-4">
-                    <button className="btn  btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-blue-800 transition duration-300">
+                    <button
+                      onClick={() => setSelectedProduct(item)}
+                      className="btn  btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+                    >
                       <FaShoppingBag className="text-lg" />
                       Order Now
                     </button>
@@ -87,6 +116,43 @@ const NewArrival = () => {
           ))}
         </Swiper>
       </section>
+
+      {/* order btn model */}
+      {selectedProduct && (
+        <dialog open className="modal modal-open">
+          <div className="modal-box bg-slate-900 text-white max-w-md">
+            <h3 className="font-bold text-xl mb-3">Confirm Your Order</h3>
+
+            <img
+              src={selectedProduct.img}
+              className="w-full h-56 object-cover rounded-lg mb-4"
+            />
+
+            <p className="font-semibold">{selectedProduct.title}</p>
+            <p className="text-sky-400 mt-1">
+              Price: ৳ {selectedProduct.price}
+            </p>
+
+            <p className="text-sm text-slate-400 mt-2">Size: M / L / XL</p>
+
+            <div className="modal-action flex justify-between">
+              <button
+                className="btn btn-outline"
+                onClick={() => setSelectedProduct(null)}
+              >
+                Cancel
+              </button>
+
+              <button
+                className="btn bg-sky-600 text-white"
+                onClick={() => handleConfirmOrder(selectedProduct)}
+              >
+                Confirm Now
+              </button>
+            </div>
+          </div>
+        </dialog>
+      )}
 
       <style jsx global>{`
         .mySwiper {

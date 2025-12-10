@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaRegHeart, FaShoppingBag, FaTrashAlt } from "react-icons/fa";
-import { IoCartOutline } from "react-icons/io5";
 
 const WishlistPage = () => {
   const [cart, setCart] = useState([
