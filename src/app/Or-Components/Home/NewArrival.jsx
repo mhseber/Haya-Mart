@@ -8,11 +8,16 @@ import "swiper/css/pagination";
 import { FaCartPlus, FaRegHeart, FaShoppingBag, FaStar } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { useRouter } from "next/navigation";
+import {
+  IoCloseCircleOutline,
+  IoCheckmarkCircleOutline,
+} from "react-icons/io5";
 
 const NewArrival = () => {
   const [items, setItems] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const router = useRouter();
+  const [selectedSize, setSelectedSize] = useState("");
 
   useEffect(() => {
     fetch("/NewArrival.json")
@@ -120,33 +125,56 @@ const NewArrival = () => {
       {/* order btn model */}
       {selectedProduct && (
         <dialog open className="modal modal-open">
-          <div className="modal-box bg-slate-900 text-white max-w-md">
+          <div className="modal-box bg-slate-900 text-white max-w-lg">
             <h3 className="font-bold text-xl mb-3">Confirm Your Order</h3>
 
             <img
               src={selectedProduct.img}
-              className="w-full h-56 object-cover rounded-lg mb-4"
+              className="w-full h-80 object-cover rounded-lg mb-4"
             />
 
             <p className="font-semibold">{selectedProduct.title}</p>
             <p className="text-sky-400 mt-1">
               Price: ৳ {selectedProduct.price}
             </p>
-
-            <p className="text-sm text-slate-400 mt-2">Size: M / L / XL</p>
+            {/* Sizes */}
+            <div className="mt-4 sm:mt-2">
+              <h3 className="text-xs sm:text-sm text-sky-500 font-semibold mb-2">
+                Select Size :{" "}
+                <span className="text-[#38bdf8]">{selectedSize || ""}</span>
+              </h3>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["S", "M", "L", "XL", "XXL"].map((size) => (
+                  <button
+                    key={size}
+                    onClick={() =>
+                      setSelectedSize(selectedSize === size ? "" : size)
+                    }
+                    className={`border px-3 sm:px-4 py-[3px] sm:py-1 rounded-lg text-xs sm:text-sm transition-all ${
+                      selectedSize === size
+                        ? "bg-[#38bdf8] text-black border-[#38bdf8]"
+                        : "text-[#38bdf8] border-[#38bdf8] hover:bg-[#38bdf8] hover:text-black"
+                    }`}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
 
             <div className="modal-action flex justify-between">
               <button
                 className="btn btn-outline"
                 onClick={() => setSelectedProduct(null)}
               >
-                Cancel
+                <IoCloseCircleOutline className="text-2xl" />
               </button>
 
               <button
-                className="btn bg-sky-600 text-white"
+                className="btn btn-outline   border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
                 onClick={() => handleConfirmOrder(selectedProduct)}
               >
+                <IoCheckmarkCircleOutline className="text-xl" />
                 Confirm Now
               </button>
             </div>
