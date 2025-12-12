@@ -16,9 +16,9 @@ const ShopByCategory = () => {
     { id: 7, image: "/banner/tp1.PNG", name: "Thobe" },
     { id: 8, image: "/Category/perfume.jpg", name: "Perfume" },
     { id: 9, image: "/Category/pants.jpg", name: "Pants" },
-    { id: 9, image: "/Category/offer.avif", name: "OfferZone" },
-    { id: 9, image: "/Category/gadget2.jpeg", name: "Gadgets" },
-    { id: 9, image: "/Category/ofood.webp", name: "Organic Foods" },
+    { id: 10, image: "/Category/offer.avif", name: "OfferZone" },
+    { id: 11, image: "/Category/gadget2.jpeg", name: "Gadgets" },
+    { id: 12, image: "/Category/ofood.webp", name: "Organic Foods" },
   ];
 
   return (
