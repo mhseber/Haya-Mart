@@ -17,9 +17,9 @@ const Banner = () => {
       >
         <div>
           <img
-            src="/banner/p1.webp"
+            src="/banner/p1.png"
             alt="Banner 1"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[450px] object-cover"
           />
         </div>
         <div>

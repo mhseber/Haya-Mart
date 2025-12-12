@@ -11,7 +11,7 @@ const ShopByCategory = () => {
     { id: 2, image: "/Category/accessoris.webp", name: "Accessories" },
     { id: 3, image: "/Category/caps.webp", name: "Caps" },
     { id: 4, image: "/Category/kifay.jpeg", name: "Kifaya" },
-    { id: 5, image: "/Category/pangabi.jpeg", name: "Panjabi" },
+    { id: 5, image: "/Category/pangabi2.jpeg", name: "Panjabi" },
     { id: 6, image: "/Category/t-shart.jpg", name: "T-Shirt" },
     { id: 7, image: "/banner/tp1.PNG", name: "Thobe" },
     { id: 8, image: "/Category/perfume.jpg", name: "Perfume" },
