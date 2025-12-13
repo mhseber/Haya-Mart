@@ -20,15 +20,6 @@ const WishlistPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-950 to-blue-950 pt-26 py-12 text-white">
-      {/* <motion.h1
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl font-extrabold text-center mb-8 text-sky-400"
-      >
-        <FaRegHeart className="inline-block mr-2 text-sky-400" /> Your Wishlist
-      </motion.h1> */}
-
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -42,7 +33,7 @@ const WishlistPage = () => {
         </span>
       </motion.h1>
 
-      <div className="max-w-3xl mx-auto bg-sky-900/40 backdrop-blur-md rounded-3xl shadow-lg p-6">
+      <div className="max-w-5xl mx-auto bg-sky-900/40 backdrop-blur-md rounded-3xl shadow-lg shadow-sky-400 p-6">
         <ul className="list bg-base-100 rounded-box shadow-md text-black">
           <li className="p-4 pb-2 text-xl text-sky-600 font-semibold tracking-wide">
             Added Products
@@ -66,13 +57,15 @@ const WishlistPage = () => {
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="size-12 rounded-xl object-cover shadow"
+                    className="size-22 rounded-xl object-cover shadow"
                   />
                 </div>
 
                 <div className="flex-grow">
-                  <div className="font-semibold text-sky-500">{item.name}</div>
-                  <div className="text-xs uppercase font-semibold text-gray-500">
+                  <div className="font-semibold text-xl text-sky-500">
+                    {item.name}
+                  </div>
+                  <div className="text-xl uppercase font-semibold text-gray-500">
                     ৳ {item.price}
                   </div>
                 </div>
