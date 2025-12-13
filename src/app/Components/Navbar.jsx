@@ -13,12 +13,28 @@ import { signOut } from "firebase/auth";
 import auth from "@/Firebase/firebase.init";
 import { useRouter } from "next/navigation";
 import { CiLogout } from "react-icons/ci";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [user] = useAuthState(auth);
-
   const router = useRouter();
+  const [wishlistCount, setWishlistCount] = useState(0);
+
+  // Update wishlist count on mount and when wishlist changes
+  useEffect(() => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    setWishlistCount(wishlist.length);
+
+    // অন্য tab / component থেকে update হলে sync হবে
+    const handleStorage = () => {
+      const updated = JSON.parse(localStorage.getItem("wishlist")) || [];
+      setWishlistCount(updated.length);
+    };
+
+    window.addEventListener("storage", handleStorage);
+    return () => window.removeEventListener("storage", handleStorage);
+  }, []);
 
   const handleLogout = () => {
     signOut(auth)
@@ -159,6 +175,8 @@ const Navbar = () => {
           </button>
         </Link>
 
+        {/*  Wishlist*/}
+
         <Link
           href={user ? "/Or-Components/Wishlist" : "#"}
           onClick={(e) => {
@@ -168,9 +186,17 @@ const Navbar = () => {
             }
           }}
         >
-          <button className="btn btn-sm rounded-2xl border-sky-700 mb-2 lg:mb-0">
-            <FaRegHeart className="text-lg text-sky-500" />
-          </button>
+          <div className="relative">
+            <button className="btn btn-sm rounded-2xl border-sky-700 mb-2 lg:mb-0">
+              <FaRegHeart className="text-lg text-sky-500" />
+            </button>
+
+            {wishlistCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-sky-500 text-black text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                {wishlistCount}
+              </span>
+            )}
+          </div>
         </Link>
 
         {/* Login/Logout */}
@@ -179,7 +205,7 @@ const Navbar = () => {
             <img
               src={user.photoURL || "/avatar.png"}
               alt={user.displayName || "User"}
-              className="w-8 h-8 rounded-full border border-sky-500 mb-2 lg:mb-0"
+              className="w-8 h-8 rounded-full border border-sky-500 mb-2 ml-3 lg:mb-0"
             />
             <button
               onClick={handleLogout}

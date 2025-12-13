@@ -1,62 +1,45 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaRegHeart, FaShoppingBag, FaTrashAlt } from "react-icons/fa";
 
 const WishlistPage = () => {
-  const [cart, setCart] = useState([
-    {
-      id: 1,
-      name: "Summer T-Shirt",
-      price: 700,
-      img: "https://taibahstyle.com/wp-content/uploads/2024/01/Maroon-Raglan-768x768-1.webp",
-    },
-    {
-      id: 2,
-      name: "Classic Tshirt",
-      price: 990,
-      img: "https://backend.oubd.shop/uploads/all/rVaQcw3P68luohmiBsXd4xWHLa6Ff2wmS0DtF67Y.webp",
-    },
-    {
-      id: 2,
-      name: "Classic Tshirt",
-      price: 990,
-      img: "https://backend.oubd.shop/uploads/all/rVaQcw3P68luohmiBsXd4xWHLa6Ff2wmS0DtF67Y.webp",
-    },
-    {
-      id: 3,
-      name: "By 1 Get 1 Free Tshirt",
-      price: 1250,
-      img: "https://ummahmartbd.com/wp-content/uploads/2024/03/Copy-of-Musterd-Oil-24.jpg",
-    },
-    {
-      id: 3,
-      name: "By 1 Get 1 Free Tshirt",
-      price: 1250,
-      img: "https://ummahmartbd.com/wp-content/uploads/2024/03/Copy-of-Musterd-Oil-24.jpg",
-    },
-    {
-      id: 3,
-      name: "By 1 Get 1 Free Tshirt",
-      price: 1250,
-      img: "https://ummahmartbd.com/wp-content/uploads/2024/03/Copy-of-Musterd-Oil-24.jpg",
-    },
-  ]);
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    setCart(wishlist);
+  }, []);
 
   const removeItem = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
+    const updated = cart.filter((item) => item.id !== id);
+    setCart(updated);
+    localStorage.setItem("wishlist", JSON.stringify(updated));
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-950 to-blue-950 pt-26 py-12 text-white">
-      <motion.h1
+      {/* <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-4xl font-extrabold text-center mb-8 text-sky-400"
       >
         <FaRegHeart className="inline-block mr-2 text-sky-400" /> Your Wishlist
+      </motion.h1> */}
+
+      <motion.h1
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-extrabold text-center mb-8 text-sky-400 flex justify-center items-center gap-3"
+      >
+        <FaRegHeart className="text-sky-400" />
+        Your Wishlist
+        <span className="bg-sky-500 text-black text-sm font-bold px-3 py-1 rounded-full">
+          {cart.length}
+        </span>
       </motion.h1>
 
       <div className="max-w-3xl mx-auto bg-sky-900/40 backdrop-blur-md rounded-3xl shadow-lg p-6">
