@@ -23,7 +23,6 @@ const BestSelling = () => {
   const [items, setItems] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const router = useRouter();
-  // const [selectedSize, setSelectedSize] = useState("");
   const [user] = useAuthState(auth);
 
   useEffect(() => {
