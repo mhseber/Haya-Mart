@@ -8,10 +8,17 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import PantsMo from "../ProductModalPage/PantsMo";
+import { useRouter } from "next/navigation";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "@/Firebase/firebase.init";
+import Swal from "sweetalert2";
 
 const Pants = () => {
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
+  const router = useRouter();
+  const [user] = useAuthState(auth);
+
   useEffect(() => {
     // fetch("http://localhost:3000/api/items/pants")
     fetch("ProductData/pants.json")
@@ -31,6 +38,51 @@ const Pants = () => {
   // modal close করার জন্য
   const handleCloseModal = () => {
     setSelectedItem(null);
+  };
+
+  // Wishlist Handler/////////////////////////////////////
+
+  const handleAddToWishlist = (item) => {
+    if (!user) {
+      Swal.fire({
+        icon: "warning",
+        title: "Login Required",
+        text: "Please login to add items to your wishlist",
+        confirmButtonText: "Login Now",
+      }).then(() => {
+        router.push("/AuthUsers");
+      });
+      return;
+    }
+
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    const exists = wishlist.some((p) => p.code === item.code);
+    if (exists) {
+      Swal.fire({
+        icon: "info",
+        title: "Already Added",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+      return;
+    }
+
+    wishlist.push({
+      code: item.code,
+      name: item.name,
+      price: item.price,
+      img: item.img,
+    });
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    Swal.fire({
+      icon: "success",
+      title: "Added to Wishlist ❤️",
+      timer: 1200,
+      showConfirmButton: false,
+    });
   };
 
   return (
@@ -88,7 +140,11 @@ const Pants = () => {
                         {item.price}
                       </p>
                       <div className="flex gap-2">
-                        <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
+                        {/* Wishlist Button */}
+                        <button
+                          onClick={() => handleAddToWishlist(item)}
+                          className="btn btn-sm rounded-2xl border-sky-700 mt-2"
+                        >
                           <FaRegHeart className="text-lg text-sky-500" />
                         </button>
                         <button
