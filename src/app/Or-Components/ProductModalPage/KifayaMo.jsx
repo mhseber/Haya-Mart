@@ -1,13 +1,64 @@
 "use client";
 
+import auth from "@/Firebase/firebase.init";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { FaCartPlus, FaRegHeart, FaShoppingBag } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const KifayaMo = ({ item, onClose }) => {
   const [selectedSize, setSelectedSize] = useState("");
+  const router = useRouter();
+  const [user] = useAuthState(auth);
 
   if (!item) return null;
+
+  // Wishlist Handler/////////////////////////////////////
+
+  const handleAddToWishlist = (item) => {
+    if (!user) {
+      Swal.fire({
+        icon: "warning",
+        title: "Login Required",
+        text: "Please login to add items to your wishlist",
+        confirmButtonText: "Login Now",
+      }).then(() => {
+        router.push("/AuthUsers");
+      });
+      return;
+    }
+
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    const exists = wishlist.some((p) => p.code === item.code);
+    if (exists) {
+      Swal.fire({
+        icon: "info",
+        title: "Already Added",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+      return;
+    }
+
+    wishlist.push({
+      code: item.code,
+      name: item.name,
+      price: item.price,
+      img: item.img,
+    });
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    Swal.fire({
+      icon: "success",
+      title: "Added to Wishlist ❤️",
+      timer: 1200,
+      showConfirmButton: false,
+    });
+  };
 
   return (
     <AnimatePresence>
@@ -76,7 +127,10 @@ const KifayaMo = ({ item, onClose }) => {
                   <FaCartPlus className="text-sm sm:text-lg" />
                   Add To Cart
                 </button>
-                <button className="btn btn-xs sm:btn-sm rounded-xl border-sky-700">
+                <button
+                  onClick={() => handleAddToWishlist(item)}
+                  className="btn btn-xs sm:btn-sm rounded-xl border-sky-700"
+                >
                   <FaRegHeart className="text-sm sm:text-lg text-sky-500" />
                 </button>
               </div>
