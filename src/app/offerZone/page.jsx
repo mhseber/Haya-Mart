@@ -1,10 +1,17 @@
 "use client";
 
+import auth from "@/Firebase/firebase.init";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
+import Swal from "sweetalert2";
 
 const OfferZonePage = () => {
+  const router = useRouter();
+  const [user] = useAuthState(auth);
+
   const offers = [
     {
       id: 1,
@@ -61,6 +68,55 @@ const OfferZonePage = () => {
       img: "https://backend.oubd.shop/uploads/all/rVaQcw3P68luohmiBsXd4xWHLa6Ff2wmS0DtF67Y.webp",
     },
   ];
+
+  // Wishlist Handler/////////////////////////////////////
+
+  const handleAddToWishlist = (offer) => {
+    if (!user) {
+      Swal.fire({
+        icon: "warning",
+        title: "Login Required",
+        text: "Please login to add items to your wishlist",
+        confirmButtonText: "Login Now",
+      }).then(() => {
+        router.push("/AuthUsers");
+      });
+      return;
+    }
+
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    const exists = wishlist.some(
+      (p) => p.id === offer.id && p.type === "offer"
+    );
+
+    if (exists) {
+      Swal.fire({
+        icon: "info",
+        title: "Already Added",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+      return;
+    }
+
+    wishlist.push({
+      id: offer.id,
+      name: offer.title,
+      price: offer.offerPrice,
+      img: offer.img,
+      type: "offer",
+    });
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    Swal.fire({
+      icon: "success",
+      title: "Added to Wishlist ❤️",
+      timer: 1200,
+      showConfirmButton: false,
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-950 to-blue-950 text-white py-12">
@@ -122,7 +178,10 @@ const OfferZonePage = () => {
                   <button className="btn btn-sm rounded-2xl border-sky-700 mt-2 ml-4">
                     <IoCartOutline className="text-lg text-sky-500" />
                   </button>
-                  <button className="btn btn-sm rounded-2xl border-sky-700 mt-2">
+                  <button
+                    onClick={() => handleAddToWishlist(offer)}
+                    className="btn btn-sm rounded-2xl border-sky-700 mt-2"
+                  >
                     <FaRegHeart className="text-lg text-sky-500" />
                   </button>
                 </section>
