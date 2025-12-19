@@ -20,11 +20,16 @@ const Navbar = () => {
   const [user] = useAuthState(auth);
   const router = useRouter();
   const [wishlistCount, setWishlistCount] = useState(0);
+  const [cartCount, setCartCount] = useState(0);
 
   // Update wishlist count on mount and when wishlist changes
   useEffect(() => {
     const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
     setWishlistCount(wishlist.length);
+
+    // Update cart count on mount and when cart changes
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCartCount(cart.length);
 
     // অন্য tab / component থেকে update হলে sync হবে
     const handleStorage = () => {
@@ -170,9 +175,16 @@ const Navbar = () => {
             }
           }}
         >
-          <button className="btn btn-sm rounded-2xl border-sky-700 mb-2 lg:mb-0">
-            <IoCartOutline className="text-lg text-sky-500" />
-          </button>
+          <div className="relative">
+            <button className="btn btn-sm rounded-2xl border-sky-700 mb-2 lg:mb-0">
+              <IoCartOutline className="text-lg text-sky-500" />
+            </button>
+            {cartCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-sky-500 text-black text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                {cartCount}
+              </span>
+            )}
+          </div>
         </Link>
 
         {/*  Wishlist*/}
