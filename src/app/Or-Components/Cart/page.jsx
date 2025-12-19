@@ -1,52 +1,22 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaShoppingBag, FaTrashAlt } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 
 const CartPage = () => {
-  const [cart, setCart] = useState([
-    {
-      id: 1,
-      name: "Summer T-Shirt",
-      price: 700,
-      img: "https://taibahstyle.com/wp-content/uploads/2024/01/Maroon-Raglan-768x768-1.webp",
-    },
-    {
-      id: 2,
-      name: "Classic Tshirt",
-      price: 990,
-      img: "https://backend.oubd.shop/uploads/all/rVaQcw3P68luohmiBsXd4xWHLa6Ff2wmS0DtF67Y.webp",
-    },
-    {
-      id: 2,
-      name: "Classic Tshirt",
-      price: 990,
-      img: "https://backend.oubd.shop/uploads/all/rVaQcw3P68luohmiBsXd4xWHLa6Ff2wmS0DtF67Y.webp",
-    },
-    {
-      id: 3,
-      name: "By 1 Get 1 Free Tshirt",
-      price: 1250,
-      img: "https://ummahmartbd.com/wp-content/uploads/2024/03/Copy-of-Musterd-Oil-24.jpg",
-    },
-    {
-      id: 3,
-      name: "By 1 Get 1 Free Tshirt",
-      price: 1250,
-      img: "https://ummahmartbd.com/wp-content/uploads/2024/03/Copy-of-Musterd-Oil-24.jpg",
-    },
-    {
-      id: 3,
-      name: "By 1 Get 1 Free Tshirt",
-      price: 1250,
-      img: "https://ummahmartbd.com/wp-content/uploads/2024/03/Copy-of-Musterd-Oil-24.jpg",
-    },
-  ]);
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(storedCart);
+  }, []);
 
   const removeItem = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
+    const updatedCart = cart.filter((item) => item.id !== id);
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   return (
