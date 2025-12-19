@@ -99,6 +99,55 @@ const SignatureEdition = () => {
     });
   };
 
+  // add to cart handler ///////////////////////////////
+  const handleAddToCart = (item) => {
+    // ❌ User not logged in
+    if (!user) {
+      Swal.fire({
+        icon: "warning",
+        title: "Login Required",
+        text: "Please login to add items to your cart",
+        confirmButtonText: "Login Now",
+      }).then(() => {
+        router.push("/AuthUsers");
+      });
+      return;
+    }
+
+    // ✅ Get existing cart
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // ❌ Already exists
+    const exists = cart.some((p) => p.id === item.id);
+    if (exists) {
+      Swal.fire({
+        icon: "info",
+        title: "Already in Cart",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+      return;
+    }
+
+    // ✅ Add to cart
+    cart.push({
+      id: item.id,
+      name: item.title,
+      price: item.price,
+      img: item.img,
+      quantity: 1,
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    Swal.fire({
+      icon: "success",
+      title: "Added to Cart 🛒",
+      timer: 1200,
+      showConfirmButton: false,
+    });
+  };
+
   return (
     <div className="px-6">
       {/* Title Section */}
@@ -172,7 +221,10 @@ const SignatureEdition = () => {
                       <FaShoppingBag className="text-lg" />
                       Order Now
                     </button>
-                    <button className="btn btn-outline btn-sm">
+                    <button
+                      onClick={() => handleAddToCart(item)}
+                      className="btn btn-outline btn-sm"
+                    >
                       <FaCartPlus className="text-lg" />
                       Add To Cart
                     </button>
