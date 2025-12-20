@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import SocialIcons from "../Or-Components/NavIcons/SocialIcons";
+import logo from "../../../public/logo/logo.png";
 
 const Footer = () => {
   return (
@@ -11,6 +12,13 @@ const Footer = () => {
         {/* ----- Brand Section ----- */}
         <aside>
           <div className="text-center sm:text-left space-y-2">
+            <Image
+              src={logo}
+              alt="Haya Mart Logo"
+              width={100}
+              height={100}
+              className="text-blue-400"
+            ></Image>
             <h3 className="font-extrabold pl-4 text-4xl text-sky-500">
               <motion.span
                 animate={{ color: ["#7dd3fc", "#38bdf8", "#0ea5e9"] }}

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Style/About.css";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
@@ -30,9 +31,11 @@ const AboutUs = () => {
           <p className="text-gray-200 leading-relaxed text-sm sm:text-base font-semibold">
             ✨ Haya Mart — Dress with Dignity, Live with Haya.
           </p>
-          <button className="btn btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300">
-            Order Now
-          </button>
+          <Link href="/Outfits">
+            <button className="btn btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300">
+              Order Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>
