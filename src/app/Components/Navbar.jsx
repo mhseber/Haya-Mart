@@ -14,6 +14,8 @@ import auth from "@/Firebase/firebase.init";
 import { useRouter } from "next/navigation";
 import { CiLogout } from "react-icons/ci";
 import { useEffect, useState } from "react";
+import logo from "../../../public/logo/logo.png";
+import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -144,7 +146,14 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <h3 className="font-extrabold pl-4 lg:text-4xl text-2xl text-sky-500">
+        <Image
+          src={logo}
+          alt="Haya Mart Logo"
+          width={90}
+          height={90}
+          className="filter brightness-0 invert sepia saturate-200 hue-rotate-[200deg]"
+        ></Image>
+        <h3 className="font-extrabold lg:text-3xl text-2xl text-sky-500">
           <motion.span
             animate={{ color: ["#7dd3fc", "#38bdf8", "#0ea5e9"] }}
             transition={{
