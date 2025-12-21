@@ -11,44 +11,51 @@ const Footer = () => {
       <div className="footer sm:footer-horizontal">
         {/* ----- Brand Section ----- */}
         <aside>
-          <div className="text-center sm:text-left space-y-2">
-            <Image
-              src={logo}
-              alt="Haya Mart Logo"
-              width={100}
-              height={100}
-              className="text-blue-400"
-            ></Image>
-            <h3 className="font-extrabold pl-4 text-4xl text-sky-500">
-              <motion.span
-                animate={{ color: ["#7dd3fc", "#38bdf8", "#0ea5e9"] }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-              >
-                Haya
-              </motion.span>{" "}
-              Mart
-            </h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Empowering the Muslim lifestyle since 2025. <br /> Dedicated to
-              providing quality products that align <br /> with faith, culture,
-              and modern living.
+          <div className="space-y-2 text-center sm:text-left">
+            {/* Logo + Brand */}
+            <div className="flex flex-col sm:flex-row items-center sm:items-center ">
+              <Image
+                src={logo}
+                alt="Haya Mart Logo"
+                width={90}
+                height={90}
+                className="filter brightness-0 invert sepia saturate-200 hue-rotate-[200deg]"
+              />
+
+              <h3 className="font-extrabold text-3xl sm:text-4xl text-sky-500 leading-none">
+                <motion.span
+                  animate={{ color: ["#7dd3fc", "#38bdf8", "#0ea5e9"] }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                >
+                  Haya
+                </motion.span>{" "}
+                Mart
+              </h3>
+            </div>
+
+            {/* Description */}
+            <p className="text-gray-300 text-sm leading-relaxed max-w-sm mx-auto sm:mx-0">
+              Empowering the Muslim lifestyle since 2025.
+              <br />
+              Dedicated to providing quality products that align
+              <br />
+              with faith, culture, and modern living.
             </p>
 
             {/* Payment Section */}
-            <section className="mt-8">
-              <p className="text-gray-300 font-extrabold text-xl">
-                We Accept :
-              </p>
-              <div className="flex gap-2 mt-2">
+            <section className="pt-4">
+              <p className="text-gray-300 font-bold text-lg mb-2">We Accept:</p>
+
+              <div className="flex justify-center sm:justify-start">
                 <Image
                   src="/extray/payment.png"
                   alt="Payment Methods"
-                  width={290}
-                  height={50}
+                  width={260}
+                  height={40}
                   className="object-contain"
                 />
               </div>
