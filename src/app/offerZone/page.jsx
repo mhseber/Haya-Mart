@@ -7,10 +7,17 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import Swal from "sweetalert2";
+import {
+  IoCloseCircleOutline,
+  IoCheckmarkCircleOutline,
+} from "react-icons/io5";
+
+import React, { useState } from "react";
 
 const OfferZonePage = () => {
   const router = useRouter();
   const [user] = useAuthState(auth);
+  const [selectedOffer, setSelectedOffer] = useState(null);
 
   const offers = [
     {
@@ -69,6 +76,41 @@ const OfferZonePage = () => {
     },
   ];
 
+  // Offer Confirm Order Handler ///////////////////////
+
+  const handleConfirmOfferOrder = (offer) => {
+    if (!user) {
+      Swal.fire({
+        icon: "warning",
+        title: "Login Required",
+        text: "Please login to place order",
+        confirmButtonText: "Login Now",
+      }).then(() => {
+        router.push("/AuthUsers");
+      });
+      return;
+    }
+
+    const order = {
+      id: Date.now(),
+      name: offer.title,
+      price: offer.offerPrice,
+      img: offer.img,
+      status: "Confirmed",
+      type: "offer",
+    };
+
+    localStorage.setItem("lastOrder", JSON.stringify(order));
+
+    Swal.fire({
+      icon: "success",
+      title: "Order Confirmed 🎉",
+      text: "Your offer order has been placed successfully!",
+    });
+
+    setSelectedOffer(null);
+  };
+
   // Wishlist Handler/////////////////////////////////////
 
   const handleAddToWishlist = (offer) => {
@@ -113,6 +155,57 @@ const OfferZonePage = () => {
     Swal.fire({
       icon: "success",
       title: "Added to Wishlist ❤️",
+      timer: 1200,
+      showConfirmButton: false,
+    });
+  };
+
+  // Offer Add To Cart Handler ///////////////////////
+  const handleAddToCart = (offer) => {
+    // ❌ User not logged in
+    if (!user) {
+      Swal.fire({
+        icon: "warning",
+        title: "Login Required",
+        text: "Please login to add items to your cart",
+        confirmButtonText: "Login Now",
+      }).then(() => {
+        router.push("/AuthUsers");
+      });
+      return;
+    }
+
+    // ✅ Get existing cart
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // ❌ Already exists (offer check)
+    const exists = cart.some((p) => p.id === offer.id && p.type === "offer");
+
+    if (exists) {
+      Swal.fire({
+        icon: "info",
+        title: "Already in Cart",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+      return;
+    }
+
+    // ✅ Add offer to cart
+    cart.push({
+      id: offer.id,
+      name: offer.title,
+      price: offer.offerPrice,
+      img: offer.img,
+      quantity: 1,
+      type: "offer",
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    Swal.fire({
+      icon: "success",
+      title: "Added to Cart 🛒",
       timer: 1200,
       showConfirmButton: false,
     });
@@ -172,12 +265,20 @@ const OfferZonePage = () => {
 
                 {/* Buttons */}
                 <section className="flex gap-2 mt-6">
-                  <button className="btn btn-lg border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300">
+                  <button
+                    onClick={() => setSelectedOffer(offer)}
+                    className="btn btn-lg border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+                  >
                     Grab Offer
                   </button>
-                  <button className="btn btn-sm rounded-2xl border-sky-700 mt-2 ml-4">
+
+                  <button
+                    onClick={() => handleAddToCart(offer)}
+                    className="btn btn-sm rounded-2xl border-sky-700 mt-2 ml-4"
+                  >
                     <IoCartOutline className="text-lg text-sky-500" />
                   </button>
+
                   <button
                     onClick={() => handleAddToWishlist(offer)}
                     className="btn btn-sm rounded-2xl border-sky-700 mt-2"
@@ -190,6 +291,52 @@ const OfferZonePage = () => {
           </motion.div>
         ))}
       </div>
+      {/* Confirm Offer Modal */}
+      {selectedOffer && (
+        <dialog open className="modal modal-open">
+          <div className="modal-box bg-slate-900 text-white max-w-lg w-full">
+            <h3 className="font-bold text-xl mb-4 text-sky-400">
+              Confirm Your Offer
+            </h3>
+
+            <img
+              src={selectedOffer.img}
+              alt={selectedOffer.title}
+              className="w-full h-64 sm:h-72 object-cover rounded-xl mb-4"
+            />
+
+            <h4 className="text-lg font-semibold">{selectedOffer.title}</h4>
+
+            <p className="text-sm text-gray-300 mt-2">{selectedOffer.desc}</p>
+
+            <div className="flex items-center gap-3 mt-4">
+              <p className="text-gray-400 line-through">
+                ৳{selectedOffer.mainPrice}
+              </p>
+              <p className="text-sky-400 text-2xl font-bold">
+                ৳{selectedOffer.offerPrice}
+              </p>
+            </div>
+
+            <div className="modal-action flex justify-between mt-6">
+              <button
+                onClick={() => setSelectedOffer(null)}
+                className="btn btn-outline"
+              >
+                <IoCloseCircleOutline className="text-2xl" />
+              </button>
+
+              <button
+                onClick={() => handleConfirmOfferOrder(selectedOffer)}
+                className="btn border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+              >
+                <IoCheckmarkCircleOutline className="text-xl mr-1" />
+                Confirm Order
+              </button>
+            </div>
+          </div>
+        </dialog>
+      )}
     </div>
   );
 };
