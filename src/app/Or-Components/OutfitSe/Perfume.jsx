@@ -21,7 +21,6 @@ const Perfume = () => {
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [selectedSize, setSelectedSize] = useState("");
   const router = useRouter();
   const [user] = useAuthState(auth);
 
@@ -281,30 +280,6 @@ const Perfume = () => {
             <p className="text-sky-400 mt-1">
               Price: ৳ {selectedProduct.price}
             </p>
-            {/* Sizes */}
-            <div className="mt-4 sm:mt-2">
-              <h3 className="text-xs sm:text-sm text-sky-500 font-semibold mb-2">
-                Select Size :{" "}
-                <span className="text-[#38bdf8]">{selectedSize || ""}</span>
-              </h3>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["S", "M", "L", "XL", "XXL"].map((size) => (
-                  <button
-                    key={size}
-                    onClick={() =>
-                      setSelectedSize(selectedSize === size ? "" : size)
-                    }
-                    className={`border px-3 sm:px-4 py-[3px] sm:py-1 rounded-lg text-xs sm:text-sm transition-all ${
-                      selectedSize === size
-                        ? "bg-[#38bdf8] text-black border-[#38bdf8]"
-                        : "text-[#38bdf8] border-[#38bdf8] hover:bg-[#38bdf8] hover:text-black"
-                    }`}
-                  >
-                    {size}
-                  </button>
-                ))}
-              </div>
-            </div>
 
             <div className="modal-action flex justify-between">
               <button

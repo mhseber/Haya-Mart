@@ -289,7 +289,7 @@ const Abayas = () => {
                 <span className="text-[#38bdf8]">{selectedSize || ""}</span>
               </h3>
               <div className="flex flex-wrap gap-2 mb-4">
-                {["S", "M", "L", "XL", "XXL"].map((size) => (
+                {["38", "40", "42", "44", "46"].map((size) => (
                   <button
                     key={size}
                     onClick={() =>
