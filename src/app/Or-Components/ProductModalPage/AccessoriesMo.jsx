@@ -3,12 +3,14 @@
 import auth from "@/Firebase/firebase.init";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { FaCartPlus, FaRegHeart, FaShoppingBag } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 const AccessoriesMo = ({ item, onClose }) => {
   const router = useRouter();
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [user] = useAuthState(auth);
 
   if (!item) return null;
@@ -107,6 +109,30 @@ const AccessoriesMo = ({ item, onClose }) => {
     });
   };
 
+  //////////////////////////////// Order Handler ////////////////////////////
+
+  const handleConfirmOrder = (product) => {
+    setSelectedProduct(null);
+
+    // ✅ Dummy order save (future API ready)
+    const order = {
+      id: Date.now(),
+      productName: product.title,
+      price: product.price,
+      status: "Confirmed",
+    };
+
+    localStorage.setItem("lastOrder", JSON.stringify(order));
+
+    Swal.fire({
+      icon: "success",
+      title: "Order Confirmed 🎉",
+      text: "Your order has been placed successfully!",
+    }).then(() => {
+      router.push("/Dashboard/User"); // User dashboard
+    });
+  };
+
   return (
     <AnimatePresence>
       <motion.div
@@ -158,7 +184,10 @@ const AccessoriesMo = ({ item, onClose }) => {
 
               {/* Buttons */}
               <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8">
-                <button className="btn btn-xs lg:btn-sm sm:btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300">
+                <button
+                  onClick={() => handleConfirmOrder(item)}
+                  className="btn btn-xs lg:btn-sm sm:btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+                >
                   <FaShoppingBag className="text-sm sm:text-lg" />
                   Order Now
                 </button>
