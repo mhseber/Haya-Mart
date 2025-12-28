@@ -13,10 +13,16 @@ import { useRouter } from "next/navigation";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "@/Firebase/firebase.init";
 import Swal from "sweetalert2";
+import {
+  IoCheckmarkCircleOutline,
+  IoCloseCircleOutline,
+} from "react-icons/io5";
 
 const Accessories = () => {
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedSize, setSelectedSize] = useState("");
   const router = useRouter();
   const [user] = useAuthState(auth);
 
@@ -135,6 +141,30 @@ const Accessories = () => {
     });
   };
 
+  //////////////////////////////// Order Handler ////////////////////////////
+
+  const handleConfirmOrder = (product) => {
+    setSelectedProduct(null);
+
+    // ✅ Dummy order save (future API ready)
+    const order = {
+      id: Date.now(),
+      productName: product.title,
+      price: product.price,
+      status: "Confirmed",
+    };
+
+    localStorage.setItem("lastOrder", JSON.stringify(order));
+
+    Swal.fire({
+      icon: "success",
+      title: "Order Confirmed 🎉",
+      text: "Your order has been placed successfully!",
+    }).then(() => {
+      router.push("/Dashboard/User"); // User dashboard
+    });
+  };
+
   return (
     <div className="px-6 py-6">
       {/* Title Section */}
@@ -215,7 +245,10 @@ const Accessories = () => {
                   </div>
 
                   <div className="card-actions justify-center mt-4">
-                    <button className="btn btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-blue-800 transition duration-300">
+                    <button
+                      onClick={() => setSelectedProduct(item)}
+                      className="btn btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+                    >
                       <FaShoppingBag className="text-lg" />
                       Order Now
                     </button>
@@ -233,6 +266,66 @@ const Accessories = () => {
           ))}
         </Swiper>
       </section>
+
+      {/* order btn model */}
+      {selectedProduct && (
+        <dialog open className="modal modal-open">
+          <div className="modal-box bg-slate-900 text-white max-w-lg">
+            <h3 className="font-bold text-xl mb-3">Confirm Your Order</h3>
+
+            <img
+              src={selectedProduct.img}
+              className="w-full h-80 object-cover rounded-lg mb-4"
+            />
+
+            <p className="font-semibold">{selectedProduct.title}</p>
+            <p className="text-sky-400 mt-1">
+              Price: ৳ {selectedProduct.price}
+            </p>
+            {/* Sizes */}
+            <div className="mt-4 sm:mt-2">
+              <h3 className="text-xs sm:text-sm text-sky-500 font-semibold mb-2">
+                Select Size :{" "}
+                <span className="text-[#38bdf8]">{selectedSize || ""}</span>
+              </h3>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["S", "M", "L", "XL", "XXL"].map((size) => (
+                  <button
+                    key={size}
+                    onClick={() =>
+                      setSelectedSize(selectedSize === size ? "" : size)
+                    }
+                    className={`border px-3 sm:px-4 py-[3px] sm:py-1 rounded-lg text-xs sm:text-sm transition-all ${
+                      selectedSize === size
+                        ? "bg-[#38bdf8] text-black border-[#38bdf8]"
+                        : "text-[#38bdf8] border-[#38bdf8] hover:bg-[#38bdf8] hover:text-black"
+                    }`}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="modal-action flex justify-between">
+              <button
+                className="btn btn-outline"
+                onClick={() => setSelectedProduct(null)}
+              >
+                <IoCloseCircleOutline className="text-2xl" />
+              </button>
+
+              <button
+                className="btn btn-outline   border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+                onClick={() => handleConfirmOrder(selectedProduct)}
+              >
+                <IoCheckmarkCircleOutline className="text-xl" />
+                Confirm Now
+              </button>
+            </div>
+          </div>
+        </dialog>
+      )}
 
       {/* ✅ Islamic Modal placed here */}
       {selectedItem && (
