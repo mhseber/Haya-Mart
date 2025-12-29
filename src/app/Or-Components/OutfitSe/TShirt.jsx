@@ -7,7 +7,7 @@ import { Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
-import TShirtMo from "../ProductModalPage/TShirtMo";
+import TShirtMo from "../ProductModalPage/TshirtMo";
 import { useRouter } from "next/navigation";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "@/Firebase/firebase.init";
@@ -17,7 +17,7 @@ import {
   IoCloseCircleOutline,
 } from "react-icons/io5";
 
-const TShirt = () => {
+const Tshirt = () => {
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -369,4 +369,4 @@ const TShirt = () => {
   );
 };
 
-export default TShirt;
+export default Tshirt;

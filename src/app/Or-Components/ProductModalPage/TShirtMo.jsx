@@ -8,7 +8,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { FaCartPlus, FaRegHeart, FaShoppingBag } from "react-icons/fa";
 import Swal from "sweetalert2";
 
-const TShirtMo = ({ item, onClose }) => {
+const TshirtMo = ({ item, onClose }) => {
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const router = useRouter();
@@ -247,4 +247,4 @@ const TShirtMo = ({ item, onClose }) => {
   );
 };
 
-export default TShirtMo;
+export default TshirtMo;

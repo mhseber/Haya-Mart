@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Filter from "../Or-Components/OutfitSe/Filter";
-import TShirt from "../Or-Components/OutfitSe/Tshirt";
+import Tshirt from "../Or-Components/OutfitSe/Tshirt";
 import Panjabi from "../Or-Components/OutfitSe/Panjabi";
 import Caps from "../Or-Components/OutfitSe/Caps";
 import Perfume from "../Or-Components/OutfitSe/Perfume";
@@ -67,7 +67,7 @@ const OutfitsPage = () => {
         <Caps />
       </div>
       <div id="tshirt">
-        <TShirt />
+        <Tshirt />
       </div>
       <div id="pants">
         <Pants />
