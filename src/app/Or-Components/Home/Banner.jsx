@@ -17,8 +17,8 @@ const Banner = () => {
   ];
 
   return (
-    <div className="w-full pt-38 px-4 md:px-8">
-      <div className="rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
+    <div className="w-full pt-24 px-4 sm:px-10 md:px-20 lg:px-32 xl:px-48">
+      <div className="rounded-2xl shadow-xl overflow-hidden border border-gray-100 bg-white">
         <Carousel
           autoPlay
           infiniteLoop
@@ -33,13 +33,13 @@ const Banner = () => {
           renderIndicator={(onClickHandler, isSelected, index, label) => {
             const defStyle = {
               marginLeft: 6,
-              color: "#ccc",
+              color: "#aaa",
               cursor: "pointer",
               display: "inline-block",
-              fontSize: "24px",
+              fontSize: "18px", // ইন্ডিকেটর সাইজ কিছুটা কমানো হয়েছে
             };
             const style = isSelected
-              ? { ...defStyle, color: "#000" }
+              ? { ...defStyle, color: "#3b82f6" } // আপনার ব্লু থিমের সাথে মিল রেখে ব্লু কালার
               : { ...defStyle };
             return (
               <span
@@ -60,7 +60,8 @@ const Banner = () => {
           {images.map((src, index) => (
             <div
               key={index}
-              className="relative w-full h-[220px] sm:h-[350px] md:h-[450px] lg:h-[550px] xl:h-[600px] group"
+              // হাইট কমানো হয়েছে (h- values updated)
+              className="relative w-full h-[180px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] group"
             >
               <Image
                 src={src}
@@ -68,7 +69,7 @@ const Banner = () => {
                 fill
                 priority={index === 0}
                 quality={100}
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
 

@@ -20,7 +20,9 @@ export const metadata = {
     },
     keywords: ['Next.js', 'React', 'JavaScript', 'playground','Learning'],
   description: "Islamic Clothing Brand",
-  
+  icons: {
+    icon: './hm-logo2.png',
+  },
 };
 
 export default function RootLayout({ children }) {

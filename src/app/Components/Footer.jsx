@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import SocialIcons from "../Or-Components/NavIcons/SocialIcons";
-import logo from "../../../public/logo/logo.png";
+import logo from "../../../public/logo/hm-logo2.png";
 
 const Footer = () => {
   return (
