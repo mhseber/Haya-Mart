@@ -146,14 +146,8 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
-        <Image
-          src={logo}
-          alt="Haya Mart Logo"
-          width={90}
-          height={90}
-          className="filter brightness-0 invert sepia saturate-200 hue-rotate-[200deg]"
-        ></Image>
-        <h3 className="font-extrabold lg:text-3xl text-2xl text-sky-500">
+
+        <h3 className="font-extrabold pl-10 lg:text-3xl text-2xl text-sky-500">
           <motion.span
             animate={{ color: ["#7dd3fc", "#38bdf8", "#0ea5e9"] }}
             transition={{

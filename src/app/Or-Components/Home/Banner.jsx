@@ -18,20 +18,18 @@ const Banner = () => {
 
   return (
     <div className="w-full pt-38 px-4 md:px-8">
-      {/* চারপাশ থেকে কিছুটা গ্যাপ দিলে প্রিমিয়াম লাগে */}
       <div className="rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
         <Carousel
           autoPlay
           infiniteLoop
           showThumbs={false}
           showStatus={false}
-          showIndicators={true} // আপনি যদি নিচের ডটগুলো সরাতে চান তবে এটাকে false করে দিন
+          showIndicators={true}
           interval={4000}
-          transitionTime={800} // স্লাইড হওয়ার সময়টা একটু স্মুথ (০.৮ সেকেন্ড) করা হয়েছে
+          transitionTime={800}
           stopOnHover={true}
           swipeable
           emulateTouch
-          // নিচের অংশটি হলুদ দাগ বা ডটগুলোকে সুন্দর করার জন্য
           renderIndicator={(onClickHandler, isSelected, index, label) => {
             const defStyle = {
               marginLeft: 6,
@@ -73,7 +71,7 @@ const Banner = () => {
                 sizes="100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              {/* ইমেজের উপর হালকা ডার্ক লেয়ার দিলে ক্লিয়ারিটি আরও বাড়ে */}
+
               <div className="absolute inset-0 bg-black/5"></div>
             </div>
           ))}
