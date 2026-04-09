@@ -12,68 +12,55 @@ const Banner = () => {
     "/banner/banner1.webp",
     "/banner/t-shirt2.png",
     "/banner/p5.png",
-    "/banner/p2.2.png",
+    "/banner/p2.png",
     "/banner/abayas2.png",
   ];
 
   return (
-    <div className="w-full pt-24 px-4 sm:px-10 md:px-20 lg:px-32 xl:px-48">
-      <div className="rounded-2xl shadow-xl overflow-hidden border border-gray-100 bg-white">
+    <div className="w-full pt-10 md:pt-28 px-4 pb-10 sm:px-6 lg:px-12 max-w-[1600px] mx-auto">
+      <div className="relative rounded-3xl shadow-2xl overflow-hidden border border-sky-900/20 bg-[#000814]">
         <Carousel
           autoPlay
           infiniteLoop
           showThumbs={false}
           showStatus={false}
           showIndicators={true}
-          interval={4000}
-          transitionTime={800}
+          interval={5000}
+          transitionTime={1000}
           stopOnHover={true}
           swipeable
           emulateTouch
-          renderIndicator={(onClickHandler, isSelected, index, label) => {
-            const defStyle = {
-              marginLeft: 6,
-              color: "#aaa",
-              cursor: "pointer",
-              display: "inline-block",
-              fontSize: "18px", // ইন্ডিকেটর সাইজ কিছুটা কমানো হয়েছে
-            };
-            const style = isSelected
-              ? { ...defStyle, color: "#3b82f6" } // আপনার ব্লু থিমের সাথে মিল রেখে ব্লু কালার
-              : { ...defStyle };
-            return (
-              <span
-                style={style}
-                onClick={onClickHandler}
-                onKeyDown={onClickHandler}
-                value={index}
-                key={index}
-                role="button"
-                tabIndex={0}
-                aria-label={`${label} ${index + 1}`}
-              >
-                {isSelected ? "●" : "○"}
-              </span>
-            );
-          }}
+          renderIndicator={(onClickHandler, isSelected, index) => (
+            <li
+              className={`inline-block mx-1 cursor-pointer transition-all duration-300 ${
+                isSelected
+                  ? "w-8 h-2 bg-sky-500 rounded-full"
+                  : "w-2 h-2 bg-gray-500 rounded-full opacity-50"
+              }`}
+              onClick={onClickHandler}
+              key={index}
+              role="button"
+            />
+          )}
         >
           {images.map((src, index) => (
             <div
               key={index}
-              // হাইট কমানো হয়েছে (h- values updated)
-              className="relative w-full h-[180px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] group"
+              className="relative w-full aspect-[16/9] sm:aspect-[21/9] md:aspect-[25/9] lg:max-h-[500px]"
             >
               <Image
                 src={src}
-                alt={`Premium Banner ${index + 1}`}
+                alt={`Haya Mart Premium Collection ${index + 1}`}
                 fill
-                priority={index === 0}
-                quality={100}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                priority={index < 2} // প্রথম ২টা ইমেজ দ্রুত লোড হবে
+                quality={100} // সর্বোচ্চ কোয়ালিটি নিশ্চিত করতে
+                sizes="100vw"
+                className="object-cover md:object-center transition-transform duration-[2000ms] hover:scale-105"
+                unoptimized={src.endsWith(".png")} // PNG ইমেজের শার্পনেস ঠিক রাখতে
               />
 
-              <div className="absolute inset-0 bg-black/5"></div>
+              {/* প্রিমিয়াম লুকের জন্য হালকা গ্রেডিয়েন্ট ওভারলে */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             </div>
           ))}
         </Carousel>

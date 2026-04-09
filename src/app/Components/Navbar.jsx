@@ -58,7 +58,6 @@ const Navbar = () => {
 
   const ADMIN_EMAIL = "sebermh@gmail.com";
 
-  // সাধারণ মেনু লিঙ্ক (সবার জন্য)
   const mainLinks = (
     <>
       {[
@@ -104,7 +103,6 @@ const Navbar = () => {
     </>
   );
 
-  // ইউজার ও অ্যাডমিন ড্রপডাউন (হিজিবিজি কমানোর জন্য)
   const profileDropdown = user && (
     <div className="dropdown dropdown-end">
       <div
