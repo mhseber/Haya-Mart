@@ -76,14 +76,7 @@ const SONewsletter = () => {
             />
           </div>
 
-          <button
-            className="btn text-white font-semibold hover:bg-black hover:text-blue-800
-             px-5 py-2 text-sm 
-             sm:px-8 sm:py-2.5 sm:text-base 
-             rounded-full  
-              transition-all duration-300 
-             "
-          >
+          <button className="btn btn-outline btn-lg rounded-2xl  bg-black  border-2 border-sky-300 text-blue-300 font-semibold hover:bg-black hover:text-blue-400 transition duration-300">
             Subscribe
           </button>
         </motion.div>

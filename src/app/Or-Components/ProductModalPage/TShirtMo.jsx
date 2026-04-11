@@ -212,14 +212,14 @@ const TshirtMo = ({ item, onClose }) => {
               <div className="flex flex-wrap gap-3 sm:gap-4 mt-6 sm:mt-8">
                 <button
                   onClick={() => handleConfirmOrder(item)}
-                  className="btn btn-xs lg:btn-sm sm:btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+                  className="btn  btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black"
                 >
                   <FaShoppingBag className="text-sm sm:text-lg" />
                   Order Now
                 </button>
                 <button
                   onClick={() => handleAddToCart(item)}
-                  className="btn btn-outline lg:btn-sm btn-xs sm:btn-sm"
+                  className="btn  btn-sm border-2 border-black text-blue-400 font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
                 >
                   <FaCartPlus className="text-sm sm:text-lg" />
                   Add To Cart

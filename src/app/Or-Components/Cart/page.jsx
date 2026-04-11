@@ -66,7 +66,7 @@ const CartPage = () => {
                     ৳ {item.price}
                   </div>
                 </div>
-                <button className="btn  btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300">
+                <button className="btn btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black">
                   <FaShoppingBag className="text-lg" />
                   Order Now
                 </button>

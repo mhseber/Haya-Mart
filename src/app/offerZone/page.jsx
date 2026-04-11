@@ -129,7 +129,7 @@ const OfferZonePage = () => {
     const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
     const exists = wishlist.some(
-      (p) => p.id === offer.id && p.type === "offer"
+      (p) => p.id === offer.id && p.type === "offer",
     );
 
     if (exists) {
@@ -267,7 +267,7 @@ const OfferZonePage = () => {
                 <section className="flex gap-2 mt-6">
                   <button
                     onClick={() => setSelectedOffer(offer)}
-                    className="btn btn-lg border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+                    className="btn btn-xl border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black"
                   >
                     Grab Offer
                   </button>
@@ -321,14 +321,14 @@ const OfferZonePage = () => {
             <div className="modal-action flex justify-between mt-6">
               <button
                 onClick={() => setSelectedOffer(null)}
-                className="btn btn-outline"
+                className="btn btn-outline bg-black text-blue-400"
               >
                 <IoCloseCircleOutline className="text-2xl" />
               </button>
 
               <button
                 onClick={() => handleConfirmOfferOrder(selectedOffer)}
-                className="btn border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+                className="btn btn-outline  bg-black  border-2 border-sky-300 text-white font-semibold hover:bg-black hover:text-blue-400 transition duration-300"
               >
                 <IoCheckmarkCircleOutline className="text-xl mr-1" />
                 Confirm Order

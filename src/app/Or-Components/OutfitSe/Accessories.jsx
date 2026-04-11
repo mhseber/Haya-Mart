@@ -246,14 +246,14 @@ const Accessories = () => {
                   <div className="card-actions justify-center mt-4">
                     <button
                       onClick={() => setSelectedProduct(item)}
-                      className="btn btn-sm border-2 border-black text-black font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+                      className="btn  btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black"
                     >
                       <FaShoppingBag className="text-lg" />
                       Order Now
                     </button>
                     <button
                       onClick={() => handleAddToCart(item)}
-                      className="btn btn-outline btn-sm"
+                      className="btn  btn-sm border-2 border-black text-blue-400 font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
                     >
                       <FaCartPlus className="text-lg" />
                       Add To Cart
@@ -284,14 +284,14 @@ const Accessories = () => {
 
             <div className="modal-action flex justify-between">
               <button
-                className="btn btn-outline"
+                className="btn btn-outline bg-black text-blue-400"
                 onClick={() => setSelectedProduct(null)}
               >
                 <IoCloseCircleOutline className="text-2xl" />
               </button>
 
               <button
-                className="btn btn-outline   border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-800 transition duration-300"
+                className="btn btn-outline  bg-black  border-2 border-sky-300 text-white font-semibold hover:bg-black hover:text-blue-400 transition duration-300"
                 onClick={() => handleConfirmOrder(selectedProduct)}
               >
                 <IoCheckmarkCircleOutline className="text-xl" />
