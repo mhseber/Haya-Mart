@@ -149,11 +149,26 @@ const BestSelling = () => {
 
   return (
     <div className="px-6">
-      <section className="flex justify-start gap-3 my-8 pl-5">
-        <FaFire className="text-4xl text-blue-400" />
-        <h2 className="text-3xl text-blue-200 font-bold">Best Selling</h2>
-      </section>
-      <div className="divider divide-gray-300"></div>
+      {/* title  */}
+      <motion.section
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-start mb-12 pt-10 "
+      >
+        <div className="flex flex-col items-center">
+          <div className="flex items-center gap-2.5">
+            <FaFire className="text-2xl md:text-3xl text-sky-400 drop-shadow-[0_0_8px_rgba(56,189,248,0.5)]" />
+            <h2 className="text-2xl md:text-4xl text-white font-black tracking-tight uppercase">
+              Best <span className="text-sky-500">Selling</span>
+            </h2>
+          </div>
+
+          <div className="h-1 w-24 bg-gradient-to-r from-transparent via-sky-500 to-transparent rounded-full mt-2" />
+        </div>
+        <div className="divider divide-gray-300"></div>
+      </motion.section>
 
       <section>
         <Swiper

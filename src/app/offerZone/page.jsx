@@ -36,7 +36,7 @@ const OfferZonePage = () => {
       mainPrice: 990,
       offerPrice: 590,
       desc: "Grab your favorite perfumes with our BOGO deal!",
-      img: "https://ummahmartbd.com/wp-content/uploads/2024/03/Copy-of-Musterd-Oil-24.jpg",
+      img: "https://i.ibb.co.com/LDjmH30Y/offerb1g1.png",
     },
     {
       id: 3,
@@ -44,8 +44,8 @@ const OfferZonePage = () => {
       discount: "20% Off",
       mainPrice: 990,
       offerPrice: 792,
-      desc: "New styles just dropped — get yours before they're gone!",
-      img: "https://taibahstyle.com/wp-content/uploads/2024/01/Maroon-Raglan-768x768-1.webp",
+      desc: "DROP SHOULDER BACK CANVAS - CYCLE BLACK | Haya Mart Elevate your style with our latest collection of trendy DROP SHOULDER.",
+      img: "https://backend.oubd.shop/uploads/all/aE7FvFZNnJhf5iMNVbCfAcwSuLXduSXvn4rQK250.webp",
     },
     {
       id: 4,
@@ -62,8 +62,8 @@ const OfferZonePage = () => {
       discount: "3 For 999",
       mainPrice: 1990,
       offerPrice: 999,
-      desc: "Crazy Deals on Perfume and Bath and Body Combos I Best Perfumes Gift Set I Bella Vita Luxury",
-      img: "https://bellavitaluxury.co.in/cdn/shop/files/678-548-01_36118912-21f2-4fd8-a150-9bbd67587bfc.jpg?v=1724311677&width=800",
+      desc: "Ready Stock] Kahf Eau De Toilette Men's Perfume 100ml + Kah",
+      img: "https://down-my.img.susercontent.com/file/my-11134207-7r98v-luatqi8wqv9pa3",
     },
     {
       id: 6,

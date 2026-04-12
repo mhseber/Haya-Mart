@@ -149,11 +149,54 @@ const NewArrival = () => {
 
   return (
     <div className="px-6">
-      <section className="flex justify-start gap-3 my-8 pl-5">
-        <FaStar className="text-4xl text-blue-400" />
-        <h2 className="text-3xl text-blue-200 font-bold">New Arrival</h2>
-      </section>
-      <div className="divider divide-gray-300"></div>
+      {/* CSS Fix for Swiper Pagination - Place this inside your return div */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+  /* ইন-অ্যাক্টিভ ডটগুলোর কালার (সাদা বা হালকা আকাশী দিতে পারেন) */
+  .mySwiper .swiper-pagination-bullet { 
+    background: #ffffff !important; 
+    opacity: 0.4 !important;
+    transition: all 0.3s ease; 
+  }
+
+  /* অ্যাক্টিভ ডটের কালার (Sky Blue) */
+  .mySwiper .swiper-pagination-bullet-active { 
+    background: #38bdf8 !important; /* আপনার থিমের Sky-400 কালার */
+    opacity: 1 !important;
+    width: 24px !important; 
+    border-radius: 10px !important; 
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.5); /* হালকা গ্লো */
+  }
+
+  /* ডটগুলোর কন্টেইনার পজিশন ঠিক করা */
+  .mySwiper .swiper-pagination {
+    bottom: 5px !important;
+  }
+`,
+        }}
+      />
+      {/* title  */}
+      <motion.section
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-start mb-12 pt-5"
+      >
+        <div className="flex flex-col items-center">
+          <div className="flex items-center gap-2.5">
+            <FaStar className="text-2xl md:text-3xl text-sky-400 drop-shadow-[0_0_8px_rgba(56,189,248,0.5)]" />
+            <h2 className="text-2xl md:text-4xl text-white font-black tracking-tight uppercase">
+              New <span className="text-sky-500">Arrival</span>
+            </h2>
+          </div>
+
+          <div className="h-1 w-24 bg-gradient-to-r from-transparent via-sky-500 to-transparent rounded-full mt-2" />
+        </div>
+        <div className="divider divide-gray-300"></div>
+      </motion.section>
+
       <section>
         <Swiper
           className="mySwiper"
@@ -288,39 +331,6 @@ const NewArrival = () => {
           </div>
         </dialog>
       )}
-
-      <style jsx global>{`
-        .mySwiper {
-          position: relative;
-          padding-bottom: 34px !important;
-        }
-        .mySwiper .swiper-pagination {
-          bottom: 8px !important;
-          top: auto !important;
-          width: 100% !important;
-          display: flex;
-          justify-content: center;
-          pointer-events: auto;
-        }
-        .mySwiper .swiper-pagination-bullet {
-          background: #ffffff !important;
-          opacity: 1 !important;
-          width: 10px !important;
-          height: 10px !important;
-          margin: 0 6px !important;
-        }
-        .mySwiper .swiper-pagination-bullet-active {
-          background: #2563eb !important;
-          transform: scale(1.25);
-          transition: all 0.25s ease;
-        }
-        @media (max-width: 640px) {
-          .mySwiper .swiper-pagination-bullet {
-            width: 8px !important;
-            height: 8px !important;
-          }
-        }
-      `}</style>
     </div>
   );
 };
