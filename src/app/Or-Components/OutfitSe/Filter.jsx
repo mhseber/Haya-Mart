@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -19,40 +18,73 @@ const Filter = () => {
     { name: "Omani Thobe", target: "othobe" },
   ];
 
-  // scroll handler
+  // Scroll handler with offset for sticky header
   const handleScroll = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const offset = 100; // আপনার স্টিকি নববার থাকলে সেটার জন্য গ্যাপ
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = section.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
-  return (
-    <section className="flex flex-col items-center justify-center p-5 px-4">
-      <motion.div
-        className="bg-sky-300 w-full max-w-5xl p-6 rounded-3xl shadow-2xl shadow-blue-700"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        {/* Title */}
-        <motion.h1
-          className="text-3xl font-bold text-black mb-6 flex items-center justify-center gap-2"
-          animate={{ color: ["#000", "#0369a1", "#000"] }}
-          transition={{ duration: 3, repeat: Infinity }}
-        >
-          🛍️ Filter Categories
-        </motion.h1>
+  // Animation variants for staggered effect
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 },
+    },
+  };
 
-        {/* Buttons */}
-        <div className="flex flex-wrap justify-center gap-4">
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
+
+  return (
+    <section className="relative py-10 px-4 overflow-hidden">
+      {/* Background Decorative Blur */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-sky-500/20 blur-[120px] rounded-full pointer-events-none" />
+
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="relative z-10 max-w-6xl mx-auto backdrop-blur-md bg-slate-900/40 border border-white/10 p-8 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+      >
+        {/* Title with Underline Effect */}
+        <div className="text-center mb-10">
+          <motion.h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-widest flex items-center justify-center gap-3">
+            <span className="text-sky-400">⚡</span> Quick{" "}
+            <span className="text-sky-400">Explore</span>
+          </motion.h2>
+          <div className="h-1 w-20 bg-sky-500 mx-auto mt-3 rounded-full shadow-[0_0_10px_#0ea5e9]" />
+        </div>
+
+        {/* Buttons Grid */}
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4">
           {categories.map((item, index) => (
             <motion.button
               key={index}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "rgba(56, 189, 248, 1)",
+                color: "#000",
+                boxShadow: "0px 0px 20px rgba(56, 189, 248, 0.4)",
+              }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => handleScroll(item.target)}
-              className="btn  btn-xl border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black"
+              className="px-5 py-2.5 rounded-xl border border-sky-500/30 bg-slate-800/50 text-sky-400 text-sm md:text-base font-bold transition-all duration-300 backdrop-blur-sm"
             >
               {item.name}
             </motion.button>

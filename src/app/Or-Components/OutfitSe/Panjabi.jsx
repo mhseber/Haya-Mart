@@ -244,7 +244,7 @@ const Panjabi = () => {
                     </p>
                   </div>
 
-                  <div className="card-actions justify-center mt-4">
+                  <div className=" card-actions justify-center mt-4">
                     <button
                       onClick={() => setSelectedProduct(item)}
                       className="btn  btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black"
