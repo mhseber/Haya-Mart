@@ -23,79 +23,6 @@ const CartPage = () => {
   };
 
   return (
-    // <div className="min-h-screen bg-gradient-to-b from-sky-950 to-blue-950 pt-26 py-12 text-white">
-    //   <motion.h1
-    //     initial={{ opacity: 0, y: -30 }}
-    //     animate={{ opacity: 1, y: 0 }}
-    //     transition={{ duration: 0.6 }}
-    //     className="text-4xl font-extrabold text-center mb-8 text-sky-400"
-    //   >
-    //     <IoCartOutline className="inline-block mr-2 text-sky-400" /> Your Cart
-    //   </motion.h1>
-
-    //   <div className="max-w-5xl mx-auto bg-sky-900/40 backdrop-blur-md rounded-3xl shadow-lg p-6">
-    //     <ul className="list bg-base-100 rounded-box shadow-md text-black">
-    //       <li className="p-4 pb-2 text-xl text-sky-600 font-semibold tracking-wide">
-    //         Added Products
-    //       </li>
-
-    //       <AnimatePresence>
-    //         {cart.map((item, index) => (
-    //           <motion.li
-    //             key={item.id}
-    //             className="list-row flex items-center gap-3 p-3 border-b border-gray-300/40 last:border-none"
-    //             initial={{ opacity: 0, x: 100 }}
-    //             animate={{ opacity: 1, x: 0 }}
-    //             exit={{ opacity: 0, x: -100 }}
-    //             transition={{ duration: 0.4 }}
-    //           >
-    //             <div className="text-4xl text-gray-300 font-thin opacity-40 tabular-nums">
-    //               {String(index + 1).padStart(2, "0")}
-    //             </div>
-
-    //             <div>
-    //               <img
-    //                 src={item.img}
-    //                 alt={item.name}
-    //                 className="size-22 rounded-xl object-cover shadow"
-    //               />
-    //             </div>
-
-    //             <div className="flex-grow">
-    //               <div className="font-semibold text-xl text-sky-500">
-    //                 {item.name}
-    //               </div>
-    //               <div className="text-xl uppercase font-semibold text-gray-500">
-    //                 ৳ {item.price}
-    //               </div>
-    //             </div>
-    //             <button className="btn btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black">
-    //               <FaShoppingBag className="text-lg" />
-    //               Order Now
-    //             </button>
-    //             <button
-    //               onClick={() => removeItem(item.id)}
-    //               className="btn btn-square btn-ghost"
-    //             >
-    //               <FaTrashAlt className="text-red-600 text-lg" />
-    //             </button>
-    //           </motion.li>
-    //         ))}
-    //       </AnimatePresence>
-    //     </ul>
-
-    //     {cart.length === 0 && (
-    //       <motion.p
-    //         initial={{ opacity: 0 }}
-    //         animate={{ opacity: 1 }}
-    //         className="text-center mt-6 text-gray-300"
-    //       >
-    //         Your cart is empty 🛒
-    //       </motion.p>
-    //     )}
-    //   </div>
-    // </div>
-
     <div className="min-h-screen bg-[#020617] text-white pt-28 pb-20 px-4 md:px-10">
       {/* Header Area */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
@@ -201,7 +128,7 @@ const CartPage = () => {
               <h2 className="text-2xl font-bold text-gray-500">
                 Your cart is feeling lonely...
               </h2>
-              <Link href="/outfits">
+              <Link href="/Outfits">
                 <button className="mt-6 px-8 py-3 bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded-full hover:bg-sky-500 hover:text-black transition-all">
                   Browse Collection
                 </button>
