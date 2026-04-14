@@ -1,12 +1,15 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaShoppingBag, FaTrashAlt } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
+import { motion, AnimatePresence } from "framer-motion";
+import { IoBagCheckOutline, IoArrowBackOutline } from "react-icons/io5";
+import { FaTrashAlt, FaMinus, FaPlus } from "react-icons/fa";
+import Link from "next/link";
 
 const CartPage = () => {
   const [cart, setCart] = useState([]);
+  const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -20,76 +23,231 @@ const CartPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-950 to-blue-950 pt-26 py-12 text-white">
-      <motion.h1
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl font-extrabold text-center mb-8 text-sky-400"
-      >
-        <IoCartOutline className="inline-block mr-2 text-sky-400" /> Your Cart
-      </motion.h1>
+    // <div className="min-h-screen bg-gradient-to-b from-sky-950 to-blue-950 pt-26 py-12 text-white">
+    //   <motion.h1
+    //     initial={{ opacity: 0, y: -30 }}
+    //     animate={{ opacity: 1, y: 0 }}
+    //     transition={{ duration: 0.6 }}
+    //     className="text-4xl font-extrabold text-center mb-8 text-sky-400"
+    //   >
+    //     <IoCartOutline className="inline-block mr-2 text-sky-400" /> Your Cart
+    //   </motion.h1>
 
-      <div className="max-w-5xl mx-auto bg-sky-900/40 backdrop-blur-md rounded-3xl shadow-lg p-6">
-        <ul className="list bg-base-100 rounded-box shadow-md text-black">
-          <li className="p-4 pb-2 text-xl text-sky-600 font-semibold tracking-wide">
-            Added Products
-          </li>
+    //   <div className="max-w-5xl mx-auto bg-sky-900/40 backdrop-blur-md rounded-3xl shadow-lg p-6">
+    //     <ul className="list bg-base-100 rounded-box shadow-md text-black">
+    //       <li className="p-4 pb-2 text-xl text-sky-600 font-semibold tracking-wide">
+    //         Added Products
+    //       </li>
 
-          <AnimatePresence>
+    //       <AnimatePresence>
+    //         {cart.map((item, index) => (
+    //           <motion.li
+    //             key={item.id}
+    //             className="list-row flex items-center gap-3 p-3 border-b border-gray-300/40 last:border-none"
+    //             initial={{ opacity: 0, x: 100 }}
+    //             animate={{ opacity: 1, x: 0 }}
+    //             exit={{ opacity: 0, x: -100 }}
+    //             transition={{ duration: 0.4 }}
+    //           >
+    //             <div className="text-4xl text-gray-300 font-thin opacity-40 tabular-nums">
+    //               {String(index + 1).padStart(2, "0")}
+    //             </div>
+
+    //             <div>
+    //               <img
+    //                 src={item.img}
+    //                 alt={item.name}
+    //                 className="size-22 rounded-xl object-cover shadow"
+    //               />
+    //             </div>
+
+    //             <div className="flex-grow">
+    //               <div className="font-semibold text-xl text-sky-500">
+    //                 {item.name}
+    //               </div>
+    //               <div className="text-xl uppercase font-semibold text-gray-500">
+    //                 ৳ {item.price}
+    //               </div>
+    //             </div>
+    //             <button className="btn btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black">
+    //               <FaShoppingBag className="text-lg" />
+    //               Order Now
+    //             </button>
+    //             <button
+    //               onClick={() => removeItem(item.id)}
+    //               className="btn btn-square btn-ghost"
+    //             >
+    //               <FaTrashAlt className="text-red-600 text-lg" />
+    //             </button>
+    //           </motion.li>
+    //         ))}
+    //       </AnimatePresence>
+    //     </ul>
+
+    //     {cart.length === 0 && (
+    //       <motion.p
+    //         initial={{ opacity: 0 }}
+    //         animate={{ opacity: 1 }}
+    //         className="text-center mt-6 text-gray-300"
+    //       >
+    //         Your cart is empty 🛒
+    //       </motion.p>
+    //     )}
+    //   </div>
+    // </div>
+
+    <div className="min-h-screen bg-[#020617] text-white pt-28 pb-20 px-4 md:px-10">
+      {/* Header Area */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="flex items-center gap-4"
+        >
+          <div className="p-4 bg-sky-500/10 rounded-2xl border border-sky-500/20">
+            <IoCartOutline className="text-4xl text-sky-400" />
+          </div>
+          <div>
+            <h1 className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter">
+              Your <span className="text-sky-500">Cart</span>
+            </h1>
+            <p className="text-gray-400 text-sm">
+              You have {cart.length} items in your bag
+            </p>
+          </div>
+        </motion.div>
+
+        <Link
+          href="/Outfits"
+          className="flex items-center gap-2 text-gray-400 hover:text-sky-400 transition-colors font-medium"
+        >
+          <IoArrowBackOutline /> Continue Shopping
+        </Link>
+      </div>
+
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
+        {/* --- Left: Product List --- */}
+        <div className="lg:col-span-2 space-y-6">
+          <AnimatePresence mode="popLayout">
             {cart.map((item, index) => (
-              <motion.li
+              <motion.div
                 key={item.id}
-                className="list-row flex items-center gap-3 p-3 border-b border-gray-300/40 last:border-none"
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.4 }}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, x: -50 }}
+                className="relative group backdrop-blur-md bg-white/[0.03] border border-white/10 rounded-[2rem] p-4 md:p-6 flex flex-col md:flex-row items-center gap-6 hover:border-sky-500/30 transition-all shadow-xl"
               >
-                <div className="text-4xl text-gray-300 font-thin opacity-40 tabular-nums">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
+                {/* Index Number */}
+                <span className="absolute -left-3 -top-3 w-8 h-8 bg-slate-800 border border-white/10 rounded-full flex items-center justify-center text-xs font-bold text-sky-400 shadow-lg">
+                  {index + 1}
+                </span>
 
-                <div>
+                {/* Product Image */}
+                <div className="w-full md:w-32 h-32 flex-shrink-0">
                   <img
                     src={item.img}
                     alt={item.name}
-                    className="size-22 rounded-xl object-cover shadow"
+                    className="w-full h-full object-cover rounded-2xl border border-white/5"
                   />
                 </div>
 
-                <div className="flex-grow">
-                  <div className="font-semibold text-xl text-sky-500">
+                {/* Info */}
+                <div className="flex-grow text-center md:text-left">
+                  <h3 className="text-xl font-bold text-white group-hover:text-sky-400 transition-colors uppercase tracking-tight">
                     {item.name}
-                  </div>
-                  <div className="text-xl uppercase font-semibold text-gray-500">
+                  </h3>
+                  <p className="text-sky-400 text-2xl font-black mt-1">
                     ৳ {item.price}
-                  </div>
+                  </p>
                 </div>
-                <button className="btn btn-sm border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black">
-                  <FaShoppingBag className="text-lg" />
-                  Order Now
-                </button>
-                <button
-                  onClick={() => removeItem(item.id)}
-                  className="btn btn-square btn-ghost"
-                >
-                  <FaTrashAlt className="text-red-600 text-lg" />
-                </button>
-              </motion.li>
+
+                {/* Quantity Controls (Optional but recommended) */}
+                <div className="flex items-center gap-4 bg-black/40 px-4 py-2 rounded-xl border border-white/5">
+                  <button className="text-gray-400 hover:text-white transition-colors">
+                    <FaMinus size={12} />
+                  </button>
+                  <span className="font-bold w-4 text-center">1</span>
+                  <button className="text-gray-400 hover:text-white transition-colors">
+                    <FaPlus size={12} />
+                  </button>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex items-center gap-3">
+                  <button className="flex items-center gap-2 px-6 py-3 bg-sky-500 text-black font-black rounded-xl hover:bg-sky-400 transition-all active:scale-95 text-sm">
+                    ORDER
+                  </button>
+                  <button
+                    onClick={() => removeItem(item.id)}
+                    className="p-3 bg-red-500/10 text-red-500 rounded-xl hover:bg-red-500 hover:text-white transition-all"
+                  >
+                    <FaTrashAlt />
+                  </button>
+                </div>
+              </motion.div>
             ))}
           </AnimatePresence>
-        </ul>
 
-        {cart.length === 0 && (
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center mt-6 text-gray-300"
+          {cart.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-20 backdrop-blur-md bg-white/[0.02] border border-dashed border-white/10 rounded-[3rem]"
+            >
+              <div className="text-6xl mb-4 opacity-20 flex justify-center">
+                <IoCartOutline />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-500">
+                Your cart is feeling lonely...
+              </h2>
+              <Link href="/outfits">
+                <button className="mt-6 px-8 py-3 bg-sky-500/10 text-sky-400 border border-sky-500/20 rounded-full hover:bg-sky-500 hover:text-black transition-all">
+                  Browse Collection
+                </button>
+              </Link>
+            </motion.div>
+          )}
+        </div>
+
+        {/* --- Right: Order Summary --- */}
+        <div className="lg:col-span-1">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="sticky top-28 backdrop-blur-2xl bg-gradient-to-br from-sky-900/20 to-blue-900/20 border border-sky-500/20 rounded-[2.5rem] p-8 shadow-2xl"
           >
-            Your cart is empty 🛒
-          </motion.p>
-        )}
+            <h2 className="text-2xl font-black mb-6 uppercase italic tracking-tighter">
+              Order <span className="text-sky-400">Summary</span>
+            </h2>
+
+            <div className="space-y-4 mb-8">
+              <div className="flex justify-between text-gray-400">
+                <span>Subtotal ({cart.length} items)</span>
+                <span className="text-white font-bold">৳ {totalPrice}</span>
+              </div>
+              <div className="flex justify-between text-gray-400">
+                <span>Shipping Fee</span>
+                <span className="text-green-400 font-bold font-mono">FREE</span>
+              </div>
+              <div className="h-px bg-white/10 my-4" />
+              <div className="flex justify-between items-end">
+                <span className="text-lg font-bold">Total Amount</span>
+                <span className="text-3xl font-black text-sky-400">
+                  ৳ {totalPrice}
+                </span>
+              </div>
+            </div>
+
+            <button className="w-full py-5 bg-sky-500 text-black font-black rounded-2xl flex items-center justify-center gap-3 hover:bg-sky-400 transition-all shadow-[0_10px_30px_rgba(56,189,248,0.3)] active:scale-95 mb-4">
+              <IoBagCheckOutline size={24} /> CHECKOUT ALL
+            </button>
+
+            <p className="text-center text-[10px] text-gray-500 uppercase tracking-[0.2em]">
+              Secure Checkout Guaranteed
+            </p>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
