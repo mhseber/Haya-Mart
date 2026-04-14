@@ -1,11 +1,11 @@
 "use client";
 
 import auth from "@/Firebase/firebase.init";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { FaRegHeart } from "react-icons/fa";
-import { IoCartOutline } from "react-icons/io5";
+import { FaPercent, FaRegHeart } from "react-icons/fa";
+import { IoCartOutline, IoFlash } from "react-icons/io5";
 import Swal from "sweetalert2";
 import {
   IoCloseCircleOutline,
@@ -212,131 +212,308 @@ const OfferZonePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-950 to-blue-950 text-white py-12">
-      <motion.h1
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center text-4xl md:text-5xl font-extrabold text-sky-400 mb-12 mt-16"
-      >
-        ✨ Special Offer Zone ✨
-      </motion.h1>
+    // <div className="min-h-screen bg-gradient-to-b from-sky-950 to-blue-950 text-white py-12">
+    //   <motion.h1
+    //     initial={{ opacity: 0, y: -30 }}
+    //     animate={{ opacity: 1, y: 0 }}
+    //     transition={{ duration: 0.8 }}
+    //     className="text-center text-4xl md:text-5xl font-extrabold text-sky-400 mb-12 mt-16"
+    //   >
+    //     ✨ Special Offer Zone ✨
+    //   </motion.h1>
 
-      <div className="grid grid-cols-1 gap-8 px-6 md:px-16">
+    //   <div className="grid grid-cols-1 gap-8 px-6 md:px-16">
+    //     {offers.map((offer) => (
+    //       <motion.div
+    //         key={offer.id}
+    //         initial={{ opacity: 0, y: 50 }}
+    //         whileInView={{ opacity: 1, y: 0 }}
+    //         transition={{ duration: 0.8 }}
+    //         className="bg-gradient-to-br from-blue-900 to-sky-900 p-4 rounded-2xl shadow-lg hover:shadow-sky-500/40 transition-all"
+    //       >
+    //         <section className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-around gap-6 bg-[#0a192f] p-6 rounded-2xl">
+    //           {/* Image */}
+    //           <div className="flex-shrink-0 w-full md:w-1/3">
+    //             <img
+    //               src={offer.img}
+    //               alt={offer.title}
+    //               className="rounded-xl w-full h-[400px] object-cover shadow-md"
+    //             />
+    //           </div>
+
+    //           {/* Content */}
+    //           <div className="text-center md:text-left md:w-2/3">
+    //             <h3 className="text-3xl md:text-4xl font-bold text-sky-400 mb-2">
+    //               {offer.title}
+    //             </h3>
+    //             <p className="text-xl text-yellow-400 font-bold mb-2">
+    //               {offer.discount}
+    //             </p>
+    //             <p className="text-gray-300 text-lg leading-relaxed pt-3">
+    //               {offer.desc}
+    //             </p>
+
+    //             {/* Price Section */}
+    //             <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:gap-4">
+    //               <p className="text-gray-400 line-through text-lg">
+    //                 ৳{offer.mainPrice}
+    //               </p>
+    //               <p className="text-sky-400 text-2xl font-bold">
+    //                 ৳{offer.offerPrice}
+    //               </p>
+    //             </div>
+
+    //             {/* Buttons */}
+    //             <section className="flex gap-2 mt-6">
+    //               <button
+    //                 onClick={() => setSelectedOffer(offer)}
+    //                 className="btn btn-xl border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black"
+    //               >
+    //                 Grab Offer
+    //               </button>
+
+    //               <button
+    //                 onClick={() => handleAddToCart(offer)}
+    //                 className="btn btn-sm rounded-2xl border-sky-700 mt-2 ml-4"
+    //               >
+    //                 <IoCartOutline className="text-lg text-sky-500" />
+    //               </button>
+
+    //               <button
+    //                 onClick={() => handleAddToWishlist(offer)}
+    //                 className="btn btn-sm rounded-2xl border-sky-700 mt-2"
+    //               >
+    //                 <FaRegHeart className="text-lg text-sky-500" />
+    //               </button>
+    //             </section>
+    //           </div>
+    //         </section>
+    //       </motion.div>
+    //     ))}
+    //   </div>
+    //   {/* Confirm Offer Modal */}
+    //   {selectedOffer && (
+    //     <dialog open className="modal modal-open">
+    //       <div className="modal-box bg-slate-900 text-white max-w-lg w-full">
+    //         <h3 className="font-bold text-xl mb-4 text-sky-400">
+    //           Confirm Your Offer
+    //         </h3>
+
+    //         <img
+    //           src={selectedOffer.img}
+    //           alt={selectedOffer.title}
+    //           className="w-full h-64 sm:h-72 object-cover rounded-xl mb-4"
+    //         />
+
+    //         <h4 className="text-lg font-semibold">{selectedOffer.title}</h4>
+
+    //         <p className="text-sm text-gray-300 mt-2">{selectedOffer.desc}</p>
+
+    //         <div className="flex items-center gap-3 mt-4">
+    //           <p className="text-gray-400 line-through">
+    //             ৳{selectedOffer.mainPrice}
+    //           </p>
+    //           <p className="text-sky-400 text-2xl font-bold">
+    //             ৳{selectedOffer.offerPrice}
+    //           </p>
+    //         </div>
+
+    //         <div className="modal-action flex justify-between mt-6">
+    //           <button
+    //             onClick={() => setSelectedOffer(null)}
+    //             className="btn btn-outline bg-black text-blue-400"
+    //           >
+    //             <IoCloseCircleOutline className="text-2xl" />
+    //           </button>
+
+    //           <button
+    //             onClick={() => handleConfirmOfferOrder(selectedOffer)}
+    //             className="btn btn-outline  bg-black  border-2 border-sky-300 text-white font-semibold hover:bg-black hover:text-blue-400 transition duration-300"
+    //           >
+    //             <IoCheckmarkCircleOutline className="text-xl mr-1" />
+    //             Confirm Order
+    //           </button>
+    //         </div>
+    //       </div>
+    //     </dialog>
+    //   )}
+    // </div>
+
+    <div className="min-h-screen bg-[#020617] text-white py-20 px-4 md:px-10 relative overflow-hidden">
+      {/* Background Mesh Gradients */}
+      <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-sky-500/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] bg-blue-600/10 blur-[100px] rounded-full pointer-events-none" />
+
+      {/* Header Section */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center mb-20 relative z-10"
+      >
+        <motion.div
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold mb-4 uppercase tracking-[0.2em]"
+        >
+          <IoFlash className="text-yellow-400" /> Flash Sale is Live
+        </motion.div>
+
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter italic uppercase">
+          Special{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
+            Offer
+          </span>{" "}
+          Zone
+        </h1>
+        <div className="h-1.5 w-32 bg-sky-500 mx-auto mt-4 rounded-full shadow-[0_0_15px_rgba(56,189,248,0.5)]" />
+      </motion.div>
+
+      {/* Offers List */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 gap-12 relative z-10">
         {offers.map((offer) => (
           <motion.div
             key={offer.id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-blue-900 to-sky-900 p-4 rounded-2xl shadow-lg hover:shadow-sky-500/40 transition-all"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="group relative"
           >
-            <section className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-around gap-6 bg-[#0a192f] p-6 rounded-2xl">
-              {/* Image */}
-              <div className="flex-shrink-0 w-full md:w-1/3">
-                <img
-                  src={offer.img}
-                  alt={offer.title}
-                  className="rounded-xl w-full h-[400px] object-cover shadow-md"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="text-center md:text-left md:w-2/3">
-                <h3 className="text-3xl md:text-4xl font-bold text-sky-400 mb-2">
-                  {offer.title}
-                </h3>
-                <p className="text-xl text-yellow-400 font-bold mb-2">
-                  {offer.discount}
-                </p>
-                <p className="text-gray-300 text-lg leading-relaxed pt-3">
-                  {offer.desc}
-                </p>
-
-                {/* Price Section */}
-                <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:gap-4">
-                  <p className="text-gray-400 line-through text-lg">
-                    ৳{offer.mainPrice}
-                  </p>
-                  <p className="text-sky-400 text-2xl font-bold">
-                    ৳{offer.offerPrice}
-                  </p>
+            {/* Card Glass Container */}
+            <div className="backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-[2.5rem] p-4 md:p-8 shadow-2xl transition-all duration-500 group-hover:border-sky-500/40 group-hover:bg-white/[0.05]">
+              <div className="flex flex-col lg:flex-row gap-10 items-center">
+                {/* Image Section with Creative Badge */}
+                <div className="relative w-full lg:w-2/5 aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl">
+                  <motion.img
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.8 }}
+                    src={offer.img}
+                    alt={offer.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-6 left-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-5 py-2 rounded-2xl font-black text-lg shadow-lg flex items-center gap-2 -rotate-6">
+                    <FaPercent /> {offer.discount}
+                  </div>
                 </div>
 
-                {/* Buttons */}
-                <section className="flex gap-2 mt-6">
-                  <button
-                    onClick={() => setSelectedOffer(offer)}
-                    className="btn btn-xl border-2 border-black text-white font-semibold hover:bg-black hover:text-blue-500 transition duration-300 bg-black"
-                  >
-                    Grab Offer
-                  </button>
+                {/* Info Section */}
+                <div className="w-full lg:w-3/5 text-center lg:text-left">
+                  <h3 className="text-4xl md:text-5xl font-extrabold text-white mb-4 group-hover:text-sky-400 transition-colors leading-tight">
+                    {offer.title}
+                  </h3>
 
-                  <button
-                    onClick={() => handleAddToCart(offer)}
-                    className="btn btn-sm rounded-2xl border-sky-700 mt-2 ml-4"
-                  >
-                    <IoCartOutline className="text-lg text-sky-500" />
-                  </button>
+                  <p className="text-gray-400 text-lg leading-relaxed mb-8 font-light">
+                    {offer.desc}
+                  </p>
 
-                  <button
-                    onClick={() => handleAddToWishlist(offer)}
-                    className="btn btn-sm rounded-2xl border-sky-700 mt-2"
-                  >
-                    <FaRegHeart className="text-lg text-sky-500" />
-                  </button>
-                </section>
+                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-10">
+                    <div className="px-6 py-3 bg-white/5 rounded-2xl border border-white/5">
+                      <p className="text-gray-500 line-through text-sm">
+                        Regular Price
+                      </p>
+                      <p className="text-xl font-medium text-gray-300">
+                        ৳{offer.mainPrice}
+                      </p>
+                    </div>
+                    <div className="px-6 py-3 bg-sky-500/10 rounded-2xl border border-sky-500/20">
+                      <p className="text-sky-400 text-sm font-bold uppercase tracking-widest">
+                        Offer Price
+                      </p>
+                      <p className="text-4xl font-black text-sky-400">
+                        ৳{offer.offerPrice}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Action Row */}
+                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                    <button
+                      onClick={() => setSelectedOffer(offer)}
+                      className="px-10 py-4 bg-sky-500 text-black font-black rounded-2xl hover:bg-sky-400 hover:scale-105 transition-all shadow-[0_10px_30px_rgba(56,189,248,0.3)]"
+                    >
+                      GRAB THIS OFFER
+                    </button>
+
+                    <button
+                      onClick={() => handleAddToCart(offer)}
+                      className="p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 hover:text-sky-400 transition-all"
+                    >
+                      <IoCartOutline size={28} />
+                    </button>
+
+                    <button
+                      onClick={() => handleAddToWishlist(offer)}
+                      className="p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 hover:text-pink-500 transition-all"
+                    >
+                      <FaRegHeart size={26} />
+                    </button>
+                  </div>
+                </div>
               </div>
-            </section>
+            </div>
           </motion.div>
         ))}
       </div>
-      {/* Confirm Offer Modal */}
-      {selectedOffer && (
-        <dialog open className="modal modal-open">
-          <div className="modal-box bg-slate-900 text-white max-w-lg w-full">
-            <h3 className="font-bold text-xl mb-4 text-sky-400">
-              Confirm Your Offer
-            </h3>
 
-            <img
-              src={selectedOffer.img}
-              alt={selectedOffer.title}
-              className="w-full h-64 sm:h-72 object-cover rounded-xl mb-4"
+      {/* --- Modern AnimatePresence Modal --- */}
+      <AnimatePresence>
+        {selectedOffer && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedOffer(null)}
+              className="absolute inset-0 bg-black/80 backdrop-blur-md"
             />
 
-            <h4 className="text-lg font-semibold">{selectedOffer.title}</h4>
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              className="relative bg-[#0f172a] border border-white/10 rounded-[3rem] p-8 max-w-2xl w-full shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden"
+            >
+              <div className="flex flex-col md:flex-row gap-8">
+                <img
+                  src={selectedOffer.img}
+                  className="w-full md:w-1/2 h-64 md:h-auto object-cover rounded-[2rem]"
+                />
+                <div className="flex flex-col justify-center">
+                  <h3 className="text-2xl font-bold text-sky-400 mb-2">
+                    {selectedOffer.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-6">
+                    {selectedOffer.desc}
+                  </p>
 
-            <p className="text-sm text-gray-300 mt-2">{selectedOffer.desc}</p>
+                  <div className="mb-8">
+                    <p className="text-gray-500 line-through text-xs">
+                      Regular: ৳{selectedOffer.mainPrice}
+                    </p>
+                    <p className="text-3xl font-black text-white">
+                      ৳{selectedOffer.offerPrice}
+                    </p>
+                  </div>
 
-            <div className="flex items-center gap-3 mt-4">
-              <p className="text-gray-400 line-through">
-                ৳{selectedOffer.mainPrice}
-              </p>
-              <p className="text-sky-400 text-2xl font-bold">
-                ৳{selectedOffer.offerPrice}
-              </p>
-            </div>
-
-            <div className="modal-action flex justify-between mt-6">
-              <button
-                onClick={() => setSelectedOffer(null)}
-                className="btn btn-outline bg-black text-blue-400"
-              >
-                <IoCloseCircleOutline className="text-2xl" />
-              </button>
-
-              <button
-                onClick={() => handleConfirmOfferOrder(selectedOffer)}
-                className="btn btn-outline  bg-black  border-2 border-sky-300 text-white font-semibold hover:bg-black hover:text-blue-400 transition duration-300"
-              >
-                <IoCheckmarkCircleOutline className="text-xl mr-1" />
-                Confirm Order
-              </button>
-            </div>
+                  <div className="flex gap-3">
+                    <button
+                      onClick={() => handleConfirmOfferOrder(selectedOffer)}
+                      className="flex-1 py-4 bg-sky-500 text-black font-black rounded-xl hover:bg-sky-400 transition-all flex items-center justify-center gap-2"
+                    >
+                      <IoCheckmarkCircleOutline size={22} /> CONFIRM
+                    </button>
+                    <button
+                      onClick={() => setSelectedOffer(null)}
+                      className="p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-red-500/20 hover:text-red-500 transition-all"
+                    >
+                      <IoCloseCircleOutline size={22} />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
-        </dialog>
-      )}
+        )}
+      </AnimatePresence>
     </div>
   );
 };
